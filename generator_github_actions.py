@@ -70,6 +70,14 @@ NOISE_TERMS = [
     "account aanmaken",
     "contact opnemen",
     "desk",
+    "google search",
+    "please click here",
+    "if you are not redirected",
+    "images maps videos",
+    "news books",
+    "search the world's information",
+    "google offered in",
+    "all images maps videos",
 ]
 
 LISTING_TERMS = [
@@ -85,6 +93,12 @@ LISTING_TERMS = [
     "woonoppervlakte",
     "m²",
     "m2",
+    "te huur",
+    "direct beschikbaar",
+]
+
+ADDRESS_HINTS = [
+    "straat", "laan", "weg", "plein", "hof", "plantsoen", "kade", "gracht"
 ]
 
 
@@ -203,21 +217,50 @@ def count_listing_terms(text: str):
     return sum(1 for term in LISTING_TERMS if term in lower)
 
 
+def has_address_hint(text: str):
+    lower = text.lower()
+    return any(h in lower for h in ADDRESS_HINTS)
+
+
+def looks_like_google_noise(text: str, title: str, bron: str):
+    blob = f"{title} {text}".lower()
+
+    strong_patterns = [
+        "google search",
+        "please click here",
+        "if you are not redirected",
+        "images maps videos",
+        "news books",
+        "search the world's information",
+        "google offered in",
+        "all images maps videos",
+    ]
+
+    if any(p in blob for p in strong_patterns):
+        return True
+
+    if bron.lower().startswith("google") and count_noise_terms(blob) >= 2 and "€" not in blob:
+        return True
+
+    return False
+
+
 def extract_listing_like_snippet(text: str):
     m = re.search(
-        r"(.{0,80}(?:€\s?\d{3,5}|eur\s?\d{3,5}|\d{2,3}\s?m²|\d+\s?kamer[s]?|huurwoning|appartement|woning).{0,160})",
+        r"(.{0,80}(?:€\s?\d{3,5}|eur\s?\d{3,5}|\d{2,3}\s?m²|\d+\s?kamer[s]?|huurwoning|appartement|woning|te huur).{0,180})",
         text,
         flags=re.I
     )
     if m:
         snippet = re.sub(r"\s+", " ", m.group(1)).strip()
-        return snippet[:220]
+        return snippet[:240]
     return ""
 
 
 def listing_signal_score(row, title: str, text: str):
     score = 0
     reasons = []
+
     lower = text.lower()
     title_lower = title.lower()
 
@@ -226,6 +269,8 @@ def listing_signal_score(row, title: str, text: str):
     rooms = extract_room_signals(text)
     noise_count = count_noise_terms(text)
     listing_count = count_listing_terms(text)
+    snippet = extract_listing_like_snippet(text)
+    google_noise = looks_like_google_noise(text, title, row["bron"])
 
     if row["prioriteit"] == 1:
         score += 22
@@ -235,8 +280,10 @@ def listing_signal_score(row, title: str, text: str):
         reasons.append("prioriteit 2")
 
     if row["bron"] in ["Funda", "Pararius"]:
-        score += 18
+        score += 20
         reasons.append("sterke bron")
+    elif row["bron"].lower().startswith("google"):
+        score -= 8
 
     if prices:
         score += 24
@@ -258,13 +305,21 @@ def listing_signal_score(row, title: str, text: str):
         score += 6
         reasons.append("plaats gevonden")
 
-    if extract_listing_like_snippet(text):
+    if snippet:
         score += 8
         reasons.append("listing-snippet")
 
     if "huur" in lower and prices:
         score += 8
         reasons.append("huur + prijs")
+
+    if prices and rooms and surfaces:
+        score += 16
+        reasons.append("volledig profiel")
+
+    if has_address_hint(text):
+        score += 6
+        reasons.append("adresachtig patroon")
 
     if noise_count >= 1:
         score -= 18
@@ -277,11 +332,17 @@ def listing_signal_score(row, title: str, text: str):
     if "wat is mijn woning waard" in lower or "veelgestelde vragen" in lower:
         score -= 30
 
+    if google_noise:
+        score -= 45
+
+    if row["bron"].lower().startswith("google") and not prices and not rooms and not surfaces:
+        score -= 20
+
     score = max(0, min(score, 100))
 
-    if score >= 68:
+    if score >= 70:
         label = "Waarschijnlijk nieuwe woning"
-    elif score >= 42:
+    elif score >= 45:
         label = "Mogelijk nieuw aanbod"
     else:
         label = "Algemene update"
@@ -291,15 +352,14 @@ def listing_signal_score(row, title: str, text: str):
     sample_bits.extend(surfaces[:2])
     sample_bits.extend(rooms[:2])
 
-    snippet = extract_listing_like_snippet(text)
-
     return {
         "score": score,
         "label": label,
         "reasons": reasons[:4],
         "signals": sample_bits[:5],
         "snippet": snippet,
-        "noise_count": noise_count
+        "noise_count": noise_count,
+        "google_noise": google_noise
     }
 
 
@@ -338,7 +398,8 @@ def detect_changes(rows):
             "reasons": [],
             "signals": [],
             "snippet": "",
-            "noise_count": 0
+            "noise_count": 0,
+            "google_noise": False
         }
 
         try:
@@ -384,6 +445,7 @@ def detect_changes(rows):
                 "signals": ai["signals"],
                 "snippet": ai["snippet"],
                 "noise_count": ai["noise_count"],
+                "google_noise": ai["google_noise"],
             })
         elif old.get("digest") != digest:
             detections.append({
@@ -401,6 +463,7 @@ def detect_changes(rows):
                 "signals": ai["signals"],
                 "snippet": ai["snippet"],
                 "noise_count": ai["noise_count"],
+                "google_noise": ai["google_noise"],
             })
 
     detections.sort(key=lambda x: x.get("ai_score", 0), reverse=True)
@@ -502,7 +565,7 @@ button.ghost{background:#fff;color:var(--text);border:1px solid var(--line)}
         <div class="stat"><strong id="totalCount">0</strong><span>bronnen</span></div>
         <div class="stat"><strong id="signalCount">0</strong><span>signalen</span></div>
         <div class="stat"><strong id="highCount">0</strong><span>sterk</span></div>
-        <div class="stat"><strong id="unseenCount">0</strong><span>ongezien</span></div>
+        <div class="stat"><strong id="unseenCount">0</strong><span>te bekijken</span></div>
       </div>
     </div>
 
@@ -515,7 +578,7 @@ button.ghost{background:#fff;color:var(--text);border:1px solid var(--line)}
       <div class="section">
         <div class="section-head"><h2>Radar</h2><span class="subtle">alle updates</span></div>
         <div class="card">
-          <div class="notice">De radar probeert onderscheid te maken tussen waarschijnlijk nieuwe woning, mogelijk nieuw aanbod en algemene updates. Alleen sterkere signalen komen bovenaan.</div>
+          <div class="notice">De radar probeert onderscheid te maken tussen waarschijnlijk nieuwe woning, mogelijk nieuw aanbod en algemene updates. Google-ruis wordt zoveel mogelijk uitgefilterd.</div>
           <div class="action-row">
             <button id="markAllSeen">Alles gezien</button>
             <button class="ghost" id="resetRadar">Reset radar</button>
@@ -604,8 +667,8 @@ Als je iets ziet, stuur me dan meteen de link door. Dank je wel!</textarea>
 <script>
 const data = __DATA_JSON__;
 const detections = __DETECTIONS_JSON__;
-const favKey = "woningzoeker_ai_radar_v4_favs";
-const seenKey = "woningzoeker_ai_radar_v4_seen";
+const favKey = "woningzoeker_ai_radar_v5_favs";
+const seenKey = "woningzoeker_ai_radar_v5_seen";
 
 const getFavs = () => JSON.parse(localStorage.getItem(favKey) || "[]");
 const setFavs = (favs) => localStorage.setItem(favKey, JSON.stringify(favs));
@@ -646,7 +709,7 @@ function sourceScore(item) {
 
 function itemHtml(item, isFav) {
   const sc = sourceScore(item);
-  const newBadge = isNew(item) ? '<span class="badge-new">Ongezien</span>' : '<span>Gezien</span>';
+  const newBadge = isNew(item) ? '<span class="badge-new">Te bekijken</span>' : '<span>Gezien</span>';
 
   return `
     <div class="item priority${item.prioriteit}">
@@ -668,8 +731,8 @@ function itemHtml(item, isFav) {
 }
 
 function signalClass(score) {
-  if (score >= 68) return "signal-high";
-  if (score >= 42) return "signal-mid";
+  if (score >= 70) return "signal-high";
+  if (score >= 45) return "signal-mid";
   return "signal-low";
 }
 
@@ -696,7 +759,7 @@ function detectionHtml(item) {
 
 function renderBestSignals() {
   const best = [...detections]
-    .filter(x => (x.ai_score || 0) >= 42)
+    .filter(x => (x.ai_score || 0) >= 45 && !x.google_noise)
     .sort((a,b) => (b.ai_score || 0) - (a.ai_score || 0))
     .slice(0, 3);
 
@@ -706,7 +769,7 @@ function renderBestSignals() {
 
 function renderDetections() {
   const clean = [...detections]
-    .filter(x => (x.ai_score || 0) >= 20)
+    .filter(x => (x.ai_score || 0) >= 20 && !x.google_noise)
     .sort((a,b) => (b.ai_score || 0) - (a.ai_score || 0));
 
   detectionList.innerHTML = clean.length ? "" : '<div class="empty">Nog geen bruikbare signalen beschikbaar.</div>';
@@ -750,9 +813,10 @@ function renderFavs() {
 }
 
 function renderStats() {
+  const clean = detections.filter(x => (x.ai_score || 0) >= 20 && !x.google_noise);
   document.getElementById("totalCount").textContent = data.length;
-  document.getElementById("signalCount").textContent = detections.filter(x => (x.ai_score || 0) >= 20).length;
-  document.getElementById("highCount").textContent = detections.filter(x => (x.ai_score || 0) >= 68).length;
+  document.getElementById("signalCount").textContent = clean.length;
+  document.getElementById("highCount").textContent = clean.filter(x => (x.ai_score || 0) >= 70).length;
   document.getElementById("unseenCount").textContent = data.filter(isNew).length;
 }
 
