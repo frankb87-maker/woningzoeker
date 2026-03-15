@@ -1,442 +1,970 @@
 {
   "Funda|Beverwijk|https://www.funda.nl/zoeken/huur?selected_area=%5B%22beverwijk%22%5D&price=%22-1600%22": {
-    "digest": "9b6f782e3feb31b8760ccad03b64b39fa0844ecad1c82e9593a422321a3162fd",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
+    "checked_at": "2026-03-15 20:54",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
     "plaats": "Beverwijk",
     "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22beverwijk%22%5D&price=%22-1600%22",
     "prioriteit": 1,
-    "focus": "huurwoningen"
+    "focus": "huurwoningen",
+    "ai": {
+      "score": 40,
+      "label": "mogelijk nieuw aanbod",
+      "reasons": [
+        "prioriteit 1",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   },
   "Pararius|Beverwijk|https://www.pararius.nl/huurwoningen/beverwijk/0-1600": {
-    "digest": "9909c8ef7e8ffd1a680c06b69fc966de9ca1114a413d42b5b09a577a6cf856cb",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
+    "checked_at": "2026-03-15 20:54",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
     "plaats": "Beverwijk",
     "url": "https://www.pararius.nl/huurwoningen/beverwijk/0-1600",
     "prioriteit": 1,
-    "focus": "huurwoningen"
+    "focus": "huurwoningen",
+    "ai": {
+      "score": 40,
+      "label": "mogelijk nieuw aanbod",
+      "reasons": [
+        "prioriteit 1",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   },
   "Google 2 kamers|Beverwijk|https://www.google.com/search?q=2+kamer+appartement+huur+Beverwijk+max+1600": {
-    "digest": "8b3781c3e075ace4560f131f25a3a17dfc4ec24e194d35f9dbc758647872e489",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:54",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
     "plaats": "Beverwijk",
     "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Beverwijk+max+1600",
     "prioriteit": 1,
-    "focus": "2 kamers"
+    "focus": "2 kamers",
+    "ai": {
+      "score": 20,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 1"
+      ],
+      "signals": []
+    }
   },
   "Google 3 kamers|Beverwijk|https://www.google.com/search?q=3+kamer+appartement+huur+Beverwijk+max+1600": {
-    "digest": "38ecd72a2063544ec5be377a41e02607f162d0852dfca842651ff0c40136d2bd",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:54",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
     "plaats": "Beverwijk",
     "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Beverwijk+max+1600",
     "prioriteit": 2,
-    "focus": "3 kamers"
+    "focus": "3 kamers",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google kindvriendelijk|Beverwijk|https://www.google.com/search?q=kindvriendelijke+huurwoning+Beverwijk+max+1600": {
-    "digest": "e44370ceac96ce1bad7555f2efaf6359b0aa13599d92f7cb8c5d5fafe74d539a",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:54",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
     "plaats": "Beverwijk",
     "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Beverwijk+max+1600",
     "prioriteit": 2,
-    "focus": "kindvriendelijk"
+    "focus": "kindvriendelijk",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google gezinswoning|Beverwijk|https://www.google.com/search?q=gezinswoning+huur+Beverwijk+max+1600": {
-    "digest": "81cd3da8315629ab4d176d587aa91f82d221894a0cb682e6c310301b29c86834",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:54",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
     "plaats": "Beverwijk",
     "url": "https://www.google.com/search?q=gezinswoning+huur+Beverwijk+max+1600",
     "prioriteit": 2,
-    "focus": "gezinswoning"
+    "focus": "gezinswoning",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Funda|Heemskerk|https://www.funda.nl/zoeken/huur?selected_area=%5B%22heemskerk%22%5D&price=%22-1600%22": {
-    "digest": "9b6f782e3feb31b8760ccad03b64b39fa0844ecad1c82e9593a422321a3162fd",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
+    "checked_at": "2026-03-15 20:54",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
     "plaats": "Heemskerk",
     "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22heemskerk%22%5D&price=%22-1600%22",
     "prioriteit": 1,
-    "focus": "huurwoningen"
+    "focus": "huurwoningen",
+    "ai": {
+      "score": 40,
+      "label": "mogelijk nieuw aanbod",
+      "reasons": [
+        "prioriteit 1",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   },
   "Pararius|Heemskerk|https://www.pararius.nl/huurwoningen/heemskerk/0-1600": {
-    "digest": "a9febd64e98e6494c86295e6c982d82e92f537034e88e000ff2dc5f71711ee63",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
+    "checked_at": "2026-03-15 20:54",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
     "plaats": "Heemskerk",
     "url": "https://www.pararius.nl/huurwoningen/heemskerk/0-1600",
     "prioriteit": 1,
-    "focus": "huurwoningen"
+    "focus": "huurwoningen",
+    "ai": {
+      "score": 40,
+      "label": "mogelijk nieuw aanbod",
+      "reasons": [
+        "prioriteit 1",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   },
   "Google 2 kamers|Heemskerk|https://www.google.com/search?q=2+kamer+appartement+huur+Heemskerk+max+1600": {
-    "digest": "8705ae0dd592d0f394b42f113c59910bdc9935a5c44358cc7f4f5e4b6e42d960",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:54",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
     "plaats": "Heemskerk",
     "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Heemskerk+max+1600",
     "prioriteit": 1,
-    "focus": "2 kamers"
+    "focus": "2 kamers",
+    "ai": {
+      "score": 20,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 1"
+      ],
+      "signals": []
+    }
   },
   "Google 3 kamers|Heemskerk|https://www.google.com/search?q=3+kamer+appartement+huur+Heemskerk+max+1600": {
-    "digest": "d9cb3f8c489dc1a86f71f684ad5950238c87567b5d9633e89d87b78797615ee1",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:54",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
     "plaats": "Heemskerk",
     "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Heemskerk+max+1600",
     "prioriteit": 2,
-    "focus": "3 kamers"
+    "focus": "3 kamers",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google kindvriendelijk|Heemskerk|https://www.google.com/search?q=kindvriendelijke+huurwoning+Heemskerk+max+1600": {
-    "digest": "67110256cc565c05ee32f9d63cfb8096decb87987e1cbbac81b18045fd5a86f5",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
     "plaats": "Heemskerk",
     "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Heemskerk+max+1600",
     "prioriteit": 2,
-    "focus": "kindvriendelijk"
+    "focus": "kindvriendelijk",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google gezinswoning|Heemskerk|https://www.google.com/search?q=gezinswoning+huur+Heemskerk+max+1600": {
-    "digest": "2fce7eda046aab33799125e79fc5ae3201d86a223f15910e9521178db456a936",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
     "plaats": "Heemskerk",
     "url": "https://www.google.com/search?q=gezinswoning+huur+Heemskerk+max+1600",
     "prioriteit": 2,
-    "focus": "gezinswoning"
+    "focus": "gezinswoning",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Funda|Uitgeest|https://www.funda.nl/zoeken/huur?selected_area=%5B%22uitgeest%22%5D&price=%22-1600%22": {
-    "digest": "9b6f782e3feb31b8760ccad03b64b39fa0844ecad1c82e9593a422321a3162fd",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
     "plaats": "Uitgeest",
     "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22uitgeest%22%5D&price=%22-1600%22",
     "prioriteit": 2,
-    "focus": "regio-uitbreiding"
+    "focus": "regio-uitbreiding",
+    "ai": {
+      "score": 30,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   },
   "Pararius|Uitgeest|https://www.pararius.nl/huurwoningen/uitgeest/0-1600": {
-    "digest": "f53816429e266e37f1d869a5bc57e6c6b2968105b4e274878bd235d7d9c6a5c1",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
+    "checked_at": "2026-03-15 20:55",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
     "plaats": "Uitgeest",
     "url": "https://www.pararius.nl/huurwoningen/uitgeest/0-1600",
     "prioriteit": 2,
-    "focus": "regio-uitbreiding"
+    "focus": "regio-uitbreiding",
+    "ai": {
+      "score": 30,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   },
   "Google 2 kamers|Uitgeest|https://www.google.com/search?q=2+kamer+appartement+huur+Uitgeest+max+1600": {
-    "digest": "0fa78183695eb7d9c423a83bfac12f58fc0d9b0da9791a68f1a6fede9c5e97d9",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
     "plaats": "Uitgeest",
     "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Uitgeest+max+1600",
     "prioriteit": 2,
-    "focus": "2 kamers"
+    "focus": "2 kamers",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google 3 kamers|Uitgeest|https://www.google.com/search?q=3+kamer+appartement+huur+Uitgeest+max+1600": {
-    "digest": "5aa6cfce03f56ac7070df63de00ad32446f101ec943742afc63054f5a02159a5",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
     "plaats": "Uitgeest",
     "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Uitgeest+max+1600",
     "prioriteit": 2,
-    "focus": "3 kamers"
+    "focus": "3 kamers",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google kindvriendelijk|Uitgeest|https://www.google.com/search?q=kindvriendelijke+huurwoning+Uitgeest+max+1600": {
-    "digest": "4bd3e3c29a8765940dc04de203dd6e12b8f06b264eef9b519cb5cdde879fc6b7",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
     "plaats": "Uitgeest",
     "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Uitgeest+max+1600",
     "prioriteit": 2,
-    "focus": "kindvriendelijk"
+    "focus": "kindvriendelijk",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google gezinswoning|Uitgeest|https://www.google.com/search?q=gezinswoning+huur+Uitgeest+max+1600": {
-    "digest": "17d7a639bb62b7eae2269f6aa304fdff91215c65e62d659527b04294f7dc5166",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
     "plaats": "Uitgeest",
     "url": "https://www.google.com/search?q=gezinswoning+huur+Uitgeest+max+1600",
     "prioriteit": 2,
-    "focus": "gezinswoning"
+    "focus": "gezinswoning",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Funda|Castricum|https://www.funda.nl/zoeken/huur?selected_area=%5B%22castricum%22%5D&price=%22-1600%22": {
-    "digest": "9b6f782e3feb31b8760ccad03b64b39fa0844ecad1c82e9593a422321a3162fd",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
     "plaats": "Castricum",
     "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22castricum%22%5D&price=%22-1600%22",
     "prioriteit": 2,
-    "focus": "regio-uitbreiding"
+    "focus": "regio-uitbreiding",
+    "ai": {
+      "score": 30,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   },
   "Pararius|Castricum|https://www.pararius.nl/huurwoningen/castricum/0-1600": {
-    "digest": "0f04cd043a49b4a8ecded260ad773179d91e3d710b59bf8cd1c54c8dbc2ea872",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
+    "checked_at": "2026-03-15 20:55",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
     "plaats": "Castricum",
     "url": "https://www.pararius.nl/huurwoningen/castricum/0-1600",
     "prioriteit": 2,
-    "focus": "regio-uitbreiding"
+    "focus": "regio-uitbreiding",
+    "ai": {
+      "score": 30,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   },
   "Google 2 kamers|Castricum|https://www.google.com/search?q=2+kamer+appartement+huur+Castricum+max+1600": {
-    "digest": "a8f5b81f133bb6566881b7757a191576ffd5591b3044db68ef6b1a86afb15b2c",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
     "plaats": "Castricum",
     "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Castricum+max+1600",
     "prioriteit": 2,
-    "focus": "2 kamers"
+    "focus": "2 kamers",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google 3 kamers|Castricum|https://www.google.com/search?q=3+kamer+appartement+huur+Castricum+max+1600": {
-    "digest": "29cf2dcc7c9e99d51a149bfdc55e5586f60b4cf2d585e656184c5213d7088139",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
     "plaats": "Castricum",
     "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Castricum+max+1600",
     "prioriteit": 2,
-    "focus": "3 kamers"
+    "focus": "3 kamers",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google kindvriendelijk|Castricum|https://www.google.com/search?q=kindvriendelijke+huurwoning+Castricum+max+1600": {
-    "digest": "f7b1e2307bcf3e426b47bb2f326e86a76cf5128efe065b3452852c7c4b0ec2c3",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
     "plaats": "Castricum",
     "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Castricum+max+1600",
     "prioriteit": 2,
-    "focus": "kindvriendelijk"
+    "focus": "kindvriendelijk",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google gezinswoning|Castricum|https://www.google.com/search?q=gezinswoning+huur+Castricum+max+1600": {
-    "digest": "28f7cad43a36e5b72b32afb7ce64e5f968951e8511f01d344eea88e3e88c36ec",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
     "plaats": "Castricum",
     "url": "https://www.google.com/search?q=gezinswoning+huur+Castricum+max+1600",
     "prioriteit": 2,
-    "focus": "gezinswoning"
+    "focus": "gezinswoning",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Funda|Assendelft|https://www.funda.nl/zoeken/huur?selected_area=%5B%22assendelft%22%5D&price=%22-1600%22": {
-    "digest": "9b6f782e3feb31b8760ccad03b64b39fa0844ecad1c82e9593a422321a3162fd",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
     "plaats": "Assendelft",
     "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22assendelft%22%5D&price=%22-1600%22",
     "prioriteit": 2,
-    "focus": "regio-uitbreiding"
+    "focus": "regio-uitbreiding",
+    "ai": {
+      "score": 30,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   },
   "Pararius|Assendelft|https://www.pararius.nl/huurwoningen/assendelft/0-1600": {
-    "digest": "903978743fb26f8229036d82f399cb609079c571c048f68b35080784d1592287",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
+    "checked_at": "2026-03-15 20:55",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
     "plaats": "Assendelft",
     "url": "https://www.pararius.nl/huurwoningen/assendelft/0-1600",
     "prioriteit": 2,
-    "focus": "regio-uitbreiding"
+    "focus": "regio-uitbreiding",
+    "ai": {
+      "score": 30,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   },
   "Google 2 kamers|Assendelft|https://www.google.com/search?q=2+kamer+appartement+huur+Assendelft+max+1600": {
-    "digest": "53483e287a9673c33347294b18dff5b2dedd4166efa65cdcc184165d2efaffcd",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
     "plaats": "Assendelft",
     "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Assendelft+max+1600",
     "prioriteit": 2,
-    "focus": "2 kamers"
+    "focus": "2 kamers",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google 3 kamers|Assendelft|https://www.google.com/search?q=3+kamer+appartement+huur+Assendelft+max+1600": {
-    "digest": "6f0e482c3fab6af2c4b55ba4d657047d28eb0c328b4eef951f34db0a586aa58a",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
     "plaats": "Assendelft",
     "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Assendelft+max+1600",
     "prioriteit": 2,
-    "focus": "3 kamers"
+    "focus": "3 kamers",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google kindvriendelijk|Assendelft|https://www.google.com/search?q=kindvriendelijke+huurwoning+Assendelft+max+1600": {
-    "digest": "a662c5ff27eb9f8d1836c4034b38982c6d2d8268f4012106e1030eb36652f662",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
     "plaats": "Assendelft",
     "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Assendelft+max+1600",
     "prioriteit": 2,
-    "focus": "kindvriendelijk"
+    "focus": "kindvriendelijk",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google gezinswoning|Assendelft|https://www.google.com/search?q=gezinswoning+huur+Assendelft+max+1600": {
-    "digest": "98d1fccd0b19a842b133cfa88f2ab73fee726fe62058bd002a75f4fe8a3b5f43",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
     "plaats": "Assendelft",
     "url": "https://www.google.com/search?q=gezinswoning+huur+Assendelft+max+1600",
     "prioriteit": 2,
-    "focus": "gezinswoning"
+    "focus": "gezinswoning",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Funda|Velsen-Noord|https://www.funda.nl/zoeken/huur?selected_area=%5B%22velsen-noord%22%5D&price=%22-1600%22": {
-    "digest": "9b6f782e3feb31b8760ccad03b64b39fa0844ecad1c82e9593a422321a3162fd",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
     "plaats": "Velsen-Noord",
     "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22velsen-noord%22%5D&price=%22-1600%22",
     "prioriteit": 2,
-    "focus": "regio-uitbreiding"
+    "focus": "regio-uitbreiding",
+    "ai": {
+      "score": 30,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   },
   "Pararius|Velsen-Noord|https://www.pararius.nl/huurwoningen/velsen-noord/0-1600": {
-    "digest": "07cd31f6caa17a0ca0fd3171417137f9cecf52e6c76a404f018bc591c8d7938f",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
+    "checked_at": "2026-03-15 20:55",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
     "plaats": "Velsen-Noord",
     "url": "https://www.pararius.nl/huurwoningen/velsen-noord/0-1600",
     "prioriteit": 2,
-    "focus": "regio-uitbreiding"
+    "focus": "regio-uitbreiding",
+    "ai": {
+      "score": 30,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   },
   "Google 2 kamers|Velsen-Noord|https://www.google.com/search?q=2+kamer+appartement+huur+Velsen-Noord+max+1600": {
-    "digest": "73abebf097f66086f6fd31b6556a9d2495be517b9a4932842d5a1057642cbaf3",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
     "plaats": "Velsen-Noord",
     "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Velsen-Noord+max+1600",
     "prioriteit": 2,
-    "focus": "2 kamers"
+    "focus": "2 kamers",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google 3 kamers|Velsen-Noord|https://www.google.com/search?q=3+kamer+appartement+huur+Velsen-Noord+max+1600": {
-    "digest": "e0b0cfcf7163a1e73e66ed925b52ceeeab756fe0be0239a9c8454e617d989c09",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
     "plaats": "Velsen-Noord",
     "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Velsen-Noord+max+1600",
     "prioriteit": 2,
-    "focus": "3 kamers"
+    "focus": "3 kamers",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google kindvriendelijk|Velsen-Noord|https://www.google.com/search?q=kindvriendelijke+huurwoning+Velsen-Noord+max+1600": {
-    "digest": "c9d35559d7f8bf471b591293243f77da6dae6f363897c88bce1d654b7a494527",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
     "plaats": "Velsen-Noord",
     "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Velsen-Noord+max+1600",
     "prioriteit": 2,
-    "focus": "kindvriendelijk"
+    "focus": "kindvriendelijk",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google gezinswoning|Velsen-Noord|https://www.google.com/search?q=gezinswoning+huur+Velsen-Noord+max+1600": {
-    "digest": "ce767a0cde77033e075a02de702807ece08073305e10d5f84d9206610ec6090c",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
     "plaats": "Velsen-Noord",
     "url": "https://www.google.com/search?q=gezinswoning+huur+Velsen-Noord+max+1600",
     "prioriteit": 2,
-    "focus": "gezinswoning"
+    "focus": "gezinswoning",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Funda|Wijk aan Zee|https://www.funda.nl/zoeken/huur?selected_area=%5B%22wijk aan zee%22%5D&price=%22-1600%22": {
-    "digest": "9b6f782e3feb31b8760ccad03b64b39fa0844ecad1c82e9593a422321a3162fd",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
     "plaats": "Wijk aan Zee",
     "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22wijk aan zee%22%5D&price=%22-1600%22",
     "prioriteit": 2,
-    "focus": "regio-uitbreiding"
+    "focus": "regio-uitbreiding",
+    "ai": {
+      "score": 30,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   },
   "Pararius|Wijk aan Zee|https://www.pararius.nl/huurwoningen/wijk aan zee/0-1600": {
-    "digest": "236e68af6067e19816ce5b0ec540920211afc13ff0abcd9447afeeebd7dfed8d",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
+    "checked_at": "2026-03-15 20:55",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
     "plaats": "Wijk aan Zee",
     "url": "https://www.pararius.nl/huurwoningen/wijk aan zee/0-1600",
     "prioriteit": 2,
-    "focus": "regio-uitbreiding"
+    "focus": "regio-uitbreiding",
+    "ai": {
+      "score": 30,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   },
   "Google 2 kamers|Wijk aan Zee|https://www.google.com/search?q=2+kamer+appartement+huur+Wijk+aan+Zee+max+1600": {
-    "digest": "d06407d6a9210e85510acded7f36275566a3a146367b00d64fb73a5dd85d5ff5",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
     "plaats": "Wijk aan Zee",
     "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Wijk+aan+Zee+max+1600",
     "prioriteit": 2,
-    "focus": "2 kamers"
+    "focus": "2 kamers",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
   },
   "Google 3 kamers|Wijk aan Zee|https://www.google.com/search?q=3+kamer+appartement+huur+Wijk+aan+Zee+max+1600": {
-    "digest": "2044f94413f18363c92deb37fb1b5b901a337211f3989c0f2b3ab16cb0182eba",
-    "checked_at": "2026-03-15 20:29",
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
     "plaats": "Wijk aan Zee",
     "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Wijk+aan+Zee+max+1600",
     "prioriteit": 2,
-    "focus": "3 kamers"
+    "focus": "3 kamers",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
+  },
+  "Google kindvriendelijk|Wijk aan Zee|https://www.google.com/search?q=kindvriendelijke+huurwoning+Wijk+aan+Zee+max+1600": {
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
+    "status": "200",
+    "title": "Google Search",
+    "bron": "Google kindvriendelijk",
+    "plaats": "Wijk aan Zee",
+    "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Wijk+aan+Zee+max+1600",
+    "prioriteit": 2,
+    "focus": "kindvriendelijk",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
+  },
+  "Google gezinswoning|Wijk aan Zee|https://www.google.com/search?q=gezinswoning+huur+Wijk+aan+Zee+max+1600": {
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
+    "status": "200",
+    "title": "Google Search",
+    "bron": "Google gezinswoning",
+    "plaats": "Wijk aan Zee",
+    "url": "https://www.google.com/search?q=gezinswoning+huur+Wijk+aan+Zee+max+1600",
+    "prioriteit": 2,
+    "focus": "gezinswoning",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
+  },
+  "Funda|Zaandam|https://www.funda.nl/zoeken/huur?selected_area=%5B%22zaandam%22%5D&price=%22-1600%22": {
+    "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
+    "checked_at": "2026-03-15 20:55",
+    "status": "200",
+    "title": "Je bent bijna op de pagina die je zoekt [funda]",
+    "bron": "Funda",
+    "plaats": "Zaandam",
+    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22zaandam%22%5D&price=%22-1600%22",
+    "prioriteit": 2,
+    "focus": "regio-uitbreiding",
+    "ai": {
+      "score": 30,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "sterke bron"
+      ],
+      "signals": []
+    }
+  },
+  "Pararius|Zaandam|https://www.pararius.nl/huurwoningen/zaandam/0-1600": {
+    "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
+    "checked_at": "2026-03-15 20:55",
+    "status": "403",
+    "title": "Just a moment...",
+    "bron": "Pararius",
+    "plaats": "Zaandam",
+    "url": "https://www.pararius.nl/huurwoningen/zaandam/0-1600",
+    "prioriteit": 2,
+    "focus": "regio-uitbreiding",
+    "ai": {
+      "score": 30,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "sterke bron"
+      ],
+      "signals": []
+    }
+  },
+  "Google 2 kamers|Zaandam|https://www.google.com/search?q=2+kamer+appartement+huur+Zaandam+max+1600": {
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
+    "status": "200",
+    "title": "Google Search",
+    "bron": "Google 2 kamers",
+    "plaats": "Zaandam",
+    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Zaandam+max+1600",
+    "prioriteit": 2,
+    "focus": "2 kamers",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
+  },
+  "Google 3 kamers|Zaandam|https://www.google.com/search?q=3+kamer+appartement+huur+Zaandam+max+1600": {
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
+    "status": "200",
+    "title": "Google Search",
+    "bron": "Google 3 kamers",
+    "plaats": "Zaandam",
+    "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Zaandam+max+1600",
+    "prioriteit": 2,
+    "focus": "3 kamers",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
+  },
+  "Google kindvriendelijk|Zaandam|https://www.google.com/search?q=kindvriendelijke+huurwoning+Zaandam+max+1600": {
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
+    "status": "200",
+    "title": "Google Search",
+    "bron": "Google kindvriendelijk",
+    "plaats": "Zaandam",
+    "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Zaandam+max+1600",
+    "prioriteit": 2,
+    "focus": "kindvriendelijk",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
+  },
+  "Google gezinswoning|Zaandam|https://www.google.com/search?q=gezinswoning+huur+Zaandam+max+1600": {
+    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
+    "checked_at": "2026-03-15 20:55",
+    "status": "200",
+    "title": "Google Search",
+    "bron": "Google gezinswoning",
+    "plaats": "Zaandam",
+    "url": "https://www.google.com/search?q=gezinswoning+huur+Zaandam+max+1600",
+    "prioriteit": 2,
+    "focus": "gezinswoning",
+    "ai": {
+      "score": 10,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2"
+      ],
+      "signals": []
+    }
+  },
+  "Funda|Driehuis|https://www.funda.nl/zoeken/huur?selected_area=%5B%22driehuis%22%5D&price=%22-1600%22": {
+    "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
+    "checked_at": "2026-03-15 20:55",
+    "status": "200",
+    "title": "Je bent bijna op de pagina die je zoekt [funda]",
+    "bron": "Funda",
+    "plaats": "Driehuis",
+    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22driehuis%22%5D&price=%22-1600%22",
+    "prioriteit": 2,
+    "focus": "regio-uitbreiding",
+    "ai": {
+      "score": 30,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "sterke bron"
+      ],
+      "signals": []
+    }
+  },
+  "Pararius|Driehuis|https://www.pararius.nl/huurwoningen/driehuis/0-1600": {
+    "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
+    "checked_at": "2026-03-15 20:55",
+    "status": "403",
+    "title": "Just a moment...",
+    "bron": "Pararius",
+    "plaats": "Driehuis",
+    "url": "https://www.pararius.nl/huurwoningen/driehuis/0-1600",
+    "prioriteit": 2,
+    "focus": "regio-uitbreiding",
+    "ai": {
+      "score": 30,
+      "label": "algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "sterke bron"
+      ],
+      "signals": []
+    }
   }
 }
