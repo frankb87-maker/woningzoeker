@@ -168,6 +168,14 @@ def extract_room_signals(text: str):
     return list(dict.fromkeys(found))[:8]
 
 
+def extract_listing_like_snippet(text: str):
+    m = re.search(r"(.{0,80}(?:€\s?\d{3,5}|eur\s?\d{3,5}|\d{2,3}\s?m²|\d+\s?kamer[s]?|huurwoning|appartement|woning).{0,160})", text, flags=re.I)
+    if m:
+        snippet = re.sub(r"\s+", " ", m.group(1)).strip()
+        return snippet[:220]
+    return text[:180].strip()
+
+
 def listing_signal_score(row, title: str, text: str):
     score = 0
     reasons = []
@@ -176,30 +184,30 @@ def listing_signal_score(row, title: str, text: str):
     title_lower = title.lower()
 
     if row["prioriteit"] == 1:
-        score += 20
+        score += 22
         reasons.append("prioriteit 1")
     elif row["prioriteit"] == 2:
         score += 10
         reasons.append("prioriteit 2")
 
     if row["bron"] in ["Funda", "Pararius"]:
-        score += 20
+        score += 18
         reasons.append("sterke bron")
 
     prices = extract_price_signals(text)
     if prices:
-        score += 20
-        reasons.append("prijs-signaal")
+        score += 22
+        reasons.append("prijs gevonden")
 
     surfaces = extract_surface_signals(text)
     if surfaces:
         score += 10
-        reasons.append("m²-signaal")
+        reasons.append("m² gevonden")
 
     rooms = extract_room_signals(text)
     if rooms:
-        score += 15
-        reasons.append("kamer-signaal")
+        score += 14
+        reasons.append("kamers gevonden")
 
     keyword_hits = 0
     for kw in ["huur", "woning", "appartement", "studio", "kamer", "slaapkamer"]:
@@ -210,20 +218,20 @@ def listing_signal_score(row, title: str, text: str):
         reasons.append("woning-taal")
 
     if row["plaats"].lower() in lower or row["plaats"].lower() in title_lower:
-        score += 5
+        score += 6
         reasons.append("plaats gevonden")
 
     if len(text) > 3000:
-        score += 5
+        score += 4
 
     score = min(score, 100)
 
-    if score >= 65:
-        label = "waarschijnlijk nieuwe woning"
-    elif score >= 40:
-        label = "mogelijk nieuw aanbod"
+    if score >= 68:
+        label = "Waarschijnlijk nieuwe woning"
+    elif score >= 42:
+        label = "Mogelijk nieuw aanbod"
     else:
-        label = "algemene update"
+        label = "Algemene update"
 
     sample_bits = []
     sample_bits.extend(prices[:2])
@@ -234,7 +242,8 @@ def listing_signal_score(row, title: str, text: str):
         "score": score,
         "label": label,
         "reasons": reasons[:4],
-        "signals": sample_bits[:5]
+        "signals": sample_bits[:5],
+        "snippet": extract_listing_like_snippet(text)
     }
 
 
@@ -260,8 +269,7 @@ def detect_changes(rows):
     detections = []
 
     headers = {"User-Agent": "Mozilla/5.0"}
-
-    candidates = [r for r in rows if r["prioriteit"] <= 2][:50]
+    candidates = [r for r in rows if r["prioriteit"] <= 2][:60]
 
     for row in candidates:
         item_id = f'{row["bron"]}|{row["plaats"]}|{row["url"]}'
@@ -271,9 +279,10 @@ def detect_changes(rows):
         digest = ""
         ai = {
             "score": 0,
-            "label": "algemene update",
+            "label": "Algemene update",
             "reasons": [],
-            "signals": []
+            "signals": [],
+            "snippet": ""
         }
 
         try:
@@ -317,6 +326,7 @@ def detect_changes(rows):
                 "ai_label": ai["label"],
                 "ai_reasons": ai["reasons"],
                 "signals": ai["signals"],
+                "snippet": ai["snippet"],
             })
         elif old.get("digest") != digest:
             detections.append({
@@ -332,6 +342,7 @@ def detect_changes(rows):
                 "ai_label": ai["label"],
                 "ai_reasons": ai["reasons"],
                 "signals": ai["signals"],
+                "snippet": ai["snippet"],
             })
 
     detections.sort(key=lambda x: x.get("ai_score", 0), reverse=True)
@@ -348,67 +359,371 @@ def html_template(data_json: str, detections_json: str, generated_at: str) -> st
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>__APP_TITLE__</title>
-<meta name="theme-color" content="#0b57d0">
+<meta name="theme-color" content="#0f172a">
 <style>
 :root{
-  --bg:#eef4ff; --bg2:#f8fbff; --card:#ffffff; --text:#132238; --muted:#68788f;
-  --line:#d9e4f5; --brand:#0b57d0; --brand3:#eaf2ff; --green:#e9fff1; --greenLine:#a8e6c0;
-  --blue:#eef4ff; --blueLine:#c7d9ff; --gray:#f6f7f9; --grayLine:#d9dde3; --orange:#fff4e6;
-  --orangeLine:#f2c88e; --shadow:0 14px 42px rgba(13,39,89,.10);
-  --redsoft:#fff0f0; --redline:#f1b3b3;
+  --bg:#f4f7fb;
+  --shell:#ffffff;
+  --card:#ffffff;
+  --line:#e2e8f0;
+  --text:#0f172a;
+  --muted:#64748b;
+  --brand:#0f172a;
+  --brand-soft:#eff6ff;
+  --blue:#2563eb;
+  --blue-soft:#dbeafe;
+  --shadow:0 10px 30px rgba(15,23,42,.08);
+
+  --signal-high-bg:#ecfdf5;
+  --signal-high-line:#a7f3d0;
+  --signal-high-text:#065f46;
+
+  --signal-mid-bg:#fffbeb;
+  --signal-mid-line:#fde68a;
+  --signal-mid-text:#92400e;
+
+  --signal-low-bg:#f8fafc;
+  --signal-low-line:#cbd5e1;
+  --signal-low-text:#334155;
+
+  --prio1:#dcfce7;
+  --prio2:#dbeafe;
+  --prio3:#f1f5f9;
 }
-*{box-sizing:border-box} html,body{margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg2) 0%, var(--bg) 100%);color:var(--text)}
-.app-shell{max-width:430px;margin:0 auto;min-height:100vh;background:linear-gradient(180deg,#f8fbff 0%,#eef4ff 100%);position:relative}
-.safe{padding:16px 16px 104px 16px}
-.hero{background:linear-gradient(145deg,#0b57d0 0%, #2f74ef 42%, #72a8ff 100%);color:#fff;border-radius:30px;padding:24px 18px 18px;box-shadow:var(--shadow);overflow:hidden}
-.hero h1{margin:0;font-size:28px;line-height:1.04}
-.hero p{margin:10px 0 0;line-height:1.45;font-size:14px;max-width:320px;opacity:.96}
-.hero-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-.hero-meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.18);color:#fff;padding:8px 10px;border-radius:999px;font-size:12px}
-.grid-top{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
-.stat{background:rgba(255,255,255,.94);color:var(--text);border:1px solid rgba(255,255,255,.7);border-radius:18px;padding:13px}
-.stat strong{display:block;font-size:24px;margin-bottom:4px}
-.section{margin-top:16px}
-.section-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.section-head h2{margin:0;font-size:20px}
-.subtle{color:var(--muted);font-size:13px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:14px;box-shadow:0 8px 24px rgba(14,30,66,.05)}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  background:linear-gradient(180deg,#f8fafc 0%,#eef3f9 100%);
+  color:var(--text)
+}
+.app-shell{
+  max-width:440px;
+  margin:0 auto;
+  min-height:100vh;
+  background:var(--shell);
+  position:relative;
+  box-shadow:0 0 0 1px rgba(148,163,184,.08)
+}
+.safe{padding:18px 16px 104px}
+.hero{
+  background:linear-gradient(135deg,#0f172a 0%, #1e293b 52%, #2563eb 100%);
+  color:#fff;
+  border-radius:28px;
+  padding:24px 18px 18px;
+  box-shadow:var(--shadow)
+}
+.hero h1{
+  margin:0 0 10px;
+  font-size:26px;
+  line-height:1.04;
+  letter-spacing:-.02em
+}
+.hero p{
+  margin:0;
+  font-size:14px;
+  line-height:1.5;
+  color:rgba(255,255,255,.92)
+}
+.hero-meta{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:14px
+}
+.hero-meta span{
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.16);
+  color:#fff;
+  padding:8px 10px;
+  border-radius:999px;
+  font-size:12px
+}
+.grid-top{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:16px
+}
+.stat{
+  background:rgba(255,255,255,.96);
+  color:var(--text);
+  border-radius:18px;
+  padding:14px 12px;
+  min-height:82px
+}
+.stat strong{
+  display:block;
+  font-size:23px;
+  line-height:1.1;
+  margin-bottom:6px
+}
+.stat span{
+  font-size:12px;
+  color:var(--muted)
+}
+.section{margin-top:18px}
+.section-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px
+}
+.section-head h2{
+  margin:0;
+  font-size:22px;
+  letter-spacing:-.02em
+}
+.section-head .subtle{
+  color:var(--muted);
+  font-size:13px
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:14px;
+  box-shadow:0 8px 24px rgba(15,23,42,.04)
+}
+.notice{
+  background:#f8fafc;
+  border:1px solid #dbe4ef;
+  color:#334155;
+  border-radius:18px;
+  padding:12px;
+  font-size:13px;
+  line-height:1.5
+}
 .controls{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.controls .full{grid-column:1 / -1}
-label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
-input, select, textarea{width:100%;border:1px solid var(--line);border-radius:14px;padding:12px 12px;font-size:15px;background:#fff;color:var(--text)}
+.controls .full{grid-column:1/-1}
+label{
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:6px
+}
+input, select, textarea{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:12px;
+  font-size:15px;
+  background:#fff;
+  color:var(--text)
+}
 textarea{min-height:150px;resize:vertical}
-.action-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-button, .linkbtn{border:none;appearance:none;background:var(--brand);color:#fff;border-radius:14px;padding:11px 13px;font-size:14px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px}
-button.secondary, .linkbtn.secondary{background:var(--brand3);color:var(--brand)}
-button.ghost{background:#f5f7fb;color:#1f2937;border:1px solid var(--line)}
-.notice{background:#eef5ff;border:1px solid #c8d9ff;color:#1f4e98;border-radius:16px;padding:12px;font-size:13px;line-height:1.45}
+.action-row{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:12px
+}
+button, .linkbtn{
+  border:none;
+  appearance:none;
+  background:var(--brand);
+  color:#fff;
+  border-radius:14px;
+  padding:11px 13px;
+  font-size:14px;
+  text-decoration:none;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center
+}
+button.secondary, .linkbtn.secondary{
+  background:#eff6ff;
+  color:#1d4ed8
+}
+button.ghost{
+  background:#fff;
+  color:var(--text);
+  border:1px solid var(--line)
+}
 .list{display:grid;gap:12px}
-.item{border-radius:22px;padding:14px;border:1px solid var(--line);box-shadow:0 6px 18px rgba(15,23,42,.04)}
-.item h3{margin:0;font-size:18px;line-height:1.2}
-.meta{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 12px}
-.meta span{padding:6px 10px;border-radius:999px;font-size:12px;border:1px solid rgba(0,0,0,.04);background:rgba(255,255,255,.8)}
-.priority1{background:var(--green); border-color:var(--greenLine)} .priority2{background:var(--blue); border-color:var(--blueLine)} .priority3{background:var(--gray); border-color:var(--grayLine)}
-.badge-new{background:var(--orange)!important;border-color:var(--orangeLine)!important}
-.panel{display:none} .panel.active{display:block}
-.bottom-nav{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:min(430px,100%);background:rgba(255,255,255,.94);backdrop-filter: blur(12px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);padding:10px 8px calc(10px + env(safe-area-inset-bottom));z-index:10}
-.navbtn{border:none;background:transparent;color:var(--muted);font-size:11px;display:flex;flex-direction:column;align-items:center;gap:5px;padding:6px 0;cursor:pointer}
-.navbtn .icon{width:34px;height:34px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#f4f7fb;font-size:17px}
-.navbtn.active{color:var(--brand);font-weight:600} .navbtn.active .icon{background:var(--brand3)}
-.empty{color:var(--muted);text-align:center;padding:16px}
-.scorebar{height:8px;border-radius:999px;background:rgba(255,255,255,.65);overflow:hidden;margin-top:8px;border:1px solid rgba(0,0,0,.04)}
-.scorebar > div{height:100%;background:linear-gradient(90deg,#0b57d0,#69a2ff)}
-.priority-guide{display:grid;gap:10px} .priority-guide .box{border-radius:18px;padding:14px;line-height:1.45}
-.prio1{background:var(--green)} .prio2{background:var(--blue)} .prio3{background:var(--gray)}
-.footer-note{color:var(--muted);font-size:12px;text-align:center;margin-top:14px}
-.radarbox{background:#fff7e9;border:1px solid #f0cb8d;color:#6e4b08;border-radius:16px;padding:12px}
-.radarbox strong{display:block;margin-bottom:4px}
-.ai-high{background:#eafaf0;border:1px solid #98ddb0;color:#135c30}
-.ai-mid{background:#fff8e9;border:1px solid #edcf92;color:#7a5300}
-.ai-low{background:#f6f7f9;border:1px solid #d9dde3;color:#495466}
-.ai-badge{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;margin:6px 6px 0 0}
-.signal{display:inline-block;background:#f4f7fb;border:1px solid #dce7f7;color:#30455f;padding:6px 9px;border-radius:999px;font-size:12px;margin:4px 6px 0 0}
+.item{
+  border-radius:22px;
+  padding:14px;
+  border:1px solid var(--line);
+  background:#fff;
+  box-shadow:0 6px 18px rgba(15,23,42,.04)
+}
+.item h3{
+  margin:0;
+  font-size:18px;
+  line-height:1.25;
+  letter-spacing:-.01em
+}
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:10px 0 12px
+}
+.meta span{
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  border:1px solid rgba(0,0,0,.04);
+  background:#f8fafc
+}
+.priority1{background:var(--prio1)}
+.priority2{background:var(--prio2)}
+.priority3{background:var(--prio3)}
+.badge-new{
+  background:#dbeafe !important;
+  color:#1d4ed8;
+  border-color:#bfdbfe !important
+}
+.scorebar{
+  height:8px;
+  border-radius:999px;
+  background:#eef2f7;
+  overflow:hidden;
+  margin-top:8px
+}
+.scorebar > div{
+  height:100%;
+  background:linear-gradient(90deg,#0f172a,#2563eb)
+}
+.panel{display:none}
+.panel.active{display:block}
+.bottom-nav{
+  position:fixed;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:0;
+  width:min(440px,100%);
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(10px);
+  border-top:1px solid var(--line);
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  padding:10px 8px calc(10px + env(safe-area-inset-bottom));
+  z-index:20
+}
+.navbtn{
+  border:none;
+  background:transparent;
+  color:var(--muted);
+  font-size:11px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:5px;
+  padding:6px 0;
+  cursor:pointer
+}
+.navbtn .icon{
+  width:34px;
+  height:34px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f8fafc;
+  font-size:17px
+}
+.navbtn.active{color:#0f172a;font-weight:600}
+.navbtn.active .icon{background:#e2e8f0}
+.empty{
+  color:var(--muted);
+  text-align:center;
+  padding:18px
+}
+.signal-card{
+  border-radius:22px;
+  padding:14px;
+  border:1px solid var(--line)
+}
+.signal-high{
+  background:var(--signal-high-bg);
+  border-color:var(--signal-high-line);
+  color:var(--signal-high-text)
+}
+.signal-mid{
+  background:var(--signal-mid-bg);
+  border-color:var(--signal-mid-line);
+  color:var(--signal-mid-text)
+}
+.signal-low{
+  background:var(--signal-low-bg);
+  border-color:var(--signal-low-line);
+  color:var(--signal-low-text)
+}
+.signal-title{
+  margin:0 0 6px;
+  font-size:18px;
+  line-height:1.25;
+  letter-spacing:-.01em
+}
+.signal-sub{
+  font-size:13px;
+  opacity:.9;
+  margin-bottom:10px
+}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+.badge{
+  display:inline-block;
+  padding:6px 9px;
+  border-radius:999px;
+  font-size:12px;
+  background:rgba(255,255,255,.7);
+  border:1px solid rgba(0,0,0,.06)
+}
+.snippet{
+  margin-top:10px;
+  font-size:13px;
+  line-height:1.5;
+  color:#334155
+}
+.best-grid{display:grid;gap:12px}
+.priority-guide{display:grid;gap:10px}
+.priority-guide .box{
+  border-radius:18px;
+  padding:14px;
+  line-height:1.5;
+  border:1px solid var(--line)
+}
+.prio1{background:#ecfdf5}
+.prio2{background:#eff6ff}
+.prio3{background:#f8fafc}
+.footer-note{
+  color:var(--muted);
+  font-size:12px;
+  text-align:center;
+  margin-top:14px
+}
+.debug{
+  color:#94a3b8;
+  font-size:11px;
+  margin-top:8px
+}
+.top-summary{
+  display:grid;
+  gap:10px
+}
+.kpi-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px
+}
+.kpi{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:14px
+}
+.kpi strong{
+  display:block;
+  font-size:22px;
+  margin-bottom:4px
+}
+.kpi span{
+  color:var(--muted);
+  font-size:12px
+}
 </style>
 </head>
 <body>
@@ -416,33 +731,35 @@ button.ghost{background:#f5f7fb;color:#1f2937;border:1px solid var(--line)}
   <div class="safe">
     <div class="hero">
       <h1>__APP_TITLE__</h1>
-      <p>Woningzoek-overzicht voor Beverwijk, Heemskerk en omgeving. Deze app bundelt verschillende verhuurwebsites, makelaars en woningplatforms zodat je sneller woningen kunt vinden.</p>
+      <p>Professioneel woningzoek-overzicht voor Beverwijk, Heemskerk en omgeving. Deze radar bundelt verhuurwebsites, makelaars en woningplatforms en markeert de meest kansrijke updates.</p>
       <div class="hero-meta">
-        <span>__COUNT__ woningbronnen</span>
-        <span>Gegenereerd: __GENERATED_AT__</span>
-        <span>AI-detecties: __DETECTION_COUNT__</span>
+        <span>__COUNT__ bronnen</span>
+        <span>Laatste update: __GENERATED_AT__</span>
+        <span>__DETECTION_COUNT__ signalen</span>
       </div>
       <div class="grid-top">
-        <div class="stat"><strong id="totalCount">0</strong><span class="subtle">woningbronnen</span></div>
-        <div class="stat"><strong id="newCount">0</strong><span class="subtle">nieuw</span></div>
+        <div class="stat"><strong id="totalCount">0</strong><span>bronnen</span></div>
+        <div class="stat"><strong id="signalCount">0</strong><span>signalen</span></div>
+        <div class="stat"><strong id="highCount">0</strong><span>hoog</span></div>
+        <div class="stat"><strong id="newCount">0</strong><span>nieuw</span></div>
       </div>
     </div>
 
     <div id="dashboard" class="panel active section">
-      <div class="section-head"><h2>Radar</h2><span class="subtle">AI detectie</span></div>
+      <div class="section-head"><h2>Beste signalen vandaag</h2><span class="subtle">eerst checken</span></div>
       <div class="card">
-        <div class="notice">AI-radar v2 probeert onderscheid te maken tussen waarschijnlijk nieuwe woning, mogelijk nieuw aanbod en algemene pagina-update.</div>
-        <div class="action-row">
-          <button id="markAllSeen">Alles gezien</button>
-          <button class="ghost" id="resetRadar">Reset radar</button>
-        </div>
-        <div class="list" id="detectionList" style="margin-top:12px"></div>
+        <div class="best-grid" id="bestList"></div>
       </div>
 
       <div class="section">
-        <div class="section-head"><h2>Nieuwe bronnen</h2><span class="subtle">start hier</span></div>
+        <div class="section-head"><h2>Radar</h2><span class="subtle">alle updates</span></div>
         <div class="card">
-          <div class="list" id="todayList"></div>
+          <div class="notice">De radar probeert onderscheid te maken tussen waarschijnlijk nieuwe woning, mogelijk nieuw aanbod en algemene updates. Hogere score = interessanter om eerst te openen.</div>
+          <div class="action-row">
+            <button id="markAllSeen">Alles gezien</button>
+            <button class="ghost" id="resetRadar">Reset radar</button>
+          </div>
+          <div class="list" id="detectionList" style="margin-top:12px"></div>
         </div>
       </div>
     </div>
@@ -506,11 +823,11 @@ Als je iets ziet, stuur me dan meteen de link door. Dank je wel!</textarea>
     <div id="prioriteiten" class="panel section">
       <div class="section-head"><h2>Prioriteiten</h2><span class="subtle">betekenis</span></div>
       <div class="priority-guide">
-        <div class="box prio1"><strong>Prioriteit 1</strong><br>Belangrijkste websites en sterkste zoekroutes.</div>
-        <div class="box prio2"><strong>Prioriteit 2</strong><br>Regio-uitbreiding en extra kansrijke routes.</div>
-        <div class="box prio3"><strong>Prioriteit 3</strong><br>Makelaars, portals, corporaties en aanvullende bronnen.</div>
+        <div class="box prio1"><strong>Prioriteit 1</strong><br>Belangrijkste websites en sterkste zoekroutes. Hier begin je altijd.</div>
+        <div class="box prio2"><strong>Prioriteit 2</strong><br>Goede uitbreidingsroutes in de regio en aanvullende zoekkansen.</div>
+        <div class="box prio3"><strong>Prioriteit 3</strong><br>Aanvullende bronnen zoals portals, makelaars en corporaties.</div>
       </div>
-      <div class="footer-note">Overzicht van woningbronnen voor sneller zoeken.</div>
+      <div class="footer-note">De radar rangschikt signalen automatisch op relevantie.</div>
     </div>
   </div>
 
@@ -526,18 +843,20 @@ Als je iets ziet, stuur me dan meteen de link door. Dank je wel!</textarea>
 <script>
 const data = __DATA_JSON__;
 const detections = __DETECTIONS_JSON__;
-const favKey = "woningzoeker_radar_v2_favs";
-const seenKey = "woningzoeker_radar_v2_seen";
+const favKey = "woningzoeker_ai_radar_v3_favs";
+const seenKey = "woningzoeker_ai_radar_v3_seen";
+
 const getFavs = () => JSON.parse(localStorage.getItem(favKey) || "[]");
 const setFavs = (favs) => localStorage.setItem(favKey, JSON.stringify(favs));
 const getSeen = () => JSON.parse(localStorage.getItem(seenKey) || "[]");
 const setSeen = (seen) => localStorage.setItem(seenKey, JSON.stringify(seen));
 
 let onlyFavs = false;
+
 const list = document.getElementById("list");
 const favList = document.getElementById("favList");
-const todayList = document.getElementById("todayList");
 const detectionList = document.getElementById("detectionList");
+const bestList = document.getElementById("bestList");
 
 function populatePlaces() {
   const select = document.getElementById("plaats");
@@ -549,9 +868,11 @@ function populatePlaces() {
   });
 }
 
-function isNew(item) { return !getSeen().includes(item.url); }
+function isNew(item) {
+  return !getSeen().includes(item.url);
+}
 
-function score(item) {
+function sourceScore(item) {
   let s = 0;
   if (item.prioriteit === 1) s += 55;
   if (item.prioriteit === 2) s += 25;
@@ -563,8 +884,9 @@ function score(item) {
 }
 
 function itemHtml(item, isFav) {
-  const sc = score(item);
+  const sc = sourceScore(item);
   const newBadge = isNew(item) ? '<span class="badge-new">Nieuw</span>' : '<span>Gezien</span>';
+
   return `
     <div class="item priority${item.prioriteit}">
       <h3>${item.bron} — ${item.plaats}</h3>
@@ -573,7 +895,7 @@ function itemHtml(item, isFav) {
         <span>${item.focus}</span>
         ${newBadge}
       </div>
-      <div class="subtle">Matchscore ${sc}/100</div>
+      <div class="subtle">Bronscore ${sc}/100</div>
       <div class="scorebar"><div style="width:${sc}%"></div></div>
       <div class="action-row">
         <a class="linkbtn" href="${item.url}" target="_blank" rel="noopener">Open link</a>
@@ -584,26 +906,37 @@ function itemHtml(item, isFav) {
   `;
 }
 
-function detectionClass(score) {
-  if (score >= 65) return "ai-high";
-  if (score >= 40) return "ai-mid";
-  return "ai-low";
+function signalClass(score) {
+  if (score >= 68) return "signal-high";
+  if (score >= 42) return "signal-mid";
+  return "signal-low";
+}
+
+function signalBadges(item) {
+  const reasons = (item.ai_reasons || []).map(x => `<span class="badge">${x}</span>`).join("");
+  const signals = (item.signals || []).map(x => `<span class="badge">${x}</span>`).join("");
+  return reasons + signals;
 }
 
 function detectionHtml(item) {
-  const reasons = (item.ai_reasons || []).map(r => `<span class="signal">${r}</span>`).join("");
-  const signals = (item.signals || []).map(r => `<span class="signal">${r}</span>`).join("");
   return `
-    <div class="radarbox ${detectionClass(item.ai_score || 0)}">
-      <strong>${item.ai_label || item.type} — ${item.bron} (${item.plaats})</strong>
-      <div style="font-size:13px;margin-bottom:8px">${item.focus} · prioriteit ${item.prioriteit} · status ${item.status} · score ${item.ai_score || 0}</div>
-      <div>${reasons}</div>
-      <div>${signals}</div>
+    <div class="signal-card ${signalClass(item.ai_score || 0)}">
+      <div class="signal-title">${item.ai_label || item.type}</div>
+      <div class="signal-sub">${item.bron} · ${item.plaats} · score ${item.ai_score || 0}</div>
+      <div class="badges">${signalBadges(item)}</div>
+      ${item.snippet ? `<div class="snippet">${item.snippet}</div>` : ""}
       <div class="action-row">
         <a class="linkbtn" href="${item.url}" target="_blank" rel="noopener">Open bron</a>
       </div>
+      <div class="debug">Focus: ${item.focus} · Prioriteit ${item.prioriteit} · Status ${item.status}</div>
     </div>
   `;
+}
+
+function renderBestSignals() {
+  const best = [...detections].sort((a,b) => (b.ai_score || 0) - (a.ai_score || 0)).slice(0, 3);
+  bestList.innerHTML = best.length ? "" : '<div class="empty">Nog geen sterke signalen beschikbaar.</div>';
+  best.forEach(item => bestList.insertAdjacentHTML("beforeend", detectionHtml(item)));
 }
 
 function bindButtons(root) {
@@ -623,7 +956,7 @@ function filteredItems() {
     if (zoek && !(`${item.bron} ${item.focus} ${item.plaats}`.toLowerCase().includes(zoek))) return false;
     if (onlyFavs && !favs.includes(item.url)) return false;
     return true;
-  }).sort((a, b) => score(b) - score(a));
+  }).sort((a, b) => sourceScore(b) - sourceScore(a));
 }
 
 function renderList() {
@@ -636,27 +969,21 @@ function renderList() {
 
 function renderFavs() {
   const favs = getFavs();
-  const items = data.filter(item => favs.includes(item.url)).sort((a, b) => score(b) - score(a));
+  const items = data.filter(item => favs.includes(item.url)).sort((a, b) => sourceScore(b) - sourceScore(a));
   favList.innerHTML = items.length ? "" : '<div class="empty">Nog geen favorieten opgeslagen.</div>';
   items.forEach(item => favList.insertAdjacentHTML("beforeend", itemHtml(item, true)));
   bindButtons(favList);
 }
 
-function renderToday() {
-  const favs = getFavs();
-  const items = data.filter(item => isNew(item)).sort((a, b) => score(b) - score(a)).slice(0, 20);
-  todayList.innerHTML = items.length ? "" : '<div class="empty">Geen nieuwe items. Alles is al gezien.</div>';
-  items.forEach(item => todayList.insertAdjacentHTML("beforeend", itemHtml(item, favs.includes(item.url))));
-  bindButtons(todayList);
-}
-
 function renderDetections() {
-  detectionList.innerHTML = detections.length ? "" : '<div class="empty">Nog geen AI-detecties. Bij volgende automatische runs verschijnen hier signalen.</div>';
-  detections.slice(0, 20).forEach(item => detectionList.insertAdjacentHTML("beforeend", detectionHtml(item)));
+  detectionList.innerHTML = detections.length ? "" : '<div class="empty">Nog geen signalen. Bij de volgende runs verschijnen hier updates.</div>';
+  detections.forEach(item => detectionList.insertAdjacentHTML("beforeend", detectionHtml(item)));
 }
 
 function renderStats() {
   document.getElementById("totalCount").textContent = data.length;
+  document.getElementById("signalCount").textContent = detections.length;
+  document.getElementById("highCount").textContent = detections.filter(x => (x.ai_score || 0) >= 68).length;
   document.getElementById("newCount").textContent = data.filter(isNew).length;
 }
 
@@ -675,13 +1002,20 @@ function markSeen(url) {
   renderAll();
 }
 
-function markAllSeen() { setSeen(data.map(x => x.url)); renderAll(); }
-function resetRadar() { localStorage.removeItem(seenKey); renderAll(); }
+function markAllSeen() {
+  setSeen(data.map(x => x.url));
+  renderAll();
+}
+
+function resetRadar() {
+  localStorage.removeItem(seenKey);
+  renderAll();
+}
 
 function renderAll() {
+  renderBestSignals();
   renderList();
   renderFavs();
-  renderToday();
   renderDetections();
   renderStats();
 }
@@ -701,7 +1035,7 @@ document.getElementById("zoek").oninput = renderList;
 document.getElementById("showFavs").onclick = () => { onlyFavs = true; renderList(); };
 document.getElementById("showAll").onclick = () => { onlyFavs = false; renderList(); };
 document.getElementById("openBest").onclick = () => {
-  data.filter(x => x.prioriteit === 1).sort((a, b) => score(b) - score(a)).slice(0, 12).forEach((item, i) => setTimeout(() => window.open(item.url, "_blank"), i * 220));
+  data.filter(x => x.prioriteit === 1).sort((a, b) => sourceScore(b) - sourceScore(a)).slice(0, 12).forEach((item, i) => setTimeout(() => window.open(item.url, "_blank"), i * 220));
 };
 document.getElementById("markAllSeen").onclick = markAllSeen;
 document.getElementById("resetRadar").onclick = resetRadar;
@@ -713,7 +1047,7 @@ async function copyText(text, msg) {
 }
 document.getElementById("copyFamilyText").onclick = () => copyText(familyTextEl.value, "Bericht gekopieerd.");
 document.getElementById("sharePage").onclick = async () => {
-  const shareData = { title: "Woningzoeker Frank Burrei", text: "Check deze woningzoek-app", url: location.href };
+  const shareData = { title: "Woningzoeker Frank Burrei", text: "Check deze woningzoeker", url: location.href };
   if (navigator.share) { try { await navigator.share(shareData); } catch (e) {} }
   else { copyText(location.href, "Link gekopieerd."); }
 };
@@ -747,7 +1081,7 @@ def build_app():
     Path("index.html").write_text(html, encoding="utf-8")
     print("Gegenereerd: index.html")
     print(f"Aantal woningbronnen: {len(rows)}")
-    print(f"Aantal AI-detecties: {len(detections)}")
+    print(f"Aantal AI-signalen: {len(detections)}")
 
 
 if __name__ == "__main__":
