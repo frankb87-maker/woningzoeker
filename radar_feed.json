@@ -1,21 +1,28 @@
 [
   {
     "type": "pagina gewijzigd",
-    "bron": "Google 2 kamers",
-    "plaats": "Castricum",
+    "bron": "Google 3 kamers",
+    "plaats": "Heemskerk",
     "prioriteit": 2,
-    "focus": "2 kamers",
-    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Castricum+max+1600",
+    "focus": "3 kamers",
+    "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Heemskerk+max+1600",
     "status": "200",
-    "title": "Google Search",
+    "title": "3 kamer appartement huur Heemskerk max 1600 - Google Search",
     "ai_score": 0,
     "ai_label": "Algemene update",
     "ai_reasons": [
-      "prioriteit 2"
+      "prioriteit 2",
+      "prijs gevonden",
+      "kamers gevonden",
+      "woning-taal"
     ],
-    "signals": [],
-    "snippet": "",
-    "noise_count": 3,
+    "signals": [
+      "€ 985",
+      "3 kamer",
+      "2 slaapkamers"
+    ],
+    "snippet": "3 kamer appartement huur Heemskerk max 1600 - Google Search G o o g l e × Please click here if you are not redirected within a few seconds. All Images Maps Videos News Books Search tools Any time Any",
+    "noise_count": 7,
     "google_noise": true
   }
 ]
