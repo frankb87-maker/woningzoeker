@@ -183,6 +183,13 @@ def extract_title(html: str) -> str:
     return ""
 
 
+def normalize_for_detection(text: str) -> str:
+    text = text.lower()
+    text = re.sub(r"\s+", " ", text)
+    text = re.sub(r"\b(?:[a-z]\s+){2,}[a-z]\b", lambda m: m.group(0).replace(" ", ""), text)
+    return text
+
+
 def extract_price_signals(text: str):
     patterns = [r"€\s?\d{3,5}", r"eur\s?\d{3,5}", r"\d{3,5}\s?euro"]
     found = []
@@ -208,7 +215,7 @@ def extract_room_signals(text: str):
 
 
 def count_noise_terms(text: str):
-    lower = text.lower()
+    lower = normalize_for_detection(text)
     return sum(1 for term in NOISE_TERMS if term in lower)
 
 
@@ -223,7 +230,7 @@ def has_address_hint(text: str):
 
 
 def looks_like_google_noise(text: str, title: str, bron: str):
-    blob = f"{title} {text}".lower()
+    blob = normalize_for_detection(f"{title} {text}")
 
     strong_patterns = [
         "google search",
@@ -234,12 +241,14 @@ def looks_like_google_noise(text: str, title: str, bron: str):
         "search the world's information",
         "google offered in",
         "all images maps videos",
+        "google",
+        "redirected within a few seconds",
     ]
 
     if any(p in blob for p in strong_patterns):
         return True
 
-    if bron.lower().startswith("google") and count_noise_terms(blob) >= 2 and "€" not in blob:
+    if bron.lower().startswith("google") and count_noise_terms(blob) >= 1:
         return True
 
     return False
@@ -283,7 +292,7 @@ def listing_signal_score(row, title: str, text: str):
         score += 20
         reasons.append("sterke bron")
     elif row["bron"].lower().startswith("google"):
-        score -= 8
+        score -= 18
 
     if prices:
         score += 24
@@ -333,7 +342,7 @@ def listing_signal_score(row, title: str, text: str):
         score -= 30
 
     if google_noise:
-        score -= 45
+        score -= 70
 
     if row["bron"].lower().startswith("google") and not prices and not rooms and not surfaces:
         score -= 20
