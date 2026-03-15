@@ -1,16 +1,6 @@
 [
   {
-    "type": "nieuw gevolgd",
-    "bron": "Funda",
-    "plaats": "Beverwijk",
-    "prioriteit": 1,
-    "focus": "huurwoningen",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22beverwijk%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]"
-  },
-  {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Pararius",
     "plaats": "Beverwijk",
     "prioriteit": 1,
@@ -20,7 +10,7 @@
     "title": "Just a moment..."
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 2 kamers",
     "plaats": "Beverwijk",
     "prioriteit": 1,
@@ -30,7 +20,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 3 kamers",
     "plaats": "Beverwijk",
     "prioriteit": 2,
@@ -40,7 +30,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google kindvriendelijk",
     "plaats": "Beverwijk",
     "prioriteit": 2,
@@ -50,7 +40,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google gezinswoning",
     "plaats": "Beverwijk",
     "prioriteit": 2,
@@ -60,17 +50,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
-    "bron": "Funda",
-    "plaats": "Heemskerk",
-    "prioriteit": 1,
-    "focus": "huurwoningen",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22heemskerk%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]"
-  },
-  {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Pararius",
     "plaats": "Heemskerk",
     "prioriteit": 1,
@@ -80,7 +60,7 @@
     "title": "Just a moment..."
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 2 kamers",
     "plaats": "Heemskerk",
     "prioriteit": 1,
@@ -90,7 +70,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 3 kamers",
     "plaats": "Heemskerk",
     "prioriteit": 2,
@@ -100,7 +80,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google kindvriendelijk",
     "plaats": "Heemskerk",
     "prioriteit": 2,
@@ -110,7 +90,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google gezinswoning",
     "plaats": "Heemskerk",
     "prioriteit": 2,
@@ -120,17 +100,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
-    "bron": "Funda",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22uitgeest%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]"
-  },
-  {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Pararius",
     "plaats": "Uitgeest",
     "prioriteit": 2,
@@ -140,7 +110,7 @@
     "title": "Just a moment..."
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 2 kamers",
     "plaats": "Uitgeest",
     "prioriteit": 2,
@@ -150,7 +120,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 3 kamers",
     "plaats": "Uitgeest",
     "prioriteit": 2,
@@ -160,7 +130,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google kindvriendelijk",
     "plaats": "Uitgeest",
     "prioriteit": 2,
@@ -170,7 +140,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google gezinswoning",
     "plaats": "Uitgeest",
     "prioriteit": 2,
@@ -180,17 +150,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
-    "bron": "Funda",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22castricum%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]"
-  },
-  {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Pararius",
     "plaats": "Castricum",
     "prioriteit": 2,
@@ -200,7 +160,7 @@
     "title": "Just a moment..."
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 2 kamers",
     "plaats": "Castricum",
     "prioriteit": 2,
@@ -210,7 +170,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 3 kamers",
     "plaats": "Castricum",
     "prioriteit": 2,
@@ -220,7 +180,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google kindvriendelijk",
     "plaats": "Castricum",
     "prioriteit": 2,
@@ -230,7 +190,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google gezinswoning",
     "plaats": "Castricum",
     "prioriteit": 2,
@@ -240,17 +200,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
-    "bron": "Funda",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22assendelft%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]"
-  },
-  {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Pararius",
     "plaats": "Assendelft",
     "prioriteit": 2,
@@ -260,7 +210,7 @@
     "title": "Just a moment..."
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 2 kamers",
     "plaats": "Assendelft",
     "prioriteit": 2,
@@ -270,7 +220,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 3 kamers",
     "plaats": "Assendelft",
     "prioriteit": 2,
@@ -280,7 +230,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google kindvriendelijk",
     "plaats": "Assendelft",
     "prioriteit": 2,
@@ -290,7 +240,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google gezinswoning",
     "plaats": "Assendelft",
     "prioriteit": 2,
@@ -300,17 +250,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
-    "bron": "Funda",
-    "plaats": "Velsen-Noord",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22velsen-noord%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]"
-  },
-  {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Pararius",
     "plaats": "Velsen-Noord",
     "prioriteit": 2,
@@ -320,7 +260,7 @@
     "title": "Just a moment..."
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 2 kamers",
     "plaats": "Velsen-Noord",
     "prioriteit": 2,
@@ -330,7 +270,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 3 kamers",
     "plaats": "Velsen-Noord",
     "prioriteit": 2,
@@ -340,7 +280,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google kindvriendelijk",
     "plaats": "Velsen-Noord",
     "prioriteit": 2,
@@ -350,7 +290,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google gezinswoning",
     "plaats": "Velsen-Noord",
     "prioriteit": 2,
@@ -360,17 +300,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
-    "bron": "Funda",
-    "plaats": "Wijk aan Zee",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22wijk aan zee%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]"
-  },
-  {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Pararius",
     "plaats": "Wijk aan Zee",
     "prioriteit": 2,
@@ -380,7 +310,7 @@
     "title": "Just a moment..."
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 2 kamers",
     "plaats": "Wijk aan Zee",
     "prioriteit": 2,
@@ -390,7 +320,7 @@
     "title": "Google Search"
   },
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 3 kamers",
     "plaats": "Wijk aan Zee",
     "prioriteit": 2,
