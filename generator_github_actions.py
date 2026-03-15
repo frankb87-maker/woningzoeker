@@ -1,4 +1,5 @@
 import json
+import re
 import hashlib
 from pathlib import Path
 from datetime import datetime
@@ -51,8 +52,10 @@ AGENCIES = [
     "KRK makelaars", "IJmond Makelaars", "Van Duin", "PMA makelaars"
 ]
 
+
 def google_url(query: str) -> str:
     return "https://www.google.com/search?q=" + quote_plus(query)
+
 
 def direct_url(source_type: str, place: str) -> str:
     p = place.lower()
@@ -61,6 +64,7 @@ def direct_url(source_type: str, place: str) -> str:
     if source_type == "pararius":
         return f"https://www.pararius.nl/huurwoningen/{p}/0-{MAX_HUUR}"
     raise ValueError(source_type)
+
 
 def add_row(rows, seen, bron, plaats, prioriteit, focus, url):
     key = (bron, plaats, url)
@@ -73,6 +77,7 @@ def add_row(rows, seen, bron, plaats, prioriteit, focus, url):
             "focus": focus,
             "url": url,
         })
+
 
 def build_data():
     rows = []
@@ -104,6 +109,7 @@ def build_data():
 
     return rows
 
+
 def load_json(path: Path, default):
     if path.exists():
         try:
@@ -112,30 +118,172 @@ def load_json(path: Path, default):
             return default
     return default
 
+
+def clean_html_text(html: str) -> str:
+    html = re.sub(r"<script.*?</script>", " ", html, flags=re.S | re.I)
+    html = re.sub(r"<style.*?</style>", " ", html, flags=re.S | re.I)
+    html = re.sub(r"<[^>]+>", " ", html)
+    html = re.sub(r"\s+", " ", html)
+    return html.strip()
+
+
+def extract_title(html: str) -> str:
+    m = re.search(r"<title>(.*?)</title>", html, flags=re.I | re.S)
+    if m:
+        return re.sub(r"\s+", " ", m.group(1)).strip()[:180]
+    return ""
+
+
+def extract_price_signals(text: str):
+    patterns = [
+        r"€\s?\d{3,5}",
+        r"eur\s?\d{3,5}",
+        r"\d{3,5}\s?euro"
+    ]
+    found = []
+    for p in patterns:
+        found += re.findall(p, text, flags=re.I)
+    return list(dict.fromkeys(found))[:8]
+
+
+def extract_surface_signals(text: str):
+    patterns = [
+        r"\d{2,3}\s?m²",
+        r"\d{2,3}\s?m2"
+    ]
+    found = []
+    for p in patterns:
+        found += re.findall(p, text, flags=re.I)
+    return list(dict.fromkeys(found))[:8]
+
+
+def extract_room_signals(text: str):
+    patterns = [
+        r"\b\d+\s?kamer[s]?\b",
+        r"\b\d+\s?slaapkamer[s]?\b"
+    ]
+    found = []
+    for p in patterns:
+        found += re.findall(p, text, flags=re.I)
+    return list(dict.fromkeys(found))[:8]
+
+
+def listing_signal_score(row, title: str, text: str):
+    score = 0
+    reasons = []
+
+    lower = text.lower()
+    title_lower = title.lower()
+
+    if row["prioriteit"] == 1:
+        score += 20
+        reasons.append("prioriteit 1")
+    elif row["prioriteit"] == 2:
+        score += 10
+        reasons.append("prioriteit 2")
+
+    if row["bron"] in ["Funda", "Pararius"]:
+        score += 20
+        reasons.append("sterke bron")
+
+    prices = extract_price_signals(text)
+    if prices:
+        score += 20
+        reasons.append("prijs-signaal")
+
+    surfaces = extract_surface_signals(text)
+    if surfaces:
+        score += 10
+        reasons.append("m²-signaal")
+
+    rooms = extract_room_signals(text)
+    if rooms:
+        score += 15
+        reasons.append("kamer-signaal")
+
+    keyword_hits = 0
+    for kw in ["huur", "woning", "appartement", "studio", "kamer", "slaapkamer"]:
+        if kw in lower:
+            keyword_hits += 1
+    if keyword_hits >= 3:
+        score += 10
+        reasons.append("woning-taal")
+
+    if row["plaats"].lower() in lower or row["plaats"].lower() in title_lower:
+        score += 5
+        reasons.append("plaats gevonden")
+
+    if len(text) > 3000:
+        score += 5
+
+    score = min(score, 100)
+
+    if score >= 65:
+        label = "waarschijnlijk nieuwe woning"
+    elif score >= 40:
+        label = "mogelijk nieuw aanbod"
+    else:
+        label = "algemene update"
+
+    sample_bits = []
+    sample_bits.extend(prices[:2])
+    sample_bits.extend(surfaces[:2])
+    sample_bits.extend(rooms[:2])
+
+    return {
+        "score": score,
+        "label": label,
+        "reasons": reasons[:4],
+        "signals": sample_bits[:5]
+    }
+
+
+def fingerprint_relevant_content(title: str, text: str):
+    prices = extract_price_signals(text)
+    surfaces = extract_surface_signals(text)
+    rooms = extract_room_signals(text)
+
+    compact = " | ".join([
+        title[:180],
+        " ".join(prices[:8]),
+        " ".join(surfaces[:8]),
+        " ".join(rooms[:8]),
+        text[:4000]
+    ])
+    return hashlib.sha256(compact.encode("utf-8", errors="ignore")).hexdigest()
+
+
 def detect_changes(rows):
     state_path = Path("radar_state.json")
     prev = load_json(state_path, {})
     new_state = {}
     detections = []
 
-    # Beperk detectie tot de meest kansrijke routes om blokkades en runtime te beperken
-    candidates = [r for r in rows if r["prioriteit"] <= 2][:40]
-
     headers = {"User-Agent": "Mozilla/5.0"}
+
+    candidates = [r for r in rows if r["prioriteit"] <= 2][:50]
+
     for row in candidates:
         item_id = f'{row["bron"]}|{row["plaats"]}|{row["url"]}'
         status = "ok"
         title = ""
+        text = ""
         digest = ""
+        ai = {
+            "score": 0,
+            "label": "algemene update",
+            "reasons": [],
+            "signals": []
+        }
+
         try:
             resp = requests.get(row["url"], headers=headers, timeout=20, allow_redirects=True)
-            text = resp.text[:120000]
-            title_start = text.lower().find("<title>")
-            title_end = text.lower().find("</title>")
-            if title_start != -1 and title_end != -1:
-                title = text[title_start+7:title_end].strip().replace("\n", " ")[:140]
-            digest = hashlib.sha256((title + "|" + text[:30000]).encode("utf-8", errors="ignore")).hexdigest()
             status = str(resp.status_code)
+            html = resp.text[:150000]
+            title = extract_title(html)
+            text = clean_html_text(html)[:25000]
+            digest = fingerprint_relevant_content(title, text)
+            ai = listing_signal_score(row, title, text)
         except Exception as e:
             status = "error"
             digest = hashlib.sha256(str(e).encode("utf-8")).hexdigest()
@@ -150,9 +298,11 @@ def detect_changes(rows):
             "url": row["url"],
             "prioriteit": row["prioriteit"],
             "focus": row["focus"],
+            "ai": ai,
         }
 
         old = prev.get(item_id)
+
         if not old:
             detections.append({
                 "type": "nieuw gevolgd",
@@ -163,6 +313,10 @@ def detect_changes(rows):
                 "url": row["url"],
                 "status": status,
                 "title": title,
+                "ai_score": ai["score"],
+                "ai_label": ai["label"],
+                "ai_reasons": ai["reasons"],
+                "signals": ai["signals"],
             })
         elif old.get("digest") != digest:
             detections.append({
@@ -174,11 +328,18 @@ def detect_changes(rows):
                 "url": row["url"],
                 "status": status,
                 "title": title or old.get("title", ""),
+                "ai_score": ai["score"],
+                "ai_label": ai["label"],
+                "ai_reasons": ai["reasons"],
+                "signals": ai["signals"],
             })
+
+    detections.sort(key=lambda x: x.get("ai_score", 0), reverse=True)
 
     state_path.write_text(json.dumps(new_state, ensure_ascii=False, indent=2), encoding="utf-8")
     Path("radar_feed.json").write_text(json.dumps(detections, ensure_ascii=False, indent=2), encoding="utf-8")
     return detections
+
 
 def html_template(data_json: str, detections_json: str, generated_at: str) -> str:
     template = """<!DOCTYPE html>
@@ -194,6 +355,7 @@ def html_template(data_json: str, detections_json: str, generated_at: str) -> st
   --line:#d9e4f5; --brand:#0b57d0; --brand3:#eaf2ff; --green:#e9fff1; --greenLine:#a8e6c0;
   --blue:#eef4ff; --blueLine:#c7d9ff; --gray:#f6f7f9; --grayLine:#d9dde3; --orange:#fff4e6;
   --orangeLine:#f2c88e; --shadow:0 14px 42px rgba(13,39,89,.10);
+  --redsoft:#fff0f0; --redline:#f1b3b3;
 }
 *{box-sizing:border-box} html,body{margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg2) 0%, var(--bg) 100%);color:var(--text)}
@@ -242,6 +404,11 @@ button.ghost{background:#f5f7fb;color:#1f2937;border:1px solid var(--line)}
 .footer-note{color:var(--muted);font-size:12px;text-align:center;margin-top:14px}
 .radarbox{background:#fff7e9;border:1px solid #f0cb8d;color:#6e4b08;border-radius:16px;padding:12px}
 .radarbox strong{display:block;margin-bottom:4px}
+.ai-high{background:#eafaf0;border:1px solid #98ddb0;color:#135c30}
+.ai-mid{background:#fff8e9;border:1px solid #edcf92;color:#7a5300}
+.ai-low{background:#f6f7f9;border:1px solid #d9dde3;color:#495466}
+.ai-badge{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;margin:6px 6px 0 0}
+.signal{display:inline-block;background:#f4f7fb;border:1px solid #dce7f7;color:#30455f;padding:6px 9px;border-radius:999px;font-size:12px;margin:4px 6px 0 0}
 </style>
 </head>
 <body>
@@ -252,8 +419,8 @@ button.ghost{background:#f5f7fb;color:#1f2937;border:1px solid var(--line)}
       <p>Woningzoek-overzicht voor Beverwijk, Heemskerk en omgeving. Deze app bundelt verschillende verhuurwebsites, makelaars en woningplatforms zodat je sneller woningen kunt vinden.</p>
       <div class="hero-meta">
         <span>__COUNT__ woningbronnen</span>
-        <span>Genereerd: __GENERATED_AT__</span>
-        <span>Detecties: __DETECTION_COUNT__</span>
+        <span>Gegenereerd: __GENERATED_AT__</span>
+        <span>AI-detecties: __DETECTION_COUNT__</span>
       </div>
       <div class="grid-top">
         <div class="stat"><strong id="totalCount">0</strong><span class="subtle">woningbronnen</span></div>
@@ -262,9 +429,9 @@ button.ghost{background:#f5f7fb;color:#1f2937;border:1px solid var(--line)}
     </div>
 
     <div id="dashboard" class="panel active section">
-      <div class="section-head"><h2>Radar</h2><span class="subtle">detectie</span></div>
+      <div class="section-head"><h2>Radar</h2><span class="subtle">AI detectie</span></div>
       <div class="card">
-        <div class="notice">Detectie-radar v1 controleert kansrijke pagina’s op wijzigingen. Een wijziging kan betekenen: nieuw aanbod, nieuwe volgorde of pagina-update.</div>
+        <div class="notice">AI-radar v2 probeert onderscheid te maken tussen waarschijnlijk nieuwe woning, mogelijk nieuw aanbod en algemene pagina-update.</div>
         <div class="action-row">
           <button id="markAllSeen">Alles gezien</button>
           <button class="ghost" id="resetRadar">Reset radar</button>
@@ -359,8 +526,8 @@ Als je iets ziet, stuur me dan meteen de link door. Dank je wel!</textarea>
 <script>
 const data = __DATA_JSON__;
 const detections = __DETECTIONS_JSON__;
-const favKey = "woningzoeker_radar_favs_v1";
-const seenKey = "woningzoeker_radar_seen_v1";
+const favKey = "woningzoeker_radar_v2_favs";
+const seenKey = "woningzoeker_radar_v2_seen";
 const getFavs = () => JSON.parse(localStorage.getItem(favKey) || "[]");
 const setFavs = (favs) => localStorage.setItem(favKey, JSON.stringify(favs));
 const getSeen = () => JSON.parse(localStorage.getItem(seenKey) || "[]");
@@ -417,12 +584,24 @@ function itemHtml(item, isFav) {
   `;
 }
 
+function detectionClass(score) {
+  if (score >= 65) return "ai-high";
+  if (score >= 40) return "ai-mid";
+  return "ai-low";
+}
+
 function detectionHtml(item) {
+  const reasons = (item.ai_reasons || []).map(r => `<span class="signal">${r}</span>`).join("");
+  const signals = (item.signals || []).map(r => `<span class="signal">${r}</span>`).join("");
   return `
-    <div class="radarbox">
-      <strong>${item.type} — ${item.bron} (${item.plaats})</strong>
-      <div style="font-size:13px;margin-bottom:8px">${item.focus} · prioriteit ${item.prioriteit}${item.status ? " · status " + item.status : ""}</div>
-      <a class="linkbtn" href="${item.url}" target="_blank" rel="noopener">Open bron</a>
+    <div class="radarbox ${detectionClass(item.ai_score || 0)}">
+      <strong>${item.ai_label || item.type} — ${item.bron} (${item.plaats})</strong>
+      <div style="font-size:13px;margin-bottom:8px">${item.focus} · prioriteit ${item.prioriteit} · status ${item.status} · score ${item.ai_score || 0}</div>
+      <div>${reasons}</div>
+      <div>${signals}</div>
+      <div class="action-row">
+        <a class="linkbtn" href="${item.url}" target="_blank" rel="noopener">Open bron</a>
+      </div>
     </div>
   `;
 }
@@ -472,8 +651,8 @@ function renderToday() {
 }
 
 function renderDetections() {
-  detectionList.innerHTML = detections.length ? "" : '<div class="empty">Nog geen detecties. Na de volgende automatische runs verschijnen hier wijzigingen.</div>';
-  detections.slice(0, 15).forEach(item => detectionList.insertAdjacentHTML("beforeend", detectionHtml(item)));
+  detectionList.innerHTML = detections.length ? "" : '<div class="empty">Nog geen AI-detecties. Bij volgende automatische runs verschijnen hier signalen.</div>';
+  detections.slice(0, 20).forEach(item => detectionList.insertAdjacentHTML("beforeend", detectionHtml(item)));
 }
 
 function renderStats() {
@@ -543,7 +722,9 @@ populatePlaces();
 renderAll();
 </script>
 </body>
-</html>"""
+</html>
+"""
+
     return (template
         .replace("__APP_TITLE__", APP_TITLE)
         .replace("__MAX_HUUR__", str(MAX_HUUR))
@@ -552,6 +733,7 @@ renderAll();
         .replace("__DETECTION_COUNT__", str(len(json.loads(detections_json))))
         .replace("__DATA_JSON__", data_json)
         .replace("__DETECTIONS_JSON__", detections_json))
+
 
 def build_app():
     rows = build_data()
@@ -565,8 +747,8 @@ def build_app():
     Path("index.html").write_text(html, encoding="utf-8")
     print("Gegenereerd: index.html")
     print(f"Aantal woningbronnen: {len(rows)}")
-    print(f"Aantal detecties: {len(detections)}")
+    print(f"Aantal AI-detecties: {len(detections)}")
+
 
 if __name__ == "__main__":
     build_app()
-
