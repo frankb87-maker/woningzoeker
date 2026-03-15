@@ -1,7 +1,7 @@
 {
   "Funda|Beverwijk|https://www.funda.nl/zoeken/huur?selected_area=%5B%22beverwijk%22%5D&price=%22-1600%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -10,19 +10,21 @@
     "prioriteit": 1,
     "focus": "huurwoningen",
     "ai": {
-      "score": 40,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 1",
-        "sterke bron"
+        "sterke bron",
+        "listing-snippet"
       ],
       "signals": [],
-      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d"
+      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d",
+      "noise_count": 10
     }
   },
   "Pararius|Beverwijk|https://www.pararius.nl/huurwoningen/beverwijk/0-1600": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -31,19 +33,20 @@
     "prioriteit": 1,
     "focus": "huurwoningen",
     "ai": {
-      "score": 40,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 1",
         "sterke bron"
       ],
       "signals": [],
-      "snippet": "Just a moment... Enable JavaScript and cookies to continue"
+      "snippet": "",
+      "noise_count": 4
     }
   },
   "Google 2 kamers|Beverwijk|https://www.google.com/search?q=2+kamer+appartement+huur+Beverwijk+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
@@ -58,12 +61,13 @@
         "prioriteit 1"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google 3 kamers|Beverwijk|https://www.google.com/search?q=3+kamer+appartement+huur+Beverwijk+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
@@ -78,12 +82,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google kindvriendelijk|Beverwijk|https://www.google.com/search?q=kindvriendelijke+huurwoning+Beverwijk+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
@@ -98,12 +103,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google gezinswoning|Beverwijk|https://www.google.com/search?q=gezinswoning+huur+Beverwijk+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
@@ -118,12 +124,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Funda|Heemskerk|https://www.funda.nl/zoeken/huur?selected_area=%5B%22heemskerk%22%5D&price=%22-1600%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -132,19 +139,21 @@
     "prioriteit": 1,
     "focus": "huurwoningen",
     "ai": {
-      "score": 40,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 1",
-        "sterke bron"
+        "sterke bron",
+        "listing-snippet"
       ],
       "signals": [],
-      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d"
+      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d",
+      "noise_count": 10
     }
   },
   "Pararius|Heemskerk|https://www.pararius.nl/huurwoningen/heemskerk/0-1600": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -153,19 +162,20 @@
     "prioriteit": 1,
     "focus": "huurwoningen",
     "ai": {
-      "score": 40,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 1",
         "sterke bron"
       ],
       "signals": [],
-      "snippet": "Just a moment... Enable JavaScript and cookies to continue"
+      "snippet": "",
+      "noise_count": 4
     }
   },
   "Google 2 kamers|Heemskerk|https://www.google.com/search?q=2+kamer+appartement+huur+Heemskerk+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
@@ -180,12 +190,13 @@
         "prioriteit 1"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google 3 kamers|Heemskerk|https://www.google.com/search?q=3+kamer+appartement+huur+Heemskerk+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
@@ -200,12 +211,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google kindvriendelijk|Heemskerk|https://www.google.com/search?q=kindvriendelijke+huurwoning+Heemskerk+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
@@ -220,12 +232,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google gezinswoning|Heemskerk|https://www.google.com/search?q=gezinswoning+huur+Heemskerk+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
@@ -240,12 +253,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Funda|Uitgeest|https://www.funda.nl/zoeken/huur?selected_area=%5B%22uitgeest%22%5D&price=%22-1600%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -254,19 +268,21 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
-        "sterke bron"
+        "sterke bron",
+        "listing-snippet"
       ],
       "signals": [],
-      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d"
+      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d",
+      "noise_count": 10
     }
   },
   "Pararius|Uitgeest|https://www.pararius.nl/huurwoningen/uitgeest/0-1600": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -275,19 +291,20 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
         "sterke bron"
       ],
       "signals": [],
-      "snippet": "Just a moment... Enable JavaScript and cookies to continue"
+      "snippet": "",
+      "noise_count": 4
     }
   },
   "Google 2 kamers|Uitgeest|https://www.google.com/search?q=2+kamer+appartement+huur+Uitgeest+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
@@ -302,12 +319,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google 3 kamers|Uitgeest|https://www.google.com/search?q=3+kamer+appartement+huur+Uitgeest+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
@@ -322,12 +340,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google kindvriendelijk|Uitgeest|https://www.google.com/search?q=kindvriendelijke+huurwoning+Uitgeest+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
@@ -342,12 +361,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google gezinswoning|Uitgeest|https://www.google.com/search?q=gezinswoning+huur+Uitgeest+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
@@ -362,12 +382,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Funda|Castricum|https://www.funda.nl/zoeken/huur?selected_area=%5B%22castricum%22%5D&price=%22-1600%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -376,19 +397,21 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
-        "sterke bron"
+        "sterke bron",
+        "listing-snippet"
       ],
       "signals": [],
-      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d"
+      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d",
+      "noise_count": 10
     }
   },
   "Pararius|Castricum|https://www.pararius.nl/huurwoningen/castricum/0-1600": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -397,39 +420,49 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
         "sterke bron"
       ],
       "signals": [],
-      "snippet": "Just a moment... Enable JavaScript and cookies to continue"
+      "snippet": "",
+      "noise_count": 4
     }
   },
   "Google 2 kamers|Castricum|https://www.google.com/search?q=2+kamer+appartement+huur+Castricum+max+1600": {
-    "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "digest": "fc367149dee623b38e7283e44e08a39bfd0e274f6eb3ee7a0643d27f9193cce5",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
-    "title": "Google Search",
+    "title": "2 kamer appartement huur Castricum max 1600 - Google Search",
     "bron": "Google 2 kamers",
     "plaats": "Castricum",
     "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Castricum+max+1600",
     "prioriteit": 2,
     "focus": "2 kamers",
     "ai": {
-      "score": 10,
-      "label": "Algemene update",
+      "score": 76,
+      "label": "Waarschijnlijk nieuwe woning",
       "reasons": [
-        "prioriteit 2"
+        "prioriteit 2",
+        "prijs gevonden",
+        "m² gevonden",
+        "kamers gevonden"
       ],
-      "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "signals": [
+        "€ 974",
+        "42 m²",
+        "2 kamer",
+        "2 kamers"
+      ],
+      "snippet": "2 kamer appartement huur Castricum max 1600 - Google Search G o o g l e × Please click here if you are not redirected within a few seconds. All Images Maps Videos News Books Searc",
+      "noise_count": 1
     }
   },
   "Google 3 kamers|Castricum|https://www.google.com/search?q=3+kamer+appartement+huur+Castricum+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
@@ -444,12 +477,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google kindvriendelijk|Castricum|https://www.google.com/search?q=kindvriendelijke+huurwoning+Castricum+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
@@ -464,12 +498,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google gezinswoning|Castricum|https://www.google.com/search?q=gezinswoning+huur+Castricum+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
@@ -484,12 +519,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Funda|Assendelft|https://www.funda.nl/zoeken/huur?selected_area=%5B%22assendelft%22%5D&price=%22-1600%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -498,19 +534,21 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
-        "sterke bron"
+        "sterke bron",
+        "listing-snippet"
       ],
       "signals": [],
-      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d"
+      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d",
+      "noise_count": 10
     }
   },
   "Pararius|Assendelft|https://www.pararius.nl/huurwoningen/assendelft/0-1600": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -519,19 +557,20 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
         "sterke bron"
       ],
       "signals": [],
-      "snippet": "Just a moment... Enable JavaScript and cookies to continue"
+      "snippet": "",
+      "noise_count": 4
     }
   },
   "Google 2 kamers|Assendelft|https://www.google.com/search?q=2+kamer+appartement+huur+Assendelft+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
@@ -546,12 +585,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google 3 kamers|Assendelft|https://www.google.com/search?q=3+kamer+appartement+huur+Assendelft+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
@@ -566,12 +606,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google kindvriendelijk|Assendelft|https://www.google.com/search?q=kindvriendelijke+huurwoning+Assendelft+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
@@ -586,12 +627,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google gezinswoning|Assendelft|https://www.google.com/search?q=gezinswoning+huur+Assendelft+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
@@ -606,12 +648,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Funda|Velsen-Noord|https://www.funda.nl/zoeken/huur?selected_area=%5B%22velsen-noord%22%5D&price=%22-1600%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -620,19 +663,21 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
-        "sterke bron"
+        "sterke bron",
+        "listing-snippet"
       ],
       "signals": [],
-      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d"
+      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d",
+      "noise_count": 10
     }
   },
   "Pararius|Velsen-Noord|https://www.pararius.nl/huurwoningen/velsen-noord/0-1600": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -641,19 +686,20 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
         "sterke bron"
       ],
       "signals": [],
-      "snippet": "Just a moment... Enable JavaScript and cookies to continue"
+      "snippet": "",
+      "noise_count": 4
     }
   },
   "Google 2 kamers|Velsen-Noord|https://www.google.com/search?q=2+kamer+appartement+huur+Velsen-Noord+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
@@ -668,12 +714,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google 3 kamers|Velsen-Noord|https://www.google.com/search?q=3+kamer+appartement+huur+Velsen-Noord+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
@@ -688,12 +735,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google kindvriendelijk|Velsen-Noord|https://www.google.com/search?q=kindvriendelijke+huurwoning+Velsen-Noord+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
@@ -708,12 +756,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google gezinswoning|Velsen-Noord|https://www.google.com/search?q=gezinswoning+huur+Velsen-Noord+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
@@ -728,12 +777,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Funda|Wijk aan Zee|https://www.funda.nl/zoeken/huur?selected_area=%5B%22wijk aan zee%22%5D&price=%22-1600%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -742,19 +792,21 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
-        "sterke bron"
+        "sterke bron",
+        "listing-snippet"
       ],
       "signals": [],
-      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d"
+      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d",
+      "noise_count": 10
     }
   },
   "Pararius|Wijk aan Zee|https://www.pararius.nl/huurwoningen/wijk aan zee/0-1600": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -763,19 +815,20 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
         "sterke bron"
       ],
       "signals": [],
-      "snippet": "Just a moment... Enable JavaScript and cookies to continue"
+      "snippet": "",
+      "noise_count": 4
     }
   },
   "Google 2 kamers|Wijk aan Zee|https://www.google.com/search?q=2+kamer+appartement+huur+Wijk+aan+Zee+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
@@ -790,12 +843,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google 3 kamers|Wijk aan Zee|https://www.google.com/search?q=3+kamer+appartement+huur+Wijk+aan+Zee+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
@@ -810,12 +864,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google kindvriendelijk|Wijk aan Zee|https://www.google.com/search?q=kindvriendelijke+huurwoning+Wijk+aan+Zee+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
@@ -830,12 +885,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google gezinswoning|Wijk aan Zee|https://www.google.com/search?q=gezinswoning+huur+Wijk+aan+Zee+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
@@ -850,12 +906,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Funda|Zaandam|https://www.funda.nl/zoeken/huur?selected_area=%5B%22zaandam%22%5D&price=%22-1600%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -864,19 +921,21 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
-        "sterke bron"
+        "sterke bron",
+        "listing-snippet"
       ],
       "signals": [],
-      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d"
+      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d",
+      "noise_count": 10
     }
   },
   "Pararius|Zaandam|https://www.pararius.nl/huurwoningen/zaandam/0-1600": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -885,19 +944,20 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
         "sterke bron"
       ],
       "signals": [],
-      "snippet": "Just a moment... Enable JavaScript and cookies to continue"
+      "snippet": "",
+      "noise_count": 4
     }
   },
   "Google 2 kamers|Zaandam|https://www.google.com/search?q=2+kamer+appartement+huur+Zaandam+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
@@ -912,12 +972,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google 3 kamers|Zaandam|https://www.google.com/search?q=3+kamer+appartement+huur+Zaandam+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
@@ -932,12 +993,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google kindvriendelijk|Zaandam|https://www.google.com/search?q=kindvriendelijke+huurwoning+Zaandam+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
@@ -952,12 +1014,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google gezinswoning|Zaandam|https://www.google.com/search?q=gezinswoning+huur+Zaandam+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
@@ -972,12 +1035,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Funda|Driehuis|https://www.funda.nl/zoeken/huur?selected_area=%5B%22driehuis%22%5D&price=%22-1600%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -986,19 +1050,21 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
-        "sterke bron"
+        "sterke bron",
+        "listing-snippet"
       ],
       "signals": [],
-      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d"
+      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d",
+      "noise_count": 10
     }
   },
   "Pararius|Driehuis|https://www.pararius.nl/huurwoningen/driehuis/0-1600": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -1007,19 +1073,20 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
         "sterke bron"
       ],
       "signals": [],
-      "snippet": "Just a moment... Enable JavaScript and cookies to continue"
+      "snippet": "",
+      "noise_count": 4
     }
   },
   "Google 2 kamers|Driehuis|https://www.google.com/search?q=2+kamer+appartement+huur+Driehuis+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
@@ -1034,12 +1101,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google 3 kamers|Driehuis|https://www.google.com/search?q=3+kamer+appartement+huur+Driehuis+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
@@ -1054,12 +1122,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google kindvriendelijk|Driehuis|https://www.google.com/search?q=kindvriendelijke+huurwoning+Driehuis+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
@@ -1074,12 +1143,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google gezinswoning|Driehuis|https://www.google.com/search?q=gezinswoning+huur+Driehuis+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
@@ -1094,12 +1164,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Funda|Santpoort-Noord|https://www.funda.nl/zoeken/huur?selected_area=%5B%22santpoort-noord%22%5D&price=%22-1600%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -1108,19 +1179,21 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
-        "sterke bron"
+        "sterke bron",
+        "listing-snippet"
       ],
       "signals": [],
-      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d"
+      "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d",
+      "noise_count": 10
     }
   },
   "Pararius|Santpoort-Noord|https://www.pararius.nl/huurwoningen/santpoort-noord/0-1600": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -1129,19 +1202,20 @@
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
     "ai": {
-      "score": 28,
+      "score": 0,
       "label": "Algemene update",
       "reasons": [
         "prioriteit 2",
         "sterke bron"
       ],
       "signals": [],
-      "snippet": "Just a moment... Enable JavaScript and cookies to continue"
+      "snippet": "",
+      "noise_count": 4
     }
   },
   "Google 2 kamers|Santpoort-Noord|https://www.google.com/search?q=2+kamer+appartement+huur+Santpoort-Noord+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 2 kamers",
@@ -1156,12 +1230,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google 3 kamers|Santpoort-Noord|https://www.google.com/search?q=3+kamer+appartement+huur+Santpoort-Noord+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google 3 kamers",
@@ -1176,12 +1251,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google kindvriendelijk|Santpoort-Noord|https://www.google.com/search?q=kindvriendelijke+huurwoning+Santpoort-Noord+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google kindvriendelijk",
@@ -1196,12 +1272,13 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   },
   "Google gezinswoning|Santpoort-Noord|https://www.google.com/search?q=gezinswoning+huur+Santpoort-Noord+max+1600": {
     "digest": "24e4148ae9697b4e691847a1bf5c172191813a03a8d20dbff6d700df40355b26",
-    "checked_at": "2026-03-15 21:18",
+    "checked_at": "2026-03-15 21:42",
     "status": "200",
     "title": "Google Search",
     "bron": "Google gezinswoning",
@@ -1216,7 +1293,8 @@
         "prioriteit 2"
       ],
       "signals": [],
-      "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+      "snippet": "",
+      "noise_count": 0
     }
   }
 }

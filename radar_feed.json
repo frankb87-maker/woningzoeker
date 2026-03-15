@@ -1,174 +1,28 @@
 [
   {
-    "type": "nieuw gevolgd",
-    "bron": "Funda",
-    "plaats": "Santpoort-Noord",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22santpoort-noord%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]",
-    "ai_score": 28,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "sterke bron"
-    ],
-    "signals": [],
-    "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d"
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Pararius",
-    "plaats": "Santpoort-Noord",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.pararius.nl/huurwoningen/santpoort-noord/0-1600",
-    "status": "403",
-    "title": "Just a moment...",
-    "ai_score": 28,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "sterke bron"
-    ],
-    "signals": [],
-    "snippet": "Just a moment... Enable JavaScript and cookies to continue"
-  },
-  {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
     "bron": "Google 2 kamers",
-    "plaats": "Driehuis",
+    "plaats": "Castricum",
     "prioriteit": 2,
     "focus": "2 kamers",
-    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Driehuis+max+1600",
+    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Castricum+max+1600",
     "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "Algemene update",
+    "title": "2 kamer appartement huur Castricum max 1600 - Google Search",
+    "ai_score": 76,
+    "ai_label": "Waarschijnlijk nieuwe woning",
     "ai_reasons": [
-      "prioriteit 2"
+      "prioriteit 2",
+      "prijs gevonden",
+      "m² gevonden",
+      "kamers gevonden"
     ],
-    "signals": [],
-    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Google 3 kamers",
-    "plaats": "Driehuis",
-    "prioriteit": 2,
-    "focus": "3 kamers",
-    "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Driehuis+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
+    "signals": [
+      "€ 974",
+      "42 m²",
+      "2 kamer",
+      "2 kamers"
     ],
-    "signals": [],
-    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Google kindvriendelijk",
-    "plaats": "Driehuis",
-    "prioriteit": 2,
-    "focus": "kindvriendelijk",
-    "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Driehuis+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": [],
-    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Google gezinswoning",
-    "plaats": "Driehuis",
-    "prioriteit": 2,
-    "focus": "gezinswoning",
-    "url": "https://www.google.com/search?q=gezinswoning+huur+Driehuis+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": [],
-    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Google 2 kamers",
-    "plaats": "Santpoort-Noord",
-    "prioriteit": 2,
-    "focus": "2 kamers",
-    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Santpoort-Noord+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": [],
-    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Google 3 kamers",
-    "plaats": "Santpoort-Noord",
-    "prioriteit": 2,
-    "focus": "3 kamers",
-    "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Santpoort-Noord+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": [],
-    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Google kindvriendelijk",
-    "plaats": "Santpoort-Noord",
-    "prioriteit": 2,
-    "focus": "kindvriendelijk",
-    "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Santpoort-Noord+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": [],
-    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Google gezinswoning",
-    "plaats": "Santpoort-Noord",
-    "prioriteit": 2,
-    "focus": "gezinswoning",
-    "url": "https://www.google.com/search?q=gezinswoning+huur+Santpoort-Noord+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": [],
-    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
+    "snippet": "2 kamer appartement huur Castricum max 1600 - Google Search G o o g l e × Please click here if you are not redirected within a few seconds. All Images Maps Videos News Books Searc",
+    "noise_count": 1
   }
 ]
