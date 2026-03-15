@@ -1,820 +1,174 @@
 [
   {
-    "type": "pagina gewijzigd",
-    "bron": "Funda",
-    "plaats": "Beverwijk",
-    "prioriteit": 1,
-    "focus": "huurwoningen",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22beverwijk%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]",
-    "ai_score": 40,
-    "ai_label": "mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 1",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pararius",
-    "plaats": "Beverwijk",
-    "prioriteit": 1,
-    "focus": "huurwoningen",
-    "url": "https://www.pararius.nl/huurwoningen/beverwijk/0-1600",
-    "status": "403",
-    "title": "Just a moment...",
-    "ai_score": 40,
-    "ai_label": "mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 1",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Funda",
-    "plaats": "Heemskerk",
-    "prioriteit": 1,
-    "focus": "huurwoningen",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22heemskerk%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]",
-    "ai_score": 40,
-    "ai_label": "mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 1",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pararius",
-    "plaats": "Heemskerk",
-    "prioriteit": 1,
-    "focus": "huurwoningen",
-    "url": "https://www.pararius.nl/huurwoningen/heemskerk/0-1600",
-    "status": "403",
-    "title": "Just a moment...",
-    "ai_score": 40,
-    "ai_label": "mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 1",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Funda",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22uitgeest%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]",
-    "ai_score": 30,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pararius",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.pararius.nl/huurwoningen/uitgeest/0-1600",
-    "status": "403",
-    "title": "Just a moment...",
-    "ai_score": 30,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Funda",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22castricum%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]",
-    "ai_score": 30,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pararius",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.pararius.nl/huurwoningen/castricum/0-1600",
-    "status": "403",
-    "title": "Just a moment...",
-    "ai_score": 30,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Funda",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22assendelft%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]",
-    "ai_score": 30,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pararius",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.pararius.nl/huurwoningen/assendelft/0-1600",
-    "status": "403",
-    "title": "Just a moment...",
-    "ai_score": 30,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Funda",
-    "plaats": "Velsen-Noord",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22velsen-noord%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]",
-    "ai_score": 30,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pararius",
-    "plaats": "Velsen-Noord",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.pararius.nl/huurwoningen/velsen-noord/0-1600",
-    "status": "403",
-    "title": "Just a moment...",
-    "ai_score": 30,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Funda",
-    "plaats": "Wijk aan Zee",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22wijk aan zee%22%5D&price=%22-1600%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]",
-    "ai_score": 30,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pararius",
-    "plaats": "Wijk aan Zee",
-    "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.pararius.nl/huurwoningen/wijk aan zee/0-1600",
-    "status": "403",
-    "title": "Just a moment...",
-    "ai_score": 30,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
     "type": "nieuw gevolgd",
     "bron": "Funda",
-    "plaats": "Zaandam",
+    "plaats": "Santpoort-Noord",
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22zaandam%22%5D&price=%22-1600%22",
+    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22santpoort-noord%22%5D&price=%22-1600%22",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
-    "ai_score": 30,
-    "ai_label": "algemene update",
+    "ai_score": 28,
+    "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
       "sterke bron"
     ],
-    "signals": []
+    "signals": [],
+    "snippet": "uis op funda Zoek een NVM makelaar Vind je verkoopmakelaar Bladeren Wat is mijn woning waard? Informatie Veelgestelde vragen Koop jouw eerste huis Verkoop je huis Hoe zoek ik op funda? Makelaars funda desk Trends &amp; d"
   },
   {
     "type": "nieuw gevolgd",
     "bron": "Pararius",
-    "plaats": "Zaandam",
+    "plaats": "Santpoort-Noord",
     "prioriteit": 2,
     "focus": "regio-uitbreiding",
-    "url": "https://www.pararius.nl/huurwoningen/zaandam/0-1600",
+    "url": "https://www.pararius.nl/huurwoningen/santpoort-noord/0-1600",
     "status": "403",
     "title": "Just a moment...",
-    "ai_score": 30,
-    "ai_label": "algemene update",
+    "ai_score": 28,
+    "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
       "sterke bron"
     ],
-    "signals": []
+    "signals": [],
+    "snippet": "Just a moment... Enable JavaScript and cookies to continue"
   },
   {
     "type": "nieuw gevolgd",
-    "bron": "Funda",
+    "bron": "Google 2 kamers",
     "plaats": "Driehuis",
     "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22driehuis%22%5D&price=%22-1600%22",
+    "focus": "2 kamers",
+    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Driehuis+max+1600",
     "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]",
-    "ai_score": 30,
-    "ai_label": "algemene update",
+    "title": "Google Search",
+    "ai_score": 10,
+    "ai_label": "Algemene update",
     "ai_reasons": [
-      "prioriteit 2",
-      "sterke bron"
+      "prioriteit 2"
     ],
-    "signals": []
+    "signals": [],
+    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
   },
   {
     "type": "nieuw gevolgd",
-    "bron": "Pararius",
+    "bron": "Google 3 kamers",
     "plaats": "Driehuis",
     "prioriteit": 2,
-    "focus": "regio-uitbreiding",
-    "url": "https://www.pararius.nl/huurwoningen/driehuis/0-1600",
-    "status": "403",
-    "title": "Just a moment...",
-    "ai_score": 30,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "sterke bron"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google 2 kamers",
-    "plaats": "Beverwijk",
-    "prioriteit": 1,
-    "focus": "2 kamers",
-    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Beverwijk+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 20,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 1"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google 2 kamers",
-    "plaats": "Heemskerk",
-    "prioriteit": 1,
-    "focus": "2 kamers",
-    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Heemskerk+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 20,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 1"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google 3 kamers",
-    "plaats": "Beverwijk",
-    "prioriteit": 2,
     "focus": "3 kamers",
-    "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Beverwijk+max+1600",
+    "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Driehuis+max+1600",
     "status": "200",
     "title": "Google Search",
     "ai_score": 10,
-    "ai_label": "algemene update",
+    "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2"
     ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google kindvriendelijk",
-    "plaats": "Beverwijk",
-    "prioriteit": 2,
-    "focus": "kindvriendelijk",
-    "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Beverwijk+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google gezinswoning",
-    "plaats": "Beverwijk",
-    "prioriteit": 2,
-    "focus": "gezinswoning",
-    "url": "https://www.google.com/search?q=gezinswoning+huur+Beverwijk+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google 3 kamers",
-    "plaats": "Heemskerk",
-    "prioriteit": 2,
-    "focus": "3 kamers",
-    "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Heemskerk+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google kindvriendelijk",
-    "plaats": "Heemskerk",
-    "prioriteit": 2,
-    "focus": "kindvriendelijk",
-    "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Heemskerk+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google gezinswoning",
-    "plaats": "Heemskerk",
-    "prioriteit": 2,
-    "focus": "gezinswoning",
-    "url": "https://www.google.com/search?q=gezinswoning+huur+Heemskerk+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google 2 kamers",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "2 kamers",
-    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Uitgeest+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google 3 kamers",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "3 kamers",
-    "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Uitgeest+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google kindvriendelijk",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "kindvriendelijk",
-    "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Uitgeest+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google gezinswoning",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "gezinswoning",
-    "url": "https://www.google.com/search?q=gezinswoning+huur+Uitgeest+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google 2 kamers",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "2 kamers",
-    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Castricum+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google 3 kamers",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "3 kamers",
-    "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Castricum+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google kindvriendelijk",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "kindvriendelijk",
-    "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Castricum+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google gezinswoning",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "gezinswoning",
-    "url": "https://www.google.com/search?q=gezinswoning+huur+Castricum+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google 2 kamers",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "2 kamers",
-    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Assendelft+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google 3 kamers",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "3 kamers",
-    "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Assendelft+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google kindvriendelijk",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "kindvriendelijk",
-    "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Assendelft+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google gezinswoning",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "gezinswoning",
-    "url": "https://www.google.com/search?q=gezinswoning+huur+Assendelft+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google 2 kamers",
-    "plaats": "Velsen-Noord",
-    "prioriteit": 2,
-    "focus": "2 kamers",
-    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Velsen-Noord+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google 3 kamers",
-    "plaats": "Velsen-Noord",
-    "prioriteit": 2,
-    "focus": "3 kamers",
-    "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Velsen-Noord+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google kindvriendelijk",
-    "plaats": "Velsen-Noord",
-    "prioriteit": 2,
-    "focus": "kindvriendelijk",
-    "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Velsen-Noord+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google gezinswoning",
-    "plaats": "Velsen-Noord",
-    "prioriteit": 2,
-    "focus": "gezinswoning",
-    "url": "https://www.google.com/search?q=gezinswoning+huur+Velsen-Noord+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google 2 kamers",
-    "plaats": "Wijk aan Zee",
-    "prioriteit": 2,
-    "focus": "2 kamers",
-    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Wijk+aan+Zee+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Google 3 kamers",
-    "plaats": "Wijk aan Zee",
-    "prioriteit": 2,
-    "focus": "3 kamers",
-    "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Wijk+aan+Zee+max+1600",
-    "status": "200",
-    "title": "Google Search",
-    "ai_score": 10,
-    "ai_label": "algemene update",
-    "ai_reasons": [
-      "prioriteit 2"
-    ],
-    "signals": []
+    "signals": [],
+    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
   },
   {
     "type": "nieuw gevolgd",
     "bron": "Google kindvriendelijk",
-    "plaats": "Wijk aan Zee",
+    "plaats": "Driehuis",
     "prioriteit": 2,
     "focus": "kindvriendelijk",
-    "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Wijk+aan+Zee+max+1600",
+    "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Driehuis+max+1600",
     "status": "200",
     "title": "Google Search",
     "ai_score": 10,
-    "ai_label": "algemene update",
+    "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2"
     ],
-    "signals": []
+    "signals": [],
+    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
   },
   {
     "type": "nieuw gevolgd",
     "bron": "Google gezinswoning",
-    "plaats": "Wijk aan Zee",
+    "plaats": "Driehuis",
     "prioriteit": 2,
     "focus": "gezinswoning",
-    "url": "https://www.google.com/search?q=gezinswoning+huur+Wijk+aan+Zee+max+1600",
+    "url": "https://www.google.com/search?q=gezinswoning+huur+Driehuis+max+1600",
     "status": "200",
     "title": "Google Search",
     "ai_score": 10,
-    "ai_label": "algemene update",
+    "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2"
     ],
-    "signals": []
+    "signals": [],
+    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
   },
   {
     "type": "nieuw gevolgd",
     "bron": "Google 2 kamers",
-    "plaats": "Zaandam",
+    "plaats": "Santpoort-Noord",
     "prioriteit": 2,
     "focus": "2 kamers",
-    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Zaandam+max+1600",
+    "url": "https://www.google.com/search?q=2+kamer+appartement+huur+Santpoort-Noord+max+1600",
     "status": "200",
     "title": "Google Search",
     "ai_score": 10,
-    "ai_label": "algemene update",
+    "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2"
     ],
-    "signals": []
+    "signals": [],
+    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
   },
   {
     "type": "nieuw gevolgd",
     "bron": "Google 3 kamers",
-    "plaats": "Zaandam",
+    "plaats": "Santpoort-Noord",
     "prioriteit": 2,
     "focus": "3 kamers",
-    "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Zaandam+max+1600",
+    "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Santpoort-Noord+max+1600",
     "status": "200",
     "title": "Google Search",
     "ai_score": 10,
-    "ai_label": "algemene update",
+    "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2"
     ],
-    "signals": []
+    "signals": [],
+    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
   },
   {
     "type": "nieuw gevolgd",
     "bron": "Google kindvriendelijk",
-    "plaats": "Zaandam",
+    "plaats": "Santpoort-Noord",
     "prioriteit": 2,
     "focus": "kindvriendelijk",
-    "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Zaandam+max+1600",
+    "url": "https://www.google.com/search?q=kindvriendelijke+huurwoning+Santpoort-Noord+max+1600",
     "status": "200",
     "title": "Google Search",
     "ai_score": 10,
-    "ai_label": "algemene update",
+    "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2"
     ],
-    "signals": []
+    "signals": [],
+    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
   },
   {
     "type": "nieuw gevolgd",
     "bron": "Google gezinswoning",
-    "plaats": "Zaandam",
+    "plaats": "Santpoort-Noord",
     "prioriteit": 2,
     "focus": "gezinswoning",
-    "url": "https://www.google.com/search?q=gezinswoning+huur+Zaandam+max+1600",
+    "url": "https://www.google.com/search?q=gezinswoning+huur+Santpoort-Noord+max+1600",
     "status": "200",
     "title": "Google Search",
     "ai_score": 10,
-    "ai_label": "algemene update",
+    "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2"
     ],
-    "signals": []
+    "signals": [],
+    "snippet": "Google Search Please click here if you are not redirected within a few seconds. If you're having trouble accessing Google Search, please&nbsp; click here , or send&nbsp; feedback ."
   }
 ]
