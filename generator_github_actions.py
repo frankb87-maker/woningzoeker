@@ -1,7 +1,9 @@
 import json
+import hashlib
 from pathlib import Path
 from datetime import datetime
 from urllib.parse import quote_plus
+import requests
 
 APP_TITLE = "Woningzoeker Frank Burrei"
 MAX_HUUR = 1600
@@ -24,50 +26,29 @@ GOOGLE_QUERIES = [
     {"name": "Google 3 kamers", "priority": 2, "focus": "3 kamers", "query": "3 kamer appartement huur {place} max {max_huur}"},
     {"name": "Google kindvriendelijk", "priority": 2, "focus": "kindvriendelijk", "query": "kindvriendelijke huurwoning {place} max {max_huur}"},
     {"name": "Google gezinswoning", "priority": 2, "focus": "gezinswoning", "query": "gezinswoning huur {place} max {max_huur}"},
-    {"name": "Google appartement", "priority": 2, "focus": "appartement", "query": "appartement huur {place} max {max_huur}"},
-    {"name": "Google huurwoning", "priority": 2, "focus": "huurwoning", "query": "huurwoning {place} max {max_huur}"},
 ]
 
 PORTALS = [
     "Huurwoningen.nl", "Huurportaal", "Huurstunt", "Direct Wonen", "Kamernet",
     "NederWoon", "RentSlam", "HousingAnywhere", "123Wonen", "kamers.nl",
-    "Rentola", "Rentbird", "Jaap huur", "Mansion.nl", "Wonen31", "ExpatRentals",
-    "Pararius huur", "Funda huur", "Rental Apartments", "Huurteam", "Stekkies"
+    "Rentola", "Rentbird", "Jaap huur"
 ]
 
 LANDLORDS = [
     "Vesteda", "MVGM", "Rotsvast", "Heimstaden", "Holland2Stay", "Interhouse",
-    "HouseHunting", "REBO", "Altera", "Bouwinvest", "Newomij", "Amvest Living",
-    "BPD Woningfonds", "Rockfield", "ACH Vastgoed", "Change=", "Brix", "Greystar",
-    "The Fizz", "OurDomain"
+    "HouseHunting", "REBO", "Altera", "Bouwinvest"
 ]
 
 CORPORATIONS = [
     "Woonopmaat", "Pré Wonen", "Rochdale", "Elan Wonen", "WoningNet",
     "Eigen Haard", "Ymere", "Parteon", "ZVH", "Intermaris", "Kennemer Wonen",
-    "Woonzorg Nederland", "Wonen Zuid Kennemerland", "Lieven de Key", "De Key",
-    "Wooncompagnie", "Woonwaard", "Woonservice", "de Alliantie", "Stadgenoot",
-    "Omnia Wonen", "Thuisvester", "Portaal", "Lefier", "Vivare", "Laris",
-    "Socius Wonen", "Rijnhart Wonen", "Velison Wonen", "Dudok Wonen"
+    "Woonzorg Nederland", "Woonwaard", "de Alliantie", "Stadgenoot"
 ]
 
 AGENCIES = [
     "Brantjes makelaars", "Van Gulik makelaars", "Teer makelaars", "Bert van Vulpen",
     "Saen Garantiemakelaars", "EV Wonen", "Kuijs Reinder Kakes", "Hopman ERA",
-    "Bakker Makelaardij", "KRK makelaars", "Mooijekind Vleut", "Vos Makelaardij",
-    "IJmond Makelaars", "Van Duin", "Noordstad makelaars", "PMA makelaars",
-    "Van der Borden", "De Best van Staveren", "Rikken Makelaardij", "Overspaern",
-    "Hendriks makelaardij", "Bakker Schoon", "Puur Makelaars", "Magneet Makelaars"
-]
-
-EXTRA_REGION = [
-    ("Makelaars IJmond", "makelaar", 3, "makelaar huurwoning IJmond"),
-    ("Verhuurmakelaar IJmond", "makelaar", 3, "verhuurmakelaar IJmond"),
-    ("Makelaars Noord-Holland huur", "makelaar", 3, "makelaar huurwoning Noord-Holland"),
-    ("Middenhuur Noord-Holland", "corporatie", 3, "middenhuur Noord-Holland huurwoning"),
-    ("Huurwoning 10 km Beverwijk", "straal 10 km", 2, "huurwoning Beverwijk 10 km max 1600"),
-    ("Huurwoning 10 km Heemskerk", "straal 10 km", 2, "huurwoning Heemskerk 10 km max 1600"),
-    ("Huurwoning IJmond gezin", "gezinswoning", 2, "gezinswoning huur IJmond max 1600"),
+    "KRK makelaars", "IJmond Makelaars", "Van Duin", "PMA makelaars"
 ]
 
 def google_url(query: str) -> str:
@@ -115,19 +96,91 @@ def build_data():
         for src in DIRECT_SOURCES:
             add_row(rows, seen, src["name"], place, 2, "regio-uitbreiding", direct_url(src["type"], place))
         for src in GOOGLE_QUERIES:
-            if src["priority"] <= 2:
-                add_row(rows, seen, src["name"], place, max(2, src["priority"]), src["focus"], google_url(src["query"].format(place=place, max_huur=MAX_HUUR)))
-        for name in PORTALS[:10]:
+            add_row(rows, seen, src["name"], place, max(2, src["priority"]), src["focus"], google_url(src["query"].format(place=place, max_huur=MAX_HUUR)))
+        for name in PORTALS[:6]:
             add_row(rows, seen, f"Google {name}", place, 3, "portal", google_url(f"{name} {place} huur"))
-        for name in AGENCIES[:10]:
+        for name in AGENCIES[:6]:
             add_row(rows, seen, f"Google {name}", place, 3, "makelaar", google_url(f"{name} huur {place}"))
-
-    for name, focus, priority, query in EXTRA_REGION:
-        add_row(rows, seen, name, "Regio", priority, focus, google_url(query))
 
     return rows
 
-def html_template(data_json: str, generated_at: str) -> str:
+def load_json(path: Path, default):
+    if path.exists():
+        try:
+            return json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            return default
+    return default
+
+def detect_changes(rows):
+    state_path = Path("radar_state.json")
+    prev = load_json(state_path, {})
+    new_state = {}
+    detections = []
+
+    # Beperk detectie tot de meest kansrijke routes om blokkades en runtime te beperken
+    candidates = [r for r in rows if r["prioriteit"] <= 2][:40]
+
+    headers = {"User-Agent": "Mozilla/5.0"}
+    for row in candidates:
+        item_id = f'{row["bron"]}|{row["plaats"]}|{row["url"]}'
+        status = "ok"
+        title = ""
+        digest = ""
+        try:
+            resp = requests.get(row["url"], headers=headers, timeout=20, allow_redirects=True)
+            text = resp.text[:120000]
+            title_start = text.lower().find("<title>")
+            title_end = text.lower().find("</title>")
+            if title_start != -1 and title_end != -1:
+                title = text[title_start+7:title_end].strip().replace("\n", " ")[:140]
+            digest = hashlib.sha256((title + "|" + text[:30000]).encode("utf-8", errors="ignore")).hexdigest()
+            status = str(resp.status_code)
+        except Exception as e:
+            status = "error"
+            digest = hashlib.sha256(str(e).encode("utf-8")).hexdigest()
+
+        new_state[item_id] = {
+            "digest": digest,
+            "checked_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "status": status,
+            "title": title,
+            "bron": row["bron"],
+            "plaats": row["plaats"],
+            "url": row["url"],
+            "prioriteit": row["prioriteit"],
+            "focus": row["focus"],
+        }
+
+        old = prev.get(item_id)
+        if not old:
+            detections.append({
+                "type": "nieuw gevolgd",
+                "bron": row["bron"],
+                "plaats": row["plaats"],
+                "prioriteit": row["prioriteit"],
+                "focus": row["focus"],
+                "url": row["url"],
+                "status": status,
+                "title": title,
+            })
+        elif old.get("digest") != digest:
+            detections.append({
+                "type": "pagina gewijzigd",
+                "bron": row["bron"],
+                "plaats": row["plaats"],
+                "prioriteit": row["prioriteit"],
+                "focus": row["focus"],
+                "url": row["url"],
+                "status": status,
+                "title": title or old.get("title", ""),
+            })
+
+    state_path.write_text(json.dumps(new_state, ensure_ascii=False, indent=2), encoding="utf-8")
+    Path("radar_feed.json").write_text(json.dumps(detections, ensure_ascii=False, indent=2), encoding="utf-8")
+    return detections
+
+def html_template(data_json: str, detections_json: str, generated_at: str) -> str:
     template = """<!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -187,6 +240,8 @@ button.ghost{background:#f5f7fb;color:#1f2937;border:1px solid var(--line)}
 .priority-guide{display:grid;gap:10px} .priority-guide .box{border-radius:18px;padding:14px;line-height:1.45}
 .prio1{background:var(--green)} .prio2{background:var(--blue)} .prio3{background:var(--gray)}
 .footer-note{color:var(--muted);font-size:12px;text-align:center;margin-top:14px}
+.radarbox{background:#fff7e9;border:1px solid #f0cb8d;color:#6e4b08;border-radius:16px;padding:12px}
+.radarbox strong{display:block;margin-bottom:4px}
 </style>
 </head>
 <body>
@@ -198,7 +253,7 @@ button.ghost{background:#f5f7fb;color:#1f2937;border:1px solid var(--line)}
       <div class="hero-meta">
         <span>__COUNT__ woningbronnen</span>
         <span>Genereerd: __GENERATED_AT__</span>
-        <span>Max. €__MAX_HUUR__</span>
+        <span>Detecties: __DETECTION_COUNT__</span>
       </div>
       <div class="grid-top">
         <div class="stat"><strong id="totalCount">0</strong><span class="subtle">woningbronnen</span></div>
@@ -207,14 +262,21 @@ button.ghost{background:#f5f7fb;color:#1f2937;border:1px solid var(--line)}
     </div>
 
     <div id="dashboard" class="panel active section">
-      <div class="section-head"><h2>Radar</h2><span class="subtle">start hier</span></div>
+      <div class="section-head"><h2>Radar</h2><span class="subtle">detectie</span></div>
       <div class="card">
-        <div class="notice">Nieuwe bronnen worden gemarkeerd zodat je makkelijk ziet waar je nog kunt kijken.</div>
+        <div class="notice">Detectie-radar v1 controleert kansrijke pagina’s op wijzigingen. Een wijziging kan betekenen: nieuw aanbod, nieuwe volgorde of pagina-update.</div>
         <div class="action-row">
           <button id="markAllSeen">Alles gezien</button>
           <button class="ghost" id="resetRadar">Reset radar</button>
         </div>
-        <div class="list" id="todayList" style="margin-top:12px"></div>
+        <div class="list" id="detectionList" style="margin-top:12px"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-head"><h2>Nieuwe bronnen</h2><span class="subtle">start hier</span></div>
+        <div class="card">
+          <div class="list" id="todayList"></div>
+        </div>
       </div>
     </div>
 
@@ -296,8 +358,9 @@ Als je iets ziet, stuur me dan meteen de link door. Dank je wel!</textarea>
 
 <script>
 const data = __DATA_JSON__;
-const favKey = "woningzoeker_v4_favs_v1";
-const seenKey = "woningzoeker_v4_seen_v1";
+const detections = __DETECTIONS_JSON__;
+const favKey = "woningzoeker_radar_favs_v1";
+const seenKey = "woningzoeker_radar_seen_v1";
 const getFavs = () => JSON.parse(localStorage.getItem(favKey) || "[]");
 const setFavs = (favs) => localStorage.setItem(favKey, JSON.stringify(favs));
 const getSeen = () => JSON.parse(localStorage.getItem(seenKey) || "[]");
@@ -307,6 +370,7 @@ let onlyFavs = false;
 const list = document.getElementById("list");
 const favList = document.getElementById("favList");
 const todayList = document.getElementById("todayList");
+const detectionList = document.getElementById("detectionList");
 
 function populatePlaces() {
   const select = document.getElementById("plaats");
@@ -349,6 +413,16 @@ function itemHtml(item, isFav) {
         <button class="secondary" data-fav="${item.url}">${isFav ? "Verwijder favoriet" : "Bewaar favoriet"}</button>
         <button class="ghost" data-seen="${item.url}">${isNew(item) ? "Markeer als gezien" : "Al gezien"}</button>
       </div>
+    </div>
+  `;
+}
+
+function detectionHtml(item) {
+  return `
+    <div class="radarbox">
+      <strong>${item.type} — ${item.bron} (${item.plaats})</strong>
+      <div style="font-size:13px;margin-bottom:8px">${item.focus} · prioriteit ${item.prioriteit}${item.status ? " · status " + item.status : ""}</div>
+      <a class="linkbtn" href="${item.url}" target="_blank" rel="noopener">Open bron</a>
     </div>
   `;
 }
@@ -397,6 +471,11 @@ function renderToday() {
   bindButtons(todayList);
 }
 
+function renderDetections() {
+  detectionList.innerHTML = detections.length ? "" : '<div class="empty">Nog geen detecties. Na de volgende automatische runs verschijnen hier wijzigingen.</div>';
+  detections.slice(0, 15).forEach(item => detectionList.insertAdjacentHTML("beforeend", detectionHtml(item)));
+}
+
 function renderStats() {
   document.getElementById("totalCount").textContent = data.length;
   document.getElementById("newCount").textContent = data.filter(isNew).length;
@@ -424,6 +503,7 @@ function renderAll() {
   renderList();
   renderFavs();
   renderToday();
+  renderDetections();
   renderStats();
 }
 
@@ -464,22 +544,29 @@ renderAll();
 </script>
 </body>
 </html>"""
-
     return (template
         .replace("__APP_TITLE__", APP_TITLE)
         .replace("__MAX_HUUR__", str(MAX_HUUR))
         .replace("__GENERATED_AT__", generated_at)
         .replace("__COUNT__", str(len(json.loads(data_json))))
-        .replace("__DATA_JSON__", data_json))
+        .replace("__DETECTION_COUNT__", str(len(json.loads(detections_json))))
+        .replace("__DATA_JSON__", data_json)
+        .replace("__DETECTIONS_JSON__", detections_json))
 
 def build_app():
-    data = build_data()
+    rows = build_data()
+    detections = detect_changes(rows)
     generated_at = datetime.now().strftime("%Y-%m-%d %H:%M")
-    html = html_template(json.dumps(data, ensure_ascii=False), generated_at)
-    out = Path("index.html")
-    out.write_text(html, encoding="utf-8")
-    print(f"Gegenereerd: {out}")
-    print(f"Aantal woningbronnen: {len(data)}")
+    html = html_template(
+        json.dumps(rows, ensure_ascii=False),
+        json.dumps(detections, ensure_ascii=False),
+        generated_at
+    )
+    Path("index.html").write_text(html, encoding="utf-8")
+    print("Gegenereerd: index.html")
+    print(f"Aantal woningbronnen: {len(rows)}")
+    print(f"Aantal detecties: {len(detections)}")
 
 if __name__ == "__main__":
     build_app()
+
