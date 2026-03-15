@@ -52,6 +52,41 @@ AGENCIES = [
     "KRK makelaars", "IJmond Makelaars", "Van Duin", "PMA makelaars"
 ]
 
+NOISE_TERMS = [
+    "just a moment",
+    "enable javascript",
+    "cookies to continue",
+    "wat is mijn woning waard",
+    "veelgestelde vragen",
+    "vind je verkoopmakelaar",
+    "nvm makelaar",
+    "makelaars funda desk",
+    "koop jouw eerste huis",
+    "cookie",
+    "privacy",
+    "voorwaarden",
+    "help",
+    "inloggen",
+    "account aanmaken",
+    "contact opnemen",
+    "desk",
+]
+
+LISTING_TERMS = [
+    "huur",
+    "huurwoning",
+    "appartement",
+    "woning",
+    "studio",
+    "kamer",
+    "slaapkamer",
+    "beschikbaar",
+    "per maand",
+    "woonoppervlakte",
+    "m²",
+    "m2",
+]
+
 
 def google_url(query: str) -> str:
     return "https://www.google.com/search?q=" + quote_plus(query)
@@ -135,11 +170,7 @@ def extract_title(html: str) -> str:
 
 
 def extract_price_signals(text: str):
-    patterns = [
-        r"€\s?\d{3,5}",
-        r"eur\s?\d{3,5}",
-        r"\d{3,5}\s?euro"
-    ]
+    patterns = [r"€\s?\d{3,5}", r"eur\s?\d{3,5}", r"\d{3,5}\s?euro"]
     found = []
     for p in patterns:
         found += re.findall(p, text, flags=re.I)
@@ -147,10 +178,7 @@ def extract_price_signals(text: str):
 
 
 def extract_surface_signals(text: str):
-    patterns = [
-        r"\d{2,3}\s?m²",
-        r"\d{2,3}\s?m2"
-    ]
+    patterns = [r"\d{2,3}\s?m²", r"\d{2,3}\s?m2"]
     found = []
     for p in patterns:
         found += re.findall(p, text, flags=re.I)
@@ -158,30 +186,46 @@ def extract_surface_signals(text: str):
 
 
 def extract_room_signals(text: str):
-    patterns = [
-        r"\b\d+\s?kamer[s]?\b",
-        r"\b\d+\s?slaapkamer[s]?\b"
-    ]
+    patterns = [r"\b\d+\s?kamer[s]?\b", r"\b\d+\s?slaapkamer[s]?\b"]
     found = []
     for p in patterns:
         found += re.findall(p, text, flags=re.I)
     return list(dict.fromkeys(found))[:8]
 
 
+def count_noise_terms(text: str):
+    lower = text.lower()
+    return sum(1 for term in NOISE_TERMS if term in lower)
+
+
+def count_listing_terms(text: str):
+    lower = text.lower()
+    return sum(1 for term in LISTING_TERMS if term in lower)
+
+
 def extract_listing_like_snippet(text: str):
-    m = re.search(r"(.{0,80}(?:€\s?\d{3,5}|eur\s?\d{3,5}|\d{2,3}\s?m²|\d+\s?kamer[s]?|huurwoning|appartement|woning).{0,160})", text, flags=re.I)
+    m = re.search(
+        r"(.{0,80}(?:€\s?\d{3,5}|eur\s?\d{3,5}|\d{2,3}\s?m²|\d+\s?kamer[s]?|huurwoning|appartement|woning).{0,160})",
+        text,
+        flags=re.I
+    )
     if m:
         snippet = re.sub(r"\s+", " ", m.group(1)).strip()
         return snippet[:220]
-    return text[:180].strip()
+    return ""
 
 
 def listing_signal_score(row, title: str, text: str):
     score = 0
     reasons = []
-
     lower = text.lower()
     title_lower = title.lower()
+
+    prices = extract_price_signals(text)
+    surfaces = extract_surface_signals(text)
+    rooms = extract_room_signals(text)
+    noise_count = count_noise_terms(text)
+    listing_count = count_listing_terms(text)
 
     if row["prioriteit"] == 1:
         score += 22
@@ -194,37 +238,46 @@ def listing_signal_score(row, title: str, text: str):
         score += 18
         reasons.append("sterke bron")
 
-    prices = extract_price_signals(text)
     if prices:
-        score += 22
+        score += 24
         reasons.append("prijs gevonden")
 
-    surfaces = extract_surface_signals(text)
     if surfaces:
-        score += 10
+        score += 12
         reasons.append("m² gevonden")
 
-    rooms = extract_room_signals(text)
     if rooms:
         score += 14
         reasons.append("kamers gevonden")
 
-    keyword_hits = 0
-    for kw in ["huur", "woning", "appartement", "studio", "kamer", "slaapkamer"]:
-        if kw in lower:
-            keyword_hits += 1
-    if keyword_hits >= 3:
-        score += 10
+    if listing_count >= 3:
+        score += 12
         reasons.append("woning-taal")
 
     if row["plaats"].lower() in lower or row["plaats"].lower() in title_lower:
         score += 6
         reasons.append("plaats gevonden")
 
-    if len(text) > 3000:
-        score += 4
+    if extract_listing_like_snippet(text):
+        score += 8
+        reasons.append("listing-snippet")
 
-    score = min(score, 100)
+    if "huur" in lower and prices:
+        score += 8
+        reasons.append("huur + prijs")
+
+    if noise_count >= 1:
+        score -= 18
+    if noise_count >= 2:
+        score -= 18
+
+    if "enable javascript" in lower or "just a moment" in lower:
+        score -= 35
+
+    if "wat is mijn woning waard" in lower or "veelgestelde vragen" in lower:
+        score -= 30
+
+    score = max(0, min(score, 100))
 
     if score >= 68:
         label = "Waarschijnlijk nieuwe woning"
@@ -238,12 +291,15 @@ def listing_signal_score(row, title: str, text: str):
     sample_bits.extend(surfaces[:2])
     sample_bits.extend(rooms[:2])
 
+    snippet = extract_listing_like_snippet(text)
+
     return {
         "score": score,
         "label": label,
         "reasons": reasons[:4],
         "signals": sample_bits[:5],
-        "snippet": extract_listing_like_snippet(text)
+        "snippet": snippet,
+        "noise_count": noise_count
     }
 
 
@@ -251,7 +307,6 @@ def fingerprint_relevant_content(title: str, text: str):
     prices = extract_price_signals(text)
     surfaces = extract_surface_signals(text)
     rooms = extract_room_signals(text)
-
     compact = " | ".join([
         title[:180],
         " ".join(prices[:8]),
@@ -282,7 +337,8 @@ def detect_changes(rows):
             "label": "Algemene update",
             "reasons": [],
             "signals": [],
-            "snippet": ""
+            "snippet": "",
+            "noise_count": 0
         }
 
         try:
@@ -327,6 +383,7 @@ def detect_changes(rows):
                 "ai_reasons": ai["reasons"],
                 "signals": ai["signals"],
                 "snippet": ai["snippet"],
+                "noise_count": ai["noise_count"],
             })
         elif old.get("digest") != digest:
             detections.append({
@@ -343,6 +400,7 @@ def detect_changes(rows):
                 "ai_reasons": ai["reasons"],
                 "signals": ai["signals"],
                 "snippet": ai["snippet"],
+                "noise_count": ai["noise_count"],
             })
 
     detections.sort(key=lambda x: x.get("ai_score", 0), reverse=True)
@@ -362,368 +420,71 @@ def html_template(data_json: str, detections_json: str, generated_at: str) -> st
 <meta name="theme-color" content="#0f172a">
 <style>
 :root{
-  --bg:#f4f7fb;
-  --shell:#ffffff;
-  --card:#ffffff;
-  --line:#e2e8f0;
-  --text:#0f172a;
-  --muted:#64748b;
-  --brand:#0f172a;
-  --brand-soft:#eff6ff;
-  --blue:#2563eb;
-  --blue-soft:#dbeafe;
-  --shadow:0 10px 30px rgba(15,23,42,.08);
-
-  --signal-high-bg:#ecfdf5;
-  --signal-high-line:#a7f3d0;
-  --signal-high-text:#065f46;
-
-  --signal-mid-bg:#fffbeb;
-  --signal-mid-line:#fde68a;
-  --signal-mid-text:#92400e;
-
-  --signal-low-bg:#f8fafc;
-  --signal-low-line:#cbd5e1;
-  --signal-low-text:#334155;
-
-  --prio1:#dcfce7;
-  --prio2:#dbeafe;
-  --prio3:#f1f5f9;
+  --bg:#f4f7fb; --shell:#ffffff; --card:#ffffff; --line:#e2e8f0; --text:#0f172a; --muted:#64748b;
+  --brand:#0f172a; --blue:#2563eb; --shadow:0 10px 30px rgba(15,23,42,.08);
+  --signal-high-bg:#ecfdf5; --signal-high-line:#a7f3d0; --signal-high-text:#065f46;
+  --signal-mid-bg:#fffbeb; --signal-mid-line:#fde68a; --signal-mid-text:#92400e;
+  --signal-low-bg:#f8fafc; --signal-low-line:#cbd5e1; --signal-low-text:#334155;
+  --prio1:#dcfce7; --prio2:#dbeafe; --prio3:#f1f5f9;
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  background:linear-gradient(180deg,#f8fafc 0%,#eef3f9 100%);
-  color:var(--text)
-}
-.app-shell{
-  max-width:440px;
-  margin:0 auto;
-  min-height:100vh;
-  background:var(--shell);
-  position:relative;
-  box-shadow:0 0 0 1px rgba(148,163,184,.08)
-}
+*{box-sizing:border-box} html,body{margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:linear-gradient(180deg,#f8fafc 0%,#eef3f9 100%);color:var(--text)}
+.app-shell{max-width:440px;margin:0 auto;min-height:100vh;background:var(--shell);position:relative;box-shadow:0 0 0 1px rgba(148,163,184,.08)}
 .safe{padding:18px 16px 104px}
-.hero{
-  background:linear-gradient(135deg,#0f172a 0%, #1e293b 52%, #2563eb 100%);
-  color:#fff;
-  border-radius:28px;
-  padding:24px 18px 18px;
-  box-shadow:var(--shadow)
-}
-.hero h1{
-  margin:0 0 10px;
-  font-size:26px;
-  line-height:1.04;
-  letter-spacing:-.02em
-}
-.hero p{
-  margin:0;
-  font-size:14px;
-  line-height:1.5;
-  color:rgba(255,255,255,.92)
-}
-.hero-meta{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-top:14px
-}
-.hero-meta span{
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.16);
-  color:#fff;
-  padding:8px 10px;
-  border-radius:999px;
-  font-size:12px
-}
-.grid-top{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-  margin-top:16px
-}
-.stat{
-  background:rgba(255,255,255,.96);
-  color:var(--text);
-  border-radius:18px;
-  padding:14px 12px;
-  min-height:82px
-}
-.stat strong{
-  display:block;
-  font-size:23px;
-  line-height:1.1;
-  margin-bottom:6px
-}
-.stat span{
-  font-size:12px;
-  color:var(--muted)
-}
+.hero{background:linear-gradient(135deg,#0f172a 0%, #1e293b 52%, #2563eb 100%);color:#fff;border-radius:28px;padding:24px 18px 18px;box-shadow:var(--shadow)}
+.hero h1{margin:0 0 10px;font-size:26px;line-height:1.04;letter-spacing:-.02em}
+.hero p{margin:0;font-size:14px;line-height:1.5;color:rgba(255,255,255,.92)}
+.hero-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.hero-meta span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);color:#fff;padding:8px 10px;border-radius:999px;font-size:12px}
+.grid-top{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.stat{background:rgba(255,255,255,.96);color:var(--text);border-radius:18px;padding:14px 12px;min-height:82px}
+.stat strong{display:block;font-size:23px;line-height:1.1;margin-bottom:6px}
+.stat span{font-size:12px;color:var(--muted)}
 .section{margin-top:18px}
-.section-head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:10px
-}
-.section-head h2{
-  margin:0;
-  font-size:22px;
-  letter-spacing:-.02em
-}
-.section-head .subtle{
-  color:var(--muted);
-  font-size:13px
-}
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:22px;
-  padding:14px;
-  box-shadow:0 8px 24px rgba(15,23,42,.04)
-}
-.notice{
-  background:#f8fafc;
-  border:1px solid #dbe4ef;
-  color:#334155;
-  border-radius:18px;
-  padding:12px;
-  font-size:13px;
-  line-height:1.5
-}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.section-head h2{margin:0;font-size:22px;letter-spacing:-.02em}
+.section-head .subtle{color:var(--muted);font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:14px;box-shadow:0 8px 24px rgba(15,23,42,.04)}
+.notice{background:#f8fafc;border:1px solid #dbe4ef;color:#334155;border-radius:18px;padding:12px;font-size:13px;line-height:1.5}
 .controls{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .controls .full{grid-column:1/-1}
-label{
-  display:block;
-  font-size:12px;
-  color:var(--muted);
-  margin-bottom:6px
-}
-input, select, textarea{
-  width:100%;
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:12px;
-  font-size:15px;
-  background:#fff;
-  color:var(--text)
-}
+label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
+input, select, textarea{width:100%;border:1px solid var(--line);border-radius:14px;padding:12px;font-size:15px;background:#fff;color:var(--text)}
 textarea{min-height:150px;resize:vertical}
-.action-row{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-top:12px
-}
-button, .linkbtn{
-  border:none;
-  appearance:none;
-  background:var(--brand);
-  color:#fff;
-  border-radius:14px;
-  padding:11px 13px;
-  font-size:14px;
-  text-decoration:none;
-  cursor:pointer;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center
-}
-button.secondary, .linkbtn.secondary{
-  background:#eff6ff;
-  color:#1d4ed8
-}
-button.ghost{
-  background:#fff;
-  color:var(--text);
-  border:1px solid var(--line)
-}
+.action-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+button, .linkbtn{border:none;appearance:none;background:var(--brand);color:#fff;border-radius:14px;padding:11px 13px;font-size:14px;text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+button.secondary, .linkbtn.secondary{background:#eff6ff;color:#1d4ed8}
+button.ghost{background:#fff;color:var(--text);border:1px solid var(--line)}
 .list{display:grid;gap:12px}
-.item{
-  border-radius:22px;
-  padding:14px;
-  border:1px solid var(--line);
-  background:#fff;
-  box-shadow:0 6px 18px rgba(15,23,42,.04)
-}
-.item h3{
-  margin:0;
-  font-size:18px;
-  line-height:1.25;
-  letter-spacing:-.01em
-}
-.meta{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin:10px 0 12px
-}
-.meta span{
-  padding:6px 10px;
-  border-radius:999px;
-  font-size:12px;
-  border:1px solid rgba(0,0,0,.04);
-  background:#f8fafc
-}
-.priority1{background:var(--prio1)}
-.priority2{background:var(--prio2)}
-.priority3{background:var(--prio3)}
-.badge-new{
-  background:#dbeafe !important;
-  color:#1d4ed8;
-  border-color:#bfdbfe !important
-}
-.scorebar{
-  height:8px;
-  border-radius:999px;
-  background:#eef2f7;
-  overflow:hidden;
-  margin-top:8px
-}
-.scorebar > div{
-  height:100%;
-  background:linear-gradient(90deg,#0f172a,#2563eb)
-}
-.panel{display:none}
-.panel.active{display:block}
-.bottom-nav{
-  position:fixed;
-  left:50%;
-  transform:translateX(-50%);
-  bottom:0;
-  width:min(440px,100%);
-  background:rgba(255,255,255,.96);
-  backdrop-filter:blur(10px);
-  border-top:1px solid var(--line);
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  padding:10px 8px calc(10px + env(safe-area-inset-bottom));
-  z-index:20
-}
-.navbtn{
-  border:none;
-  background:transparent;
-  color:var(--muted);
-  font-size:11px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:5px;
-  padding:6px 0;
-  cursor:pointer
-}
-.navbtn .icon{
-  width:34px;
-  height:34px;
-  border-radius:12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#f8fafc;
-  font-size:17px
-}
-.navbtn.active{color:#0f172a;font-weight:600}
-.navbtn.active .icon{background:#e2e8f0}
-.empty{
-  color:var(--muted);
-  text-align:center;
-  padding:18px
-}
-.signal-card{
-  border-radius:22px;
-  padding:14px;
-  border:1px solid var(--line)
-}
-.signal-high{
-  background:var(--signal-high-bg);
-  border-color:var(--signal-high-line);
-  color:var(--signal-high-text)
-}
-.signal-mid{
-  background:var(--signal-mid-bg);
-  border-color:var(--signal-mid-line);
-  color:var(--signal-mid-text)
-}
-.signal-low{
-  background:var(--signal-low-bg);
-  border-color:var(--signal-low-line);
-  color:var(--signal-low-text)
-}
-.signal-title{
-  margin:0 0 6px;
-  font-size:18px;
-  line-height:1.25;
-  letter-spacing:-.01em
-}
-.signal-sub{
-  font-size:13px;
-  opacity:.9;
-  margin-bottom:10px
-}
+.item{border-radius:22px;padding:14px;border:1px solid var(--line);background:#fff;box-shadow:0 6px 18px rgba(15,23,42,.04)}
+.item h3{margin:0;font-size:18px;line-height:1.25;letter-spacing:-.01em}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 12px}
+.meta span{padding:6px 10px;border-radius:999px;font-size:12px;border:1px solid rgba(0,0,0,.04);background:#f8fafc}
+.priority1{background:var(--prio1)} .priority2{background:var(--prio2)} .priority3{background:var(--prio3)}
+.badge-new{background:#dbeafe !important;color:#1d4ed8;border-color:#bfdbfe !important}
+.scorebar{height:8px;border-radius:999px;background:#eef2f7;overflow:hidden;margin-top:8px}
+.scorebar > div{height:100%;background:linear-gradient(90deg,#0f172a,#2563eb)}
+.panel{display:none}.panel.active{display:block}
+.bottom-nav{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:min(440px,100%);background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);padding:10px 8px calc(10px + env(safe-area-inset-bottom));z-index:20}
+.navbtn{border:none;background:transparent;color:var(--muted);font-size:11px;display:flex;flex-direction:column;align-items:center;gap:5px;padding:6px 0;cursor:pointer}
+.navbtn .icon{width:34px;height:34px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#f8fafc;font-size:17px}
+.navbtn.active{color:#0f172a;font-weight:600}.navbtn.active .icon{background:#e2e8f0}
+.empty{color:var(--muted);text-align:center;padding:18px}
+.signal-card{border-radius:22px;padding:14px;border:1px solid var(--line)}
+.signal-high{background:var(--signal-high-bg);border-color:var(--signal-high-line);color:var(--signal-high-text)}
+.signal-mid{background:var(--signal-mid-bg);border-color:var(--signal-mid-line);color:var(--signal-mid-text)}
+.signal-low{background:var(--signal-low-bg);border-color:var(--signal-low-line);color:var(--signal-low-text)}
+.signal-title{margin:0 0 6px;font-size:18px;line-height:1.25;letter-spacing:-.01em}
+.signal-sub{font-size:13px;opacity:.9;margin-bottom:10px}
 .badges{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
-.badge{
-  display:inline-block;
-  padding:6px 9px;
-  border-radius:999px;
-  font-size:12px;
-  background:rgba(255,255,255,.7);
-  border:1px solid rgba(0,0,0,.06)
-}
-.snippet{
-  margin-top:10px;
-  font-size:13px;
-  line-height:1.5;
-  color:#334155
-}
+.badge{display:inline-block;padding:6px 9px;border-radius:999px;font-size:12px;background:rgba(255,255,255,.7);border:1px solid rgba(0,0,0,.06)}
+.snippet{margin-top:10px;font-size:13px;line-height:1.5;color:#334155}
 .best-grid{display:grid;gap:12px}
 .priority-guide{display:grid;gap:10px}
-.priority-guide .box{
-  border-radius:18px;
-  padding:14px;
-  line-height:1.5;
-  border:1px solid var(--line)
-}
-.prio1{background:#ecfdf5}
-.prio2{background:#eff6ff}
-.prio3{background:#f8fafc}
-.footer-note{
-  color:var(--muted);
-  font-size:12px;
-  text-align:center;
-  margin-top:14px
-}
-.debug{
-  color:#94a3b8;
-  font-size:11px;
-  margin-top:8px
-}
-.top-summary{
-  display:grid;
-  gap:10px
-}
-.kpi-row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px
-}
-.kpi{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:14px
-}
-.kpi strong{
-  display:block;
-  font-size:22px;
-  margin-bottom:4px
-}
-.kpi span{
-  color:var(--muted);
-  font-size:12px
-}
+.priority-guide .box{border-radius:18px;padding:14px;line-height:1.5;border:1px solid var(--line)}
+.prio1{background:#ecfdf5}.prio2{background:#eff6ff}.prio3{background:#f8fafc}
+.footer-note{color:var(--muted);font-size:12px;text-align:center;margin-top:14px}
+.debug{color:#94a3b8;font-size:11px;margin-top:8px}
 </style>
 </head>
 <body>
@@ -740,12 +501,12 @@ button.ghost{
       <div class="grid-top">
         <div class="stat"><strong id="totalCount">0</strong><span>bronnen</span></div>
         <div class="stat"><strong id="signalCount">0</strong><span>signalen</span></div>
-        <div class="stat"><strong id="highCount">0</strong><span>hoog</span></div>
-        <div class="stat"><strong id="newCount">0</strong><span>nieuw</span></div>
+        <div class="stat"><strong id="highCount">0</strong><span>sterk</span></div>
+        <div class="stat"><strong id="unseenCount">0</strong><span>ongezien</span></div>
       </div>
     </div>
 
-    <div id="dashboard" class="panel active section">
+    <div id="dashboard" class="panel section">
       <div class="section-head"><h2>Beste signalen vandaag</h2><span class="subtle">eerst checken</span></div>
       <div class="card">
         <div class="best-grid" id="bestList"></div>
@@ -754,7 +515,7 @@ button.ghost{
       <div class="section">
         <div class="section-head"><h2>Radar</h2><span class="subtle">alle updates</span></div>
         <div class="card">
-          <div class="notice">De radar probeert onderscheid te maken tussen waarschijnlijk nieuwe woning, mogelijk nieuw aanbod en algemene updates. Hogere score = interessanter om eerst te openen.</div>
+          <div class="notice">De radar probeert onderscheid te maken tussen waarschijnlijk nieuwe woning, mogelijk nieuw aanbod en algemene updates. Alleen sterkere signalen komen bovenaan.</div>
           <div class="action-row">
             <button id="markAllSeen">Alles gezien</button>
             <button class="ghost" id="resetRadar">Reset radar</button>
@@ -764,8 +525,8 @@ button.ghost{
       </div>
     </div>
 
-    <div id="zoeken" class="panel section">
-      <div class="section-head"><h2>Zoeken</h2><span class="subtle">filter & open</span></div>
+    <div id="zoeken" class="panel active section">
+      <div class="section-head"><h2>Zoeken</h2><span class="subtle">start hier</span></div>
       <div class="card">
         <div class="controls">
           <div>
@@ -832,8 +593,8 @@ Als je iets ziet, stuur me dan meteen de link door. Dank je wel!</textarea>
   </div>
 
   <div class="bottom-nav">
-    <button class="navbtn active" data-tab="dashboard"><span class="icon">⌂</span><span>Radar</span></button>
-    <button class="navbtn" data-tab="zoeken"><span class="icon">⌕</span><span>Zoeken</span></button>
+    <button class="navbtn" data-tab="dashboard"><span class="icon">⌂</span><span>Radar</span></button>
+    <button class="navbtn active" data-tab="zoeken"><span class="icon">⌕</span><span>Zoeken</span></button>
     <button class="navbtn" data-tab="favorieten"><span class="icon">★</span><span>Opslaan</span></button>
     <button class="navbtn" data-tab="familie"><span class="icon">⇪</span><span>Familie</span></button>
     <button class="navbtn" data-tab="prioriteiten"><span class="icon">◎</span><span>Info</span></button>
@@ -843,8 +604,8 @@ Als je iets ziet, stuur me dan meteen de link door. Dank je wel!</textarea>
 <script>
 const data = __DATA_JSON__;
 const detections = __DETECTIONS_JSON__;
-const favKey = "woningzoeker_ai_radar_v3_favs";
-const seenKey = "woningzoeker_ai_radar_v3_seen";
+const favKey = "woningzoeker_ai_radar_v4_favs";
+const seenKey = "woningzoeker_ai_radar_v4_seen";
 
 const getFavs = () => JSON.parse(localStorage.getItem(favKey) || "[]");
 const setFavs = (favs) => localStorage.setItem(favKey, JSON.stringify(favs));
@@ -885,7 +646,7 @@ function sourceScore(item) {
 
 function itemHtml(item, isFav) {
   const sc = sourceScore(item);
-  const newBadge = isNew(item) ? '<span class="badge-new">Nieuw</span>' : '<span>Gezien</span>';
+  const newBadge = isNew(item) ? '<span class="badge-new">Ongezien</span>' : '<span>Gezien</span>';
 
   return `
     <div class="item priority${item.prioriteit}">
@@ -928,15 +689,28 @@ function detectionHtml(item) {
       <div class="action-row">
         <a class="linkbtn" href="${item.url}" target="_blank" rel="noopener">Open bron</a>
       </div>
-      <div class="debug">Focus: ${item.focus} · Prioriteit ${item.prioriteit} · Status ${item.status}</div>
+      <div class="debug">Focus: ${item.focus} · Prioriteit ${item.prioriteit}</div>
     </div>
   `;
 }
 
 function renderBestSignals() {
-  const best = [...detections].sort((a,b) => (b.ai_score || 0) - (a.ai_score || 0)).slice(0, 3);
-  bestList.innerHTML = best.length ? "" : '<div class="empty">Nog geen sterke signalen beschikbaar.</div>';
+  const best = [...detections]
+    .filter(x => (x.ai_score || 0) >= 42)
+    .sort((a,b) => (b.ai_score || 0) - (a.ai_score || 0))
+    .slice(0, 3);
+
+  bestList.innerHTML = best.length ? "" : '<div class="empty">Nog geen sterke signalen vandaag.</div>';
   best.forEach(item => bestList.insertAdjacentHTML("beforeend", detectionHtml(item)));
+}
+
+function renderDetections() {
+  const clean = [...detections]
+    .filter(x => (x.ai_score || 0) >= 20)
+    .sort((a,b) => (b.ai_score || 0) - (a.ai_score || 0));
+
+  detectionList.innerHTML = clean.length ? "" : '<div class="empty">Nog geen bruikbare signalen beschikbaar.</div>';
+  clean.forEach(item => detectionList.insertAdjacentHTML("beforeend", detectionHtml(item)));
 }
 
 function bindButtons(root) {
@@ -975,16 +749,11 @@ function renderFavs() {
   bindButtons(favList);
 }
 
-function renderDetections() {
-  detectionList.innerHTML = detections.length ? "" : '<div class="empty">Nog geen signalen. Bij de volgende runs verschijnen hier updates.</div>';
-  detections.forEach(item => detectionList.insertAdjacentHTML("beforeend", detectionHtml(item)));
-}
-
 function renderStats() {
   document.getElementById("totalCount").textContent = data.length;
-  document.getElementById("signalCount").textContent = detections.length;
+  document.getElementById("signalCount").textContent = detections.filter(x => (x.ai_score || 0) >= 20).length;
   document.getElementById("highCount").textContent = detections.filter(x => (x.ai_score || 0) >= 68).length;
-  document.getElementById("newCount").textContent = data.filter(isNew).length;
+  document.getElementById("unseenCount").textContent = data.filter(isNew).length;
 }
 
 function toggleFav(url) {
@@ -1054,6 +823,7 @@ document.getElementById("sharePage").onclick = async () => {
 
 populatePlaces();
 renderAll();
+switchTab("zoeken");
 </script>
 </body>
 </html>
