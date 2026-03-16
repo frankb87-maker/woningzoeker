@@ -1,28 +1,47 @@
 [
   {
     "type": "pagina gewijzigd",
+    "bron": "Google gezinswoning",
+    "plaats": "Beverwijk",
+    "prioriteit": 2,
+    "focus": "gezinswoning",
+    "url": "https://www.google.com/search?q=gezinswoning+huur+Beverwijk+max+1600",
+    "status": "200",
+    "title": "gezinswoning huur Beverwijk max 1600 - Google Search",
+    "ai_score": 0,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "prijs gevonden",
+      "m² gevonden",
+      "woning-taal"
+    ],
+    "signals": [
+      "€ 1675",
+      "€ 500",
+      "139 m²"
+    ],
+    "snippet": "gezinswoning huur Beverwijk max 1600 - Google Search G o o g l e × Please click here if you are not redirected within a few seconds. All Images Maps Videos News Books Search tools Any time Any",
+    "noise_count": 7,
+    "google_noise": true
+  },
+  {
+    "type": "pagina gewijzigd",
     "bron": "Google 3 kamers",
     "plaats": "Heemskerk",
     "prioriteit": 2,
     "focus": "3 kamers",
     "url": "https://www.google.com/search?q=3+kamer+appartement+huur+Heemskerk+max+1600",
     "status": "200",
-    "title": "3 kamer appartement huur Heemskerk max 1600 - Google Search",
+    "title": "Google Search",
     "ai_score": 0,
     "ai_label": "Algemene update",
     "ai_reasons": [
-      "prioriteit 2",
-      "prijs gevonden",
-      "kamers gevonden",
-      "woning-taal"
+      "prioriteit 2"
     ],
-    "signals": [
-      "€ 985",
-      "3 kamer",
-      "2 slaapkamers"
-    ],
-    "snippet": "3 kamer appartement huur Heemskerk max 1600 - Google Search G o o g l e × Please click here if you are not redirected within a few seconds. All Images Maps Videos News Books Search tools Any time Any",
-    "noise_count": 7,
+    "signals": [],
+    "snippet": "",
+    "noise_count": 3,
     "google_noise": true
   }
 ]
