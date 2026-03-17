@@ -6,455 +6,441 @@ from datetime import datetime
 from urllib.parse import quote_plus
 import requests
 
-# —————————————————————————
-
+# ---------------------------------------------------------------------------
 # Configuratie
+# ---------------------------------------------------------------------------
 
-# —————————————————————————
-
-APP_TITLE = “Woningzoeker Frank Burrei”
-VERSION   = “AI-radar v6.1”
+APP_TITLE = "Woningzoeker Frank Burrei"
+VERSION   = "AI-radar v6.1"
 MAX_HUUR  = 1600
 
-CORE_PLACES = [“Beverwijk”, “Heemskerk”]
+CORE_PLACES = ["Beverwijk", "Heemskerk"]
 REGION_PLACES = [
-“Uitgeest”, “Castricum”, “Assendelft”, “Velsen-Noord”, “Wijk aan Zee”,
-“Zaandam”, “Driehuis”, “Santpoort-Noord”, “Velserbroek”, “Bakkum”,
-“Heiloo”, “Limmen”, “Akersloot”, “Wormerveer”, “Krommenie”,
-“Haarlem-Noord”, “IJmuiden”, “Heemstede”, “Bloemendaal”,
+    "Uitgeest", "Castricum", "Assendelft", "Velsen-Noord", "Wijk aan Zee",
+    "Zaandam", "Driehuis", "Santpoort-Noord", "Velserbroek", "Bakkum",
+    "Heiloo", "Limmen", "Akersloot", "Wormerveer", "Krommenie",
+    "Haarlem-Noord", "IJmuiden", "Heemstede", "Bloemendaal",
 ]
 
-# —————————————————————————
-
+# ---------------------------------------------------------------------------
 # Directe bronnen — uitsluitend voor Radar
-
 # Geen Google hier; Google is voorbehouden aan de Zoeken-tab.
-
-# —————————————————————————
+# ---------------------------------------------------------------------------
 
 RADAR_SOURCES = [
-# Grote landelijke platforms
-{“name”: “Funda”,          “type”: “funda”,          “priority”: 1},
-{“name”: “Pararius”,       “type”: “pararius”,        “priority”: 1},
-{“name”: “Jaap”,           “type”: “jaap”,            “priority”: 1},
-{“name”: “Huislijn”,       “type”: “huislijn”,        “priority”: 2},
-{“name”: “Huurwoningen.nl”,“type”: “huurwoningen_nl”, “priority”: 2},
-# Grote verhuurders met directe website
-{“name”: “Vesteda”,        “type”: “vesteda”,         “priority”: 2},
-{“name”: “Heimstaden”,     “type”: “heimstaden”,      “priority”: 2},
-{“name”: “Holland2Stay”,   “type”: “holland2stay”,    “priority”: 3},
-# Corporaties met directe website
-{“name”: “Woonopmaat”,     “type”: “woonopmaat”,      “priority”: 2},
-{“name”: “Kennemer Wonen”, “type”: “kennemerwonen”,   “priority”: 2},
-{“name”: “Pré Wonen”,      “type”: “prewonen”,        “priority”: 2},
-{“name”: “WoningNet”,      “type”: “woningnet”,       “priority”: 2},
-{“name”: “Woonwaard”,      “type”: “woonwaard”,       “priority”: 3},
-{“name”: “ZVH”,            “type”: “zvh”,             “priority”: 2},
+    # Grote landelijke platforms
+    {"name": "Funda",          "type": "funda",          "priority": 1},
+    {"name": "Pararius",       "type": "pararius",        "priority": 1},
+    {"name": "Jaap",           "type": "jaap",            "priority": 1},
+    {"name": "Huislijn",       "type": "huislijn",        "priority": 2},
+    {"name": "Huurwoningen.nl","type": "huurwoningen_nl", "priority": 2},
+    # Grote verhuurders met directe website
+    {"name": "Vesteda",        "type": "vesteda",         "priority": 2},
+    {"name": "Heimstaden",     "type": "heimstaden",      "priority": 2},
+    {"name": "Holland2Stay",   "type": "holland2stay",    "priority": 3},
+    # Corporaties met directe website
+    {"name": "Woonopmaat",     "type": "woonopmaat",      "priority": 2},
+    {"name": "Kennemer Wonen", "type": "kennemerwonen",   "priority": 2},
+    {"name": "Pré Wonen",      "type": "prewonen",        "priority": 2},
+    {"name": "WoningNet",      "type": "woningnet",       "priority": 2},
+    {"name": "Woonwaard",      "type": "woonwaard",       "priority": 3},
+    {"name": "ZVH",            "type": "zvh",             "priority": 2},
 ]
 
-# —————————————————————————
-
+# ---------------------------------------------------------------------------
 # Google-zoekopdrachten — uitsluitend voor de Zoeken-tab
-
-# —————————————————————————
+# ---------------------------------------------------------------------------
 
 GOOGLE_QUERIES = [
-{“name”: “Google 2 kamers”,       “priority”: 1, “focus”: “2 kamers”,
-“query”: “2 kamer appartement huur {place} max {max_huur}”},
-{“name”: “Google 3 kamers”,       “priority”: 2, “focus”: “3 kamers”,
-“query”: “3 kamer appartement huur {place} max {max_huur}”},
-{“name”: “Google kindvriendelijk”,“priority”: 2, “focus”: “kindvriendelijk”,
-“query”: “kindvriendelijke huurwoning {place} max {max_huur}”},
-{“name”: “Google gezinswoning”,   “priority”: 2, “focus”: “gezinswoning”,
-“query”: “gezinswoning huur {place} max {max_huur}”},
+    {"name": "Google 2 kamers",       "priority": 1, "focus": "2 kamers",
+     "query": "2 kamer appartement huur {place} max {max_huur}"},
+    {"name": "Google 3 kamers",       "priority": 2, "focus": "3 kamers",
+     "query": "3 kamer appartement huur {place} max {max_huur}"},
+    {"name": "Google kindvriendelijk","priority": 2, "focus": "kindvriendelijk",
+     "query": "kindvriendelijke huurwoning {place} max {max_huur}"},
+    {"name": "Google gezinswoning",   "priority": 2, "focus": "gezinswoning",
+     "query": "gezinswoning huur {place} max {max_huur}"},
 ]
 
 GOOGLE_PORTALS = [
-“Huurwoningen.nl”, “Huurstunt”, “Direct Wonen”, “Kamernet”,
-“NederWoon”, “RentSlam”, “123Wonen”, “Rentola”, “Rentbird”,
+    "Huurwoningen.nl", "Huurstunt", "Direct Wonen", "Kamernet",
+    "NederWoon", "RentSlam", "123Wonen", "Rentola", "Rentbird",
 ]
 
 GOOGLE_LANDLORDS = [
-“Vesteda”, “MVGM”, “Rotsvast”, “Heimstaden”, “Holland2Stay”,
-“Interhouse”, “HouseHunting”, “REBO”, “Altera”, “Bouwinvest”,
+    "Vesteda", "MVGM", "Rotsvast", "Heimstaden", "Holland2Stay",
+    "Interhouse", "HouseHunting", "REBO", "Altera", "Bouwinvest",
 ]
 
 GOOGLE_CORPORATIONS = [
-“Woonopmaat”, “Pré Wonen”, “Rochdale”, “Elan Wonen”, “WoningNet”,
-“Eigen Haard”, “Ymere”, “Parteon”, “ZVH”, “Intermaris”,
-“Kennemer Wonen”, “Woonzorg Nederland”, “Woonwaard”,
-“de Alliantie”, “Stadgenoot”,
+    "Woonopmaat", "Pré Wonen", "Rochdale", "Elan Wonen", "WoningNet",
+    "Eigen Haard", "Ymere", "Parteon", "ZVH", "Intermaris",
+    "Kennemer Wonen", "Woonzorg Nederland", "Woonwaard",
+    "de Alliantie", "Stadgenoot",
 ]
 
 GOOGLE_AGENCIES = [
-“Brantjes makelaars”, “Van Gulik makelaars”, “Teer makelaars”,
-“Bert van Vulpen”, “Saen Garantiemakelaars”, “EV Wonen”,
-“Kuijs Reinder Kakes”, “Hopman ERA”, “IJmond Makelaars”,
-“Van Duin”, “PMA makelaars”,
+    "Brantjes makelaars", "Van Gulik makelaars", "Teer makelaars",
+    "Bert van Vulpen", "Saen Garantiemakelaars", "EV Wonen",
+    "Kuijs Reinder Kakes", "Hopman ERA", "IJmond Makelaars",
+    "Van Duin", "PMA makelaars",
 ]
 
-# —————————————————————————
-
+# ---------------------------------------------------------------------------
 # Signaaldetectie helpers
-
-# —————————————————————————
+# ---------------------------------------------------------------------------
 
 NOISE_TERMS = [
-“just a moment”, “enable javascript”, “cookies to continue”,
-“wat is mijn woning waard”, “veelgestelde vragen”,
-“vind je verkoopmakelaar”, “nvm makelaar”, “koop jouw eerste huis”,
-“cookie”, “privacy”, “voorwaarden”, “help”, “inloggen”,
-“account aanmaken”, “contact opnemen”, “desk”,
-“please click here”, “if you are not redirected”,
-“google offered in”, “search the world”,
+    "just a moment", "enable javascript", "cookies to continue",
+    "wat is mijn woning waard", "veelgestelde vragen",
+    "vind je verkoopmakelaar", "nvm makelaar", "koop jouw eerste huis",
+    "cookie", "privacy", "voorwaarden", "help", "inloggen",
+    "account aanmaken", "contact opnemen", "desk",
+    "please click here", "if you are not redirected",
+    "google offered in", "search the world",
 ]
 
 LISTING_TERMS = [
-“huur”, “huurwoning”, “appartement”, “woning”, “studio”, “kamer”,
-“slaapkamer”, “beschikbaar”, “per maand”, “woonoppervlakte”,
-“m²”, “m2”, “te huur”, “direct beschikbaar”,
+    "huur", "huurwoning", "appartement", "woning", "studio", "kamer",
+    "slaapkamer", "beschikbaar", "per maand", "woonoppervlakte",
+    "m²", "m2", "te huur", "direct beschikbaar",
 ]
 
 ADDRESS_HINTS = [
-“straat”, “laan”, “weg”, “plein”, “hof”, “plantsoen”, “kade”, “gracht”,
+    "straat", "laan", "weg", "plein", "hof", "plantsoen", "kade", "gracht",
 ]
 
-# —————————————————————————
-
+# ---------------------------------------------------------------------------
 # URL-builders
-
-# —————————————————————————
+# ---------------------------------------------------------------------------
 
 def google_url(query: str) -> str:
-return “https://www.google.com/search?q=” + quote_plus(query)
+    return "https://www.google.com/search?q=" + quote_plus(query)
+
 
 def direct_url(source_type: str, place: str) -> str:
-“”“Geeft een directe, werkende zoek-URL terug voor het opgegeven brontype en de opgegeven plaats.”””
-p = place.lower().replace(” “, “-”)
-p_enc = quote_plus(place.lower())
+    """Geeft een directe, werkende zoek-URL terug voor het opgegeven brontype en de opgegeven plaats."""
+    p = place.lower().replace(" ", "-")
+    p_enc = quote_plus(place.lower())
 
-```
-urls = {
-    # Funda: werkt met slug in URL
-    "funda":
-        f"https://www.funda.nl/zoeken/huur?selected_area=%5B%22{p_enc}%22%5D&price=%22-{MAX_HUUR}%22",
+    urls = {
+        # Funda: werkt met slug in URL
+        "funda":
+            f"https://www.funda.nl/zoeken/huur?selected_area=%5B%22{p_enc}%22%5D&price=%22-{MAX_HUUR}%22",
 
-    # Pararius: /{stad}/0-{max} — gebruik hyphenated slug
-    "pararius":
-        f"https://www.pararius.nl/huurwoningen/{p}/0-{MAX_HUUR}",
+        # Pararius: /{stad}/0-{max} — gebruik hyphenated slug
+        "pararius":
+            f"https://www.pararius.nl/huurwoningen/{p}/0-{MAX_HUUR}",
 
-    # Jaap: directe huurzoekpagina per plaats
-    "jaap":
-        f"https://www.jaap.nl/huurhuizen/{p}",
+        # Jaap: directe huurzoekpagina per plaats
+        "jaap":
+            f"https://www.jaap.nl/huurhuizen/{p}",
 
-    # Huislijn
-    "huislijn":
-        f"https://www.huislijn.nl/huurwoning/{p}",
+        # Huislijn
+        "huislijn":
+            f"https://www.huislijn.nl/huurwoning/{p}",
 
-    # Huurwoningen.nl — plaatspagina
-    "huurwoningen_nl":
-        f"https://www.huurwoningen.nl/in/{p}/",
+        # Huurwoningen.nl — plaatspagina
+        "huurwoningen_nl":
+            f"https://www.huurwoningen.nl/in/{p}/",
 
-    # Verhuurders — directe aanbodpagina's (geen plaatsfilter beschikbaar; zoek op regio)
-    "vesteda":
-        "https://www.vesteda.com/nl/woningaanbod/zoeken/?huurprijsmax=1600",
-    "heimstaden":
-        "https://www.heimstaden.com/nl/homes/",
-    "holland2stay":
-        "https://holland2stay.com/residences",
+        # Verhuurders — directe aanbodpagina's (geen plaatsfilter beschikbaar; zoek op regio)
+        "vesteda":
+            "https://www.vesteda.com/nl/woningaanbod/zoeken/?huurprijsmax=1600",
+        "heimstaden":
+            "https://www.heimstaden.com/nl/homes/",
+        "holland2stay":
+            "https://holland2stay.com/residences",
 
-    # Corporaties — directe aanbodpagina's
-    "woonopmaat":
-        "https://www.woonopmaat.nl/woningaanbod/",
-    "kennemerwonen":
-        "https://www.kennemerwonen.nl/aanbod/",
-    "prewonen":
-        "https://www.prewonen.nl/woningaanbod/",
-    "woningnet":
-        "https://www.woningnet.nl/",
-    "woonwaard":
-        "https://www.woonwaard.nl/woningaanbod/",
-    "zvh":
-        "https://www.zvh.nl/aanbod/",
-}
-
-if source_type not in urls:
-    raise ValueError(f"Onbekend brontype: {source_type}")
-return urls[source_type]
-```
-
-# —————————————————————————
-
-# Data-opbouw
-
-# —————————————————————————
-
-def add_row(rows, seen, bron, plaats, prioriteit, focus, url, tab=“both”):
-key = (bron, plaats, url)
-if key not in seen:
-seen.add(key)
-rows.append({
-“bron”:      bron,
-“plaats”:    plaats,
-“prioriteit”: prioriteit,
-“focus”:     focus,
-“url”:       url,
-“tab”:       tab,   # “radar” | “zoeken” | “both”
-})
-
-def build_data():
-rows = []
-seen = set()
-
-```
-# ---- Kerngemeenten ----
-for place in CORE_PLACES:
-
-    # Directe bronnen → Radar (en ook zichtbaar in Zoeken)
-    for src in RADAR_SOURCES:
-        add_row(rows, seen, src["name"], place, src["priority"],
-                "huurwoningen", direct_url(src["type"], place), tab="radar")
-
-    # Google-queries → alleen Zoeken
-    for src in GOOGLE_QUERIES:
-        add_row(rows, seen, src["name"], place, src["priority"], src["focus"],
-                google_url(src["query"].format(place=place, max_huur=MAX_HUUR)), tab="zoeken")
-
-    for name in GOOGLE_PORTALS:
-        add_row(rows, seen, f"Google {name}", place, 3, "portal",
-                google_url(f"{name} {place} huur"), tab="zoeken")
-    for name in GOOGLE_LANDLORDS:
-        add_row(rows, seen, f"Google {name}", place, 3, "verhuurder",
-                google_url(f"{name} huurwoning {place}"), tab="zoeken")
-    for name in GOOGLE_CORPORATIONS:
-        add_row(rows, seen, f"Google {name}", place, 3, "corporatie",
-                google_url(f"{name} huur {place}"), tab="zoeken")
-    for name in GOOGLE_AGENCIES:
-        add_row(rows, seen, f"Google {name}", place, 3, "makelaar",
-                google_url(f"{name} huur {place}"), tab="zoeken")
-
-# ---- Regiogemeenten ----
-for place in REGION_PLACES:
-
-    # Directe bronnen → Radar
-    for src in RADAR_SOURCES:
-        add_row(rows, seen, src["name"], place,
-                max(2, src["priority"]), "regio-uitbreiding",
-                direct_url(src["type"], place), tab="radar")
-
-    # Google-queries → alleen Zoeken
-    for src in GOOGLE_QUERIES:
-        add_row(rows, seen, src["name"], place, max(2, src["priority"]), src["focus"],
-                google_url(src["query"].format(place=place, max_huur=MAX_HUUR)), tab="zoeken")
-    for name in GOOGLE_PORTALS[:5]:
-        add_row(rows, seen, f"Google {name}", place, 3, "portal",
-                google_url(f"{name} {place} huur"), tab="zoeken")
-    for name in GOOGLE_AGENCIES[:5]:
-        add_row(rows, seen, f"Google {name}", place, 3, "makelaar",
-                google_url(f"{name} huur {place}"), tab="zoeken")
-
-return rows
-```
-
-# —————————————————————————
-
-# Signaaldetectie
-
-# —————————————————————————
-
-def load_json(path: Path, default):
-if path.exists():
-try:
-return json.loads(path.read_text(encoding=“utf-8”))
-except Exception:
-return default
-return default
-
-def clean_html_text(html: str) -> str:
-html = re.sub(r”<script.*?</script>”, “ “, html, flags=re.S | re.I)
-html = re.sub(r”<style.*?</style>”,  “ “, html, flags=re.S | re.I)
-html = re.sub(r”<[^>]+>”, “ “, html)
-return re.sub(r”\s+”, “ “, html).strip()
-
-def extract_title(html: str) -> str:
-m = re.search(r”<title>(.*?)</title>”, html, flags=re.I | re.S)
-if m:
-return re.sub(r”\s+”, “ “, m.group(1)).strip()[:180]
-return “”
-
-def extract_signals(text: str, patterns: list) -> list:
-found = []
-for p in patterns:
-found += re.findall(p, text, flags=re.I)
-return list(dict.fromkeys(found))[:8]
-
-def count_terms(text: str, terms: list) -> int:
-lower = text.lower()
-return sum(1 for t in terms if t in lower)
-
-def extract_snippet(text: str) -> str:
-m = re.search(
-r”(.{0,80}(?:€\s?\d{3,5}|\d{2,3}\s?m²|\d+\s?kamer[s]?|huurwoning|appartement|te huur).{0,180})”,
-text, flags=re.I,
-)
-return re.sub(r”\s+”, “ “, m.group(1)).strip()[:240] if m else “”
-
-def fingerprint(title: str, text: str, prices: list, surfaces: list, rooms: list) -> str:
-blob = “ | “.join([title[:180],
-“ “.join(prices[:8]), “ “.join(surfaces[:8]),
-“ “.join(rooms[:8]), text[:4000]])
-return hashlib.sha256(blob.encode(“utf-8”, errors=“ignore”)).hexdigest()
-
-def is_google_noise(text: str, title: str) -> bool:
-blob = f”{title} {text}”.lower()
-patterns = [
-“google search”, “please click here”, “if you are not redirected”,
-“images maps videos”, “news books”, “search the world’s information”,
-“google offered in”, “redirected within a few seconds”,
-]
-return any(p in blob for p in patterns)
-
-def signal_score(row: dict, title: str, text: str) -> dict:
-prices   = extract_signals(text, [r”€\s?\d{3,5}”, r”eur\s?\d{3,5}”, r”\d{3,5}\s?euro”])
-surfaces = extract_signals(text, [r”\d{2,3}\s?m²”, r”\d{2,3}\s?m2”])
-rooms    = extract_signals(text, [r”\b\d+\s?kamer[s]?\b”, r”\b\d+\s?slaapkamer[s]?\b”])
-noise_n  = count_terms(text, NOISE_TERMS)
-list_n   = count_terms(text, LISTING_TERMS)
-snippet  = extract_snippet(text)
-google_n = is_google_noise(text, title)
-lower    = text.lower()
-
-```
-score   = 0
-reasons = []
-
-if row["prioriteit"] == 1:   score += 22; reasons.append("prioriteit 1")
-elif row["prioriteit"] == 2: score += 10; reasons.append("prioriteit 2")
-
-if row["tab"] == "radar":    score += 20; reasons.append("directe bron")
-if prices:                   score += 24; reasons.append("prijs gevonden")
-if surfaces:                 score += 12; reasons.append("m² gevonden")
-if rooms:                    score += 14; reasons.append("kamers gevonden")
-if list_n >= 3:              score += 12; reasons.append("woning-taal")
-if row["plaats"].lower() in lower: score += 6; reasons.append("plaats gevonden")
-if snippet:                  score +=  8; reasons.append("listing-snippet")
-if "huur" in lower and prices: score += 8; reasons.append("huur + prijs")
-if prices and rooms and surfaces: score += 16; reasons.append("volledig profiel")
-if any(h in lower for h in ADDRESS_HINTS): score += 6; reasons.append("adrespatroon")
-
-if noise_n >= 1: score -= 18
-if noise_n >= 2: score -= 18
-if "enable javascript" in lower or "just a moment" in lower: score -= 35
-if google_n:     score -= 70
-
-score = max(0, min(score, 100))
-
-if score >= 70:  label = "Waarschijnlijk nieuwe woning"
-elif score >= 45: label = "Mogelijk nieuw aanbod"
-else:            label = "Algemene update"
-
-return {
-    "score":       score,
-    "label":       label,
-    "reasons":     reasons[:4],
-    "signals":     (prices + surfaces + rooms)[:5],
-    "snippet":     snippet,
-    "noise_count": noise_n,
-    "google_noise": google_n,
-}
-```
-
-def detect_changes(rows: list) -> list:
-state_path = Path(“radar_state.json”)
-prev       = load_json(state_path, {})
-new_state  = {}
-detections = []
-
-```
-headers    = {"User-Agent": "Mozilla/5.0"}
-# Controleer alleen directe (Radar-)bronnen met prioriteit ≤ 2
-candidates = [r for r in rows if r["tab"] == "radar" and r["prioriteit"] <= 2][:60]
-
-for row in candidates:
-    item_id = f'{row["bron"]}|{row["plaats"]}|{row["url"]}'
-    status  = "ok"
-    title   = ""
-    text    = ""
-    digest  = ""
-    ai      = {"score": 0, "label": "Algemene update", "reasons": [],
-               "signals": [], "snippet": "", "noise_count": 0, "google_noise": False}
-
-    try:
-        resp   = requests.get(row["url"], headers=headers, timeout=20, allow_redirects=True)
-        status = str(resp.status_code)
-        html   = resp.text[:150_000]
-        title  = extract_title(html)
-        text   = clean_html_text(html)[:25_000]
-        prices   = extract_signals(text, [r"€\s?\d{3,5}", r"eur\s?\d{3,5}"])
-        surfaces = extract_signals(text, [r"\d{2,3}\s?m²", r"\d{2,3}\s?m2"])
-        rooms    = extract_signals(text, [r"\b\d+\s?kamer[s]?\b"])
-        digest = fingerprint(title, text, prices, surfaces, rooms)
-        ai     = signal_score(row, title, text)
-    except Exception as e:
-        status = "error"
-        digest = hashlib.sha256(str(e).encode()).hexdigest()
-
-    new_state[item_id] = {
-        "digest":     digest,
-        "checked_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
-        "status":     status,
-        "title":      title,
-        **{k: row[k] for k in ("bron", "plaats", "url", "prioriteit", "focus")},
-        "ai":         ai,
+        # Corporaties — directe aanbodpagina's
+        "woonopmaat":
+            "https://www.woonopmaat.nl/woningaanbod/",
+        "kennemerwonen":
+            "https://www.kennemerwonen.nl/aanbod/",
+        "prewonen":
+            "https://www.prewonen.nl/woningaanbod/",
+        "woningnet":
+            "https://www.woningnet.nl/",
+        "woonwaard":
+            "https://www.woonwaard.nl/woningaanbod/",
+        "zvh":
+            "https://www.zvh.nl/aanbod/",
     }
 
-    old = prev.get(item_id)
-    change_type = None
-    if not old:
-        change_type = "nieuw gevolgd"
-    elif old.get("digest") != digest:
-        change_type = "pagina gewijzigd"
+    if source_type not in urls:
+        raise ValueError(f"Onbekend brontype: {source_type}")
+    return urls[source_type]
 
-    if change_type:
-        detections.append({
-            "type":        change_type,
-            "bron":        row["bron"],
-            "plaats":      row["plaats"],
-            "prioriteit":  row["prioriteit"],
-            "focus":       row["focus"],
-            "url":         row["url"],
-            "status":      status,
-            "title":       title or old.get("title", "") if old else title,
-            "ai_score":    ai["score"],
-            "ai_label":    ai["label"],
-            "ai_reasons":  ai["reasons"],
-            "signals":     ai["signals"],
-            "snippet":     ai["snippet"],
-            "noise_count": ai["noise_count"],
-            "google_noise": ai["google_noise"],
+
+# ---------------------------------------------------------------------------
+# Data-opbouw
+# ---------------------------------------------------------------------------
+
+def add_row(rows, seen, bron, plaats, prioriteit, focus, url, tab="both"):
+    key = (bron, plaats, url)
+    if key not in seen:
+        seen.add(key)
+        rows.append({
+            "bron":      bron,
+            "plaats":    plaats,
+            "prioriteit": prioriteit,
+            "focus":     focus,
+            "url":       url,
+            "tab":       tab,   # "radar" | "zoeken" | "both"
         })
 
-detections.sort(key=lambda x: x.get("ai_score", 0), reverse=True)
 
-state_path.write_text(json.dumps(new_state, ensure_ascii=False, indent=2), encoding="utf-8")
-Path("radar_feed.json").write_text(json.dumps(detections, ensure_ascii=False, indent=2), encoding="utf-8")
-return detections
-```
+def build_data():
+    rows = []
+    seen = set()
 
-# —————————————————————————
+    # ---- Kerngemeenten ----
+    for place in CORE_PLACES:
 
+        # Directe bronnen → Radar (en ook zichtbaar in Zoeken)
+        for src in RADAR_SOURCES:
+            add_row(rows, seen, src["name"], place, src["priority"],
+                    "huurwoningen", direct_url(src["type"], place), tab="radar")
+
+        # Google-queries → alleen Zoeken
+        for src in GOOGLE_QUERIES:
+            add_row(rows, seen, src["name"], place, src["priority"], src["focus"],
+                    google_url(src["query"].format(place=place, max_huur=MAX_HUUR)), tab="zoeken")
+
+        for name in GOOGLE_PORTALS:
+            add_row(rows, seen, f"Google {name}", place, 3, "portal",
+                    google_url(f"{name} {place} huur"), tab="zoeken")
+        for name in GOOGLE_LANDLORDS:
+            add_row(rows, seen, f"Google {name}", place, 3, "verhuurder",
+                    google_url(f"{name} huurwoning {place}"), tab="zoeken")
+        for name in GOOGLE_CORPORATIONS:
+            add_row(rows, seen, f"Google {name}", place, 3, "corporatie",
+                    google_url(f"{name} huur {place}"), tab="zoeken")
+        for name in GOOGLE_AGENCIES:
+            add_row(rows, seen, f"Google {name}", place, 3, "makelaar",
+                    google_url(f"{name} huur {place}"), tab="zoeken")
+
+    # ---- Regiogemeenten ----
+    for place in REGION_PLACES:
+
+        # Directe bronnen → Radar
+        for src in RADAR_SOURCES:
+            add_row(rows, seen, src["name"], place,
+                    max(2, src["priority"]), "regio-uitbreiding",
+                    direct_url(src["type"], place), tab="radar")
+
+        # Google-queries → alleen Zoeken
+        for src in GOOGLE_QUERIES:
+            add_row(rows, seen, src["name"], place, max(2, src["priority"]), src["focus"],
+                    google_url(src["query"].format(place=place, max_huur=MAX_HUUR)), tab="zoeken")
+        for name in GOOGLE_PORTALS[:5]:
+            add_row(rows, seen, f"Google {name}", place, 3, "portal",
+                    google_url(f"{name} {place} huur"), tab="zoeken")
+        for name in GOOGLE_AGENCIES[:5]:
+            add_row(rows, seen, f"Google {name}", place, 3, "makelaar",
+                    google_url(f"{name} huur {place}"), tab="zoeken")
+
+    return rows
+
+
+# ---------------------------------------------------------------------------
+# Signaaldetectie
+# ---------------------------------------------------------------------------
+
+def load_json(path: Path, default):
+    if path.exists():
+        try:
+            return json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            return default
+    return default
+
+
+def clean_html_text(html: str) -> str:
+    html = re.sub(r"<script.*?</script>", " ", html, flags=re.S | re.I)
+    html = re.sub(r"<style.*?</style>",  " ", html, flags=re.S | re.I)
+    html = re.sub(r"<[^>]+>", " ", html)
+    return re.sub(r"\s+", " ", html).strip()
+
+
+def extract_title(html: str) -> str:
+    m = re.search(r"<title>(.*?)</title>", html, flags=re.I | re.S)
+    if m:
+        return re.sub(r"\s+", " ", m.group(1)).strip()[:180]
+    return ""
+
+
+def extract_signals(text: str, patterns: list) -> list:
+    found = []
+    for p in patterns:
+        found += re.findall(p, text, flags=re.I)
+    return list(dict.fromkeys(found))[:8]
+
+
+def count_terms(text: str, terms: list) -> int:
+    lower = text.lower()
+    return sum(1 for t in terms if t in lower)
+
+
+def extract_snippet(text: str) -> str:
+    m = re.search(
+        r"(.{0,80}(?:€\s?\d{3,5}|\d{2,3}\s?m²|\d+\s?kamer[s]?|huurwoning|appartement|te huur).{0,180})",
+        text, flags=re.I,
+    )
+    return re.sub(r"\s+", " ", m.group(1)).strip()[:240] if m else ""
+
+
+def fingerprint(title: str, text: str, prices: list, surfaces: list, rooms: list) -> str:
+    blob = " | ".join([title[:180],
+                       " ".join(prices[:8]), " ".join(surfaces[:8]),
+                       " ".join(rooms[:8]), text[:4000]])
+    return hashlib.sha256(blob.encode("utf-8", errors="ignore")).hexdigest()
+
+
+def is_google_noise(text: str, title: str) -> bool:
+    blob = f"{title} {text}".lower()
+    patterns = [
+        "google search", "please click here", "if you are not redirected",
+        "images maps videos", "news books", "search the world's information",
+        "google offered in", "redirected within a few seconds",
+    ]
+    return any(p in blob for p in patterns)
+
+
+def signal_score(row: dict, title: str, text: str) -> dict:
+    prices   = extract_signals(text, [r"€\s?\d{3,5}", r"eur\s?\d{3,5}", r"\d{3,5}\s?euro"])
+    surfaces = extract_signals(text, [r"\d{2,3}\s?m²", r"\d{2,3}\s?m2"])
+    rooms    = extract_signals(text, [r"\b\d+\s?kamer[s]?\b", r"\b\d+\s?slaapkamer[s]?\b"])
+    noise_n  = count_terms(text, NOISE_TERMS)
+    list_n   = count_terms(text, LISTING_TERMS)
+    snippet  = extract_snippet(text)
+    google_n = is_google_noise(text, title)
+    lower    = text.lower()
+
+    score   = 0
+    reasons = []
+
+    if row["prioriteit"] == 1:   score += 22; reasons.append("prioriteit 1")
+    elif row["prioriteit"] == 2: score += 10; reasons.append("prioriteit 2")
+
+    if row["tab"] == "radar":    score += 20; reasons.append("directe bron")
+    if prices:                   score += 24; reasons.append("prijs gevonden")
+    if surfaces:                 score += 12; reasons.append("m² gevonden")
+    if rooms:                    score += 14; reasons.append("kamers gevonden")
+    if list_n >= 3:              score += 12; reasons.append("woning-taal")
+    if row["plaats"].lower() in lower: score += 6; reasons.append("plaats gevonden")
+    if snippet:                  score +=  8; reasons.append("listing-snippet")
+    if "huur" in lower and prices: score += 8; reasons.append("huur + prijs")
+    if prices and rooms and surfaces: score += 16; reasons.append("volledig profiel")
+    if any(h in lower for h in ADDRESS_HINTS): score += 6; reasons.append("adrespatroon")
+
+    if noise_n >= 1: score -= 18
+    if noise_n >= 2: score -= 18
+    if "enable javascript" in lower or "just a moment" in lower: score -= 35
+    if google_n:     score -= 70
+
+    score = max(0, min(score, 100))
+
+    if score >= 70:  label = "Waarschijnlijk nieuwe woning"
+    elif score >= 45: label = "Mogelijk nieuw aanbod"
+    else:            label = "Algemene update"
+
+    return {
+        "score":       score,
+        "label":       label,
+        "reasons":     reasons[:4],
+        "signals":     (prices + surfaces + rooms)[:5],
+        "snippet":     snippet,
+        "noise_count": noise_n,
+        "google_noise": google_n,
+    }
+
+
+def detect_changes(rows: list) -> list:
+    state_path = Path("radar_state.json")
+    prev       = load_json(state_path, {})
+    new_state  = {}
+    detections = []
+
+    headers    = {"User-Agent": "Mozilla/5.0"}
+    # Controleer alleen directe (Radar-)bronnen met prioriteit ≤ 2
+    candidates = [r for r in rows if r["tab"] == "radar" and r["prioriteit"] <= 2][:60]
+
+    for row in candidates:
+        item_id = f'{row["bron"]}|{row["plaats"]}|{row["url"]}'
+        status  = "ok"
+        title   = ""
+        text    = ""
+        digest  = ""
+        ai      = {"score": 0, "label": "Algemene update", "reasons": [],
+                   "signals": [], "snippet": "", "noise_count": 0, "google_noise": False}
+
+        try:
+            resp   = requests.get(row["url"], headers=headers, timeout=20, allow_redirects=True)
+            status = str(resp.status_code)
+            html   = resp.text[:150_000]
+            title  = extract_title(html)
+            text   = clean_html_text(html)[:25_000]
+            prices   = extract_signals(text, [r"€\s?\d{3,5}", r"eur\s?\d{3,5}"])
+            surfaces = extract_signals(text, [r"\d{2,3}\s?m²", r"\d{2,3}\s?m2"])
+            rooms    = extract_signals(text, [r"\b\d+\s?kamer[s]?\b"])
+            digest = fingerprint(title, text, prices, surfaces, rooms)
+            ai     = signal_score(row, title, text)
+        except Exception as e:
+            status = "error"
+            digest = hashlib.sha256(str(e).encode()).hexdigest()
+
+        new_state[item_id] = {
+            "digest":     digest,
+            "checked_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "status":     status,
+            "title":      title,
+            **{k: row[k] for k in ("bron", "plaats", "url", "prioriteit", "focus")},
+            "ai":         ai,
+        }
+
+        old = prev.get(item_id)
+        change_type = None
+        if not old:
+            change_type = "nieuw gevolgd"
+        elif old.get("digest") != digest:
+            change_type = "pagina gewijzigd"
+
+        if change_type:
+            detections.append({
+                "type":        change_type,
+                "bron":        row["bron"],
+                "plaats":      row["plaats"],
+                "prioriteit":  row["prioriteit"],
+                "focus":       row["focus"],
+                "url":         row["url"],
+                "status":      status,
+                "title":       title or old.get("title", "") if old else title,
+                "ai_score":    ai["score"],
+                "ai_label":    ai["label"],
+                "ai_reasons":  ai["reasons"],
+                "signals":     ai["signals"],
+                "snippet":     ai["snippet"],
+                "noise_count": ai["noise_count"],
+                "google_noise": ai["google_noise"],
+            })
+
+    detections.sort(key=lambda x: x.get("ai_score", 0), reverse=True)
+
+    state_path.write_text(json.dumps(new_state, ensure_ascii=False, indent=2), encoding="utf-8")
+    Path("radar_feed.json").write_text(json.dumps(detections, ensure_ascii=False, indent=2), encoding="utf-8")
+    return detections
+
+
+# ---------------------------------------------------------------------------
 # HTML-template
-
-# —————————————————————————
+# ---------------------------------------------------------------------------
 
 def html_template(data_json: str, detections_json: str, generated_at: str) -> str:
-row_count       = len(json.loads(data_json))
-detection_count = len(json.loads(detections_json))
+    row_count       = len(json.loads(data_json))
+    detection_count = len(json.loads(detections_json))
 
-```
-return f"""<!DOCTYPE html>
-```
-
+    return f"""<!DOCTYPE html>
 <html lang="nl">
 <head>
 <meta charset="utf-8">
@@ -567,123 +553,117 @@ button.ghost{{background:#fff;color:var(--text);border:1px solid var(--line)}}
       </div>
     </div>
 
-```
-<!-- ===== RADAR ===== -->
-<div id="dashboard" class="panel section">
-  <div class="section-head"><h2>Radar</h2><span class="subtle">directe bronnen</span></div>
-  <div class="card">
-    <div class="notice">
-      De Radar controleert uitsluitend directe woningwebsites: Funda, Pararius, Jaap,
-      Huislijn, Huurwoningen.nl, Vesteda, Heimstaden, corporaties en meer.
-      Google wordt hier niet gebruikt.
+    <!-- ===== RADAR ===== -->
+    <div id="dashboard" class="panel section">
+      <div class="section-head"><h2>Radar</h2><span class="subtle">directe bronnen</span></div>
+      <div class="card">
+        <div class="notice">
+          De Radar controleert uitsluitend directe woningwebsites: Funda, Pararius, Jaap,
+          Huislijn, Huurwoningen.nl, Vesteda, Heimstaden, corporaties en meer.
+          Google wordt hier niet gebruikt.
+        </div>
+        <div class="action-row">
+          <button id="markAllSeen">Alles gezien</button>
+          <button class="ghost" id="resetRadar">Reset radar</button>
+        </div>
+        <div class="section-head" style="margin-top:16px">
+          <h2 style="font-size:17px">Beste signalen</h2>
+        </div>
+        <div class="best-grid" id="bestList"></div>
+        <div class="section-head" style="margin-top:16px">
+          <h2 style="font-size:17px">Alle updates</h2>
+        </div>
+        <div class="list" id="detectionList"></div>
+      </div>
     </div>
-    <div class="action-row">
-      <button id="markAllSeen">Alles gezien</button>
-      <button class="ghost" id="resetRadar">Reset radar</button>
-    </div>
-    <div class="section-head" style="margin-top:16px">
-      <h2 style="font-size:17px">Beste signalen</h2>
-    </div>
-    <div class="best-grid" id="bestList"></div>
-    <div class="section-head" style="margin-top:16px">
-      <h2 style="font-size:17px">Alle updates</h2>
-    </div>
-    <div class="list" id="detectionList"></div>
-  </div>
-</div>
 
-<!-- ===== ZOEKEN ===== -->
-<div id="zoeken" class="panel active section">
-  <div class="section-head"><h2>Zoeken</h2><span class="subtle">start hier</span></div>
-  <div class="card">
-    <div class="controls">
-      <div>
-        <label for="plaats">Plaats</label>
-        <select id="plaats"><option value="all">Alles</option></select>
-      </div>
-      <div>
-        <label for="prio">Prioriteit</label>
-        <select id="prio">
-          <option value="all">Alles</option>
-          <option value="1">Prioriteit 1</option>
-          <option value="2">Prioriteit 2</option>
-          <option value="3">Prioriteit 3</option>
-        </select>
-      </div>
-      <div>
-        <label for="tabfilter">Brontype</label>
-        <select id="tabfilter">
-          <option value="all">Alles</option>
-          <option value="radar">Directe bronnen</option>
-          <option value="zoeken">Google-zoekopdrachten</option>
-        </select>
-      </div>
-      <div>
-        <label for="zoek">Zoeken</label>
-        <input id="zoek" placeholder="Bijv. Funda, corporatie, 2 kamers">
+    <!-- ===== ZOEKEN ===== -->
+    <div id="zoeken" class="panel active section">
+      <div class="section-head"><h2>Zoeken</h2><span class="subtle">start hier</span></div>
+      <div class="card">
+        <div class="controls">
+          <div>
+            <label for="plaats">Plaats</label>
+            <select id="plaats"><option value="all">Alles</option></select>
+          </div>
+          <div>
+            <label for="prio">Prioriteit</label>
+            <select id="prio">
+              <option value="all">Alles</option>
+              <option value="1">Prioriteit 1</option>
+              <option value="2">Prioriteit 2</option>
+              <option value="3">Prioriteit 3</option>
+            </select>
+          </div>
+          <div>
+            <label for="tabfilter">Brontype</label>
+            <select id="tabfilter">
+              <option value="all">Alles</option>
+              <option value="radar">Directe bronnen</option>
+              <option value="zoeken">Google-zoekopdrachten</option>
+            </select>
+          </div>
+          <div>
+            <label for="zoek">Zoeken</label>
+            <input id="zoek" placeholder="Bijv. Funda, corporatie, 2 kamers">
+          </div>
+        </div>
+        <div class="action-row">
+          <button id="openBest">Open top-links</button>
+          <button class="secondary" id="showFavs">Alleen favorieten</button>
+          <button class="ghost" id="showAll">Toon alles</button>
+        </div>
+        <div class="list" id="list" style="margin-top:14px"></div>
       </div>
     </div>
-    <div class="action-row">
-      <button id="openBest">Open top-links</button>
-      <button class="secondary" id="showFavs">Alleen favorieten</button>
-      <button class="ghost" id="showAll">Toon alles</button>
+
+    <!-- ===== FAVORIETEN ===== -->
+    <div id="favorieten" class="panel section">
+      <div class="section-head"><h2>Favorieten</h2><span class="subtle">bewaard lokaal</span></div>
+      <div class="card"><div class="list" id="favList"></div></div>
     </div>
-    <div class="list" id="list" style="margin-top:14px"></div>
-  </div>
-</div>
 
-<!-- ===== FAVORIETEN ===== -->
-<div id="favorieten" class="panel section">
-  <div class="section-head"><h2>Favorieten</h2><span class="subtle">bewaard lokaal</span></div>
-  <div class="card"><div class="list" id="favList"></div></div>
-</div>
-
-<!-- ===== FAMILIE ===== -->
-<div id="familie" class="panel section">
-  <div class="section-head"><h2>Familie</h2><span class="subtle">delen</span></div>
-  <div class="card">
-    <h3 style="margin-top:0">Bericht doorsturen</h3>
-    <textarea id="familyText">Hoi! Zou je met me mee willen kijken naar een huurwoning?
-```
+    <!-- ===== FAMILIE ===== -->
+    <div id="familie" class="panel section">
+      <div class="section-head"><h2>Familie</h2><span class="subtle">delen</span></div>
+      <div class="card">
+        <h3 style="margin-top:0">Bericht doorsturen</h3>
+        <textarea id="familyText">Hoi! Zou je met me mee willen kijken naar een huurwoning?
 
 Ik zoek in Beverwijk / Heemskerk en omgeving.
 Belangrijk:
-
 - maximaal €{MAX_HUUR} per maand
 - liefst 2 of 3 kamers
 - kindvriendelijke buurt
 
 Als je iets ziet, stuur me dan meteen de link door. Dank je wel!</textarea>
-<div class="action-row">
-<button id="copyFamilyText">Kopieer bericht</button>
-<button class="secondary" id="sharePage">Deel app</button>
-</div>
-</div>
-</div>
+        <div class="action-row">
+          <button id="copyFamilyText">Kopieer bericht</button>
+          <button class="secondary" id="sharePage">Deel app</button>
+        </div>
+      </div>
+    </div>
 
-```
-<!-- ===== INFO ===== -->
-<div id="prioriteiten" class="panel section">
-  <div class="section-head"><h2>Info</h2><span class="subtle">uitleg</span></div>
-  <div class="pg">
-    <div class="box p1"><strong>Radar-tab</strong><br>
-      Controleert uitsluitend directe woningwebsites (Funda, Pararius, Jaap,
-      Huislijn, Huurwoningen.nl, Vesteda, Heimstaden, corporaties).
-      Geen Google.</div>
-    <div class="box p2"><strong>Zoeken-tab</strong><br>
-      Alle bronnen inclusief Google-zoekopdrachten voor portals, makelaars
-      en corporaties. Gebruik dit als startpunt.</div>
-    <div class="box p3"><strong>Prioriteit 1</strong><br>
-      Funda en Pararius in Beverwijk/Heemskerk — altijd als eerste.</div>
-    <div class="box p3"><strong>Prioriteit 2</strong><br>
-      Overige directe bronnen en regio-uitbreidingen.</div>
-    <div class="box p3"><strong>Prioriteit 3</strong><br>
-      Aanvullende portals, makelaars en corporaties.</div>
-  </div>
-  <div class="footer-note">{VERSION} · max. €{MAX_HUUR}/mnd</div>
-</div>
-```
-
+    <!-- ===== INFO ===== -->
+    <div id="prioriteiten" class="panel section">
+      <div class="section-head"><h2>Info</h2><span class="subtle">uitleg</span></div>
+      <div class="pg">
+        <div class="box p1"><strong>Radar-tab</strong><br>
+          Controleert uitsluitend directe woningwebsites (Funda, Pararius, Jaap,
+          Huislijn, Huurwoningen.nl, Vesteda, Heimstaden, corporaties).
+          Geen Google.</div>
+        <div class="box p2"><strong>Zoeken-tab</strong><br>
+          Alle bronnen inclusief Google-zoekopdrachten voor portals, makelaars
+          en corporaties. Gebruik dit als startpunt.</div>
+        <div class="box p3"><strong>Prioriteit 1</strong><br>
+          Funda en Pararius in Beverwijk/Heemskerk — altijd als eerste.</div>
+        <div class="box p3"><strong>Prioriteit 2</strong><br>
+          Overige directe bronnen en regio-uitbreidingen.</div>
+        <div class="box p3"><strong>Prioriteit 3</strong><br>
+          Aanvullende portals, makelaars en corporaties.</div>
+      </div>
+      <div class="footer-note">{VERSION} · max. €{MAX_HUUR}/mnd</div>
+    </div>
   </div>
 
   <div class="bottom-nav">
@@ -882,36 +862,34 @@ populatePlaces();
 renderAll();
 switchTab("zoeken");
 </script>
-
 </body>
 </html>"""
 
-# —————————————————————————
 
+# ---------------------------------------------------------------------------
 # Entrypoint
-
-# —————————————————————————
+# ---------------------------------------------------------------------------
 
 def build_app():
-rows       = build_data()
-detections = detect_changes(rows)
-generated_at = datetime.now().strftime(”%Y-%m-%d %H:%M”)
+    rows       = build_data()
+    detections = detect_changes(rows)
+    generated_at = datetime.now().strftime("%Y-%m-%d %H:%M")
 
-```
-html = html_template(
-    json.dumps(rows,       ensure_ascii=False),
-    json.dumps(detections, ensure_ascii=False),
-    generated_at,
-)
-Path("index.html").write_text(html, encoding="utf-8")
+    html = html_template(
+        json.dumps(rows,       ensure_ascii=False),
+        json.dumps(detections, ensure_ascii=False),
+        generated_at,
+    )
+    Path("index.html").write_text(html, encoding="utf-8")
 
-radar_rows  = [r for r in rows if r["tab"] == "radar"]
-google_rows = [r for r in rows if r["tab"] == "zoeken"]
-print(f"Gegenereerd : index.html  ({VERSION})")
-print(f"Totaal bronnen : {len(rows)}  "
-      f"(radar: {len(radar_rows)}, zoeken/Google: {len(google_rows)})")
-print(f"AI-signalen    : {len(detections)}")
-```
+    radar_rows  = [r for r in rows if r["tab"] == "radar"]
+    google_rows = [r for r in rows if r["tab"] == "zoeken"]
+    print(f"Gegenereerd : index.html  ({VERSION})")
+    print(f"Totaal bronnen : {len(rows)}  "
+          f"(radar: {len(radar_rows)}, zoeken/Google: {len(google_rows)})")
+    print(f"AI-signalen    : {len(detections)}")
 
-if **name** == “**main**”:
-build_app()
+
+if __name__ == "__main__":
+    build_app()
+
