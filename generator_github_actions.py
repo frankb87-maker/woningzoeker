@@ -20,24 +20,27 @@ REGION_PLACES = [
 ]
 
 RADAR_SOURCES = [
+    # Prioriteit 1: platforms met volledige plaats + prijs + kamers filter
     {"name": "Funda",           "type": "funda",           "priority": 1},
     {"name": "Pararius",        "type": "pararius",        "priority": 1},
     {"name": "Jaap",            "type": "jaap",            "priority": 1},
+    # Prioriteit 2: platforms met plaatsfilter in URL
     {"name": "Huislijn",        "type": "huislijn",        "priority": 2},
     {"name": "Huurwoningen.nl", "type": "huurwoningen_nl", "priority": 2},
     {"name": "Kamernet",        "type": "kamernet",        "priority": 2},
     {"name": "Vesteda",         "type": "vesteda",         "priority": 2},
-    {"name": "Heimstaden",      "type": "heimstaden",      "priority": 2},
-    {"name": "MVGM",            "type": "mvgm",            "priority": 2},
-    {"name": "Rotsvast",        "type": "rotsvast",        "priority": 2},
-    {"name": "Interhouse",      "type": "interhouse",      "priority": 2},
+    # Corporaties regio IJmond/Kennemerland
     {"name": "Woonopmaat",      "type": "woonopmaat",      "priority": 2},
     {"name": "Kennemer Wonen",  "type": "kennemerwonen",   "priority": 2},
     {"name": "Pre Wonen",       "type": "prewonen",        "priority": 2},
     {"name": "WoningNet",       "type": "woningnet",       "priority": 2},
     {"name": "ZVH",             "type": "zvh",             "priority": 2},
-    {"name": "Holland2Stay",    "type": "holland2stay",    "priority": 3},
     {"name": "Woonwaard",       "type": "woonwaard",       "priority": 3},
+]
+
+# Landelijke verhuurders zonder plaatsfilter -> alleen via Google in Zoeken-tab
+GOOGLE_LANDLORDS_DIRECT = [
+    "Heimstaden", "Holland2Stay", "MVGM", "Rotsvast", "Interhouse",
 ]
 
 GOOGLE_QUERIES = [
@@ -125,17 +128,7 @@ def direct_url(source_type: str, place: str) -> str:
         "kamernet":
             f"https://www.kamernet.nl/huren/appartement-{p}?maxRent={MAX_HUUR}",
         "vesteda":
-            f"https://www.vesteda.com/nl/woningaanbod/zoeken/?huurprijsmax={MAX_HUUR}&kamers={MIN_KAMERS}",
-        "heimstaden":
-            "https://www.heimstaden.com/nl/homes/",
-        "mvgm":
-            "https://www.mvgm.nl/wonen/huurwoningen/",
-        "rotsvast":
-            "https://www.rotsvast.nl/huurwoningen/",
-        "interhouse":
-            "https://www.interhouse.nl/huurwoningen/",
-        "holland2stay":
-            "https://holland2stay.com/residences",
+            f"https://www.vesteda.com/nl/woningaanbod/zoeken/?location={p_enc}&huurprijsmax={MAX_HUUR}&kamers={MIN_KAMERS}",
         "woonopmaat":
             "https://www.woonopmaat.nl/woningaanbod/",
         "kennemerwonen":
@@ -180,6 +173,9 @@ def build_data():
         for name in GOOGLE_LANDLORDS:
             add_row(rows, seen, f"Google: {name}", place, 3, "verhuurder",
                     google_url(f"{name} huurwoning {place} 2 kamers max {MAX_HUUR} euro"), tab="zoeken")
+        for name in GOOGLE_LANDLORDS_DIRECT:
+            add_row(rows, seen, f"Google: {name}", place, 2, "verhuurder",
+                    google_url(f"{name} huurwoning {place} beschikbaar"), tab="zoeken")
         for name in GOOGLE_CORPORATIONS:
             add_row(rows, seen, f"Google: {name}", place, 3, "corporatie",
                     google_url(f"{name} huur {place} beschikbaar"), tab="zoeken")
