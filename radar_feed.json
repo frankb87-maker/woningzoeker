@@ -1,6 +1,54 @@
 [
   {
-    "type": "nieuw gevolgd",
+    "type": "pagina gewijzigd",
+    "bron": "Kamernet",
+    "plaats": "Beverwijk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.kamernet.nl/huren/appartement-beverwijk?maxRent=1600",
+    "status": "200",
+    "title": "",
+    "ai_score": 58,
+    "ai_label": "Mogelijk nieuw aanbod",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "prijs gevonden",
+      "woning-taal"
+    ],
+    "signals": [
+      "€1562"
+    ],
+    "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
+    "noise_count": 6,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Kamernet",
+    "plaats": "Uitgeest",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.kamernet.nl/huren/appartement-uitgeest?maxRent=1600",
+    "status": "200",
+    "title": "",
+    "ai_score": 58,
+    "ai_label": "Mogelijk nieuw aanbod",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "prijs gevonden",
+      "woning-taal"
+    ],
+    "signals": [
+      "€1450"
+    ],
+    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
+    "noise_count": 7,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
     "bron": "Kamernet",
     "plaats": "Assendelft",
     "prioriteit": 2,
@@ -22,408 +70,25 @@
     "google_noise": false
   },
   {
-    "type": "nieuw gevolgd",
-    "bron": "WoningNet",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.woningnet.nl/",
-    "status": "200",
-    "title": "Homepage - Woningnet",
-    "ai_score": 32,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "WoningNet",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.woningnet.nl/",
-    "status": "200",
-    "title": "Homepage - Woningnet",
-    "ai_score": 32,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Kennemer Wonen",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.kennemerwonen.nl/aanbod/",
-    "status": "404",
-    "title": "Pagina niet gevonden - Kennemer Wonen",
-    "ai_score": 20,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "rzekering Mijn buurt Folders Ik zoek Projecten Woning huren Woning kopen Direct te huur Over Kennemer Wonen Onze dienstverlening Beleid en plannen Onze organisatie Privacyverklaring Publicaties Werken bij Kennemer Wonen Algemeen nummer Alge",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Kennemer Wonen",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.kennemerwonen.nl/aanbod/",
-    "status": "404",
-    "title": "Pagina niet gevonden - Kennemer Wonen",
-    "ai_score": 20,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "rzekering Mijn buurt Folders Ik zoek Projecten Woning huren Woning kopen Direct te huur Over Kennemer Wonen Onze dienstverlening Beleid en plannen Onze organisatie Privacyverklaring Publicaties Werken bij Kennemer Wonen Algemeen nummer Alge",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Vesteda",
-    "plaats": "Beverwijk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=beverwijk&huurprijsmax=1600&kamers=2",
-    "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2025 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Vesteda",
+    "type": "pagina gewijzigd",
+    "bron": "Kamernet",
     "plaats": "Heemskerk",
     "prioriteit": 2,
     "focus": "huurwoningen",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=heemskerk&huurprijsmax=1600&kamers=2",
+    "url": "https://www.kamernet.nl/huren/appartement-heemskerk?maxRent=1600",
     "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2025 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Vesteda",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=uitgeest&huurprijsmax=1600&kamers=2",
-    "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2025 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Vesteda",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=castricum&huurprijsmax=1600&kamers=2",
-    "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2025 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Pre Wonen",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "ZVH",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.zvh.nl/aanbod/",
-    "status": "404",
     "title": "",
-    "ai_score": 14,
+    "ai_score": 26,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
       "directe bron",
       "woning-taal",
-      "listing-snippet"
+      "plaats gevonden"
     ],
     "signals": [],
-    "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Vesteda",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=assendelft&huurprijsmax=1600&kamers=2",
-    "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2025 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Woonopmaat",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.woonopmaat.nl/woningaanbod/",
-    "status": "200",
-    "title": "Huurwoning | Woonopmaat",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "Huurwoning | Woonopmaat Menu Sluiten Mijn Woonopmaat Ik zoek Ik zoek Huurwoning Overstap naar Woonservice Wonen in een woongroep Ouder worden en prettig wonen Ik huur Ik huur Nieuwe woning Huurdersinformatie Extra informatie voor huurders B",
-    "noise_count": 4,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Pre Wonen",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "ZVH",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.zvh.nl/aanbod/",
-    "status": "404",
-    "title": "",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Funda",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.funda.nl/zoeken/huur?selected_area=%5B%22assendelft%22%5D&price=%22-1600%22&rooms=%222-%22",
-    "status": "200",
-    "title": "Je bent bijna op de pagina die je zoekt [funda]",
-    "ai_score": 0,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron"
-    ],
-    "signals": [],
-    "snippet": "",
-    "noise_count": 8,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Pararius",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.pararius.nl/huurwoningen/assendelft/0-1600/2-slaapkamers",
-    "status": "403",
-    "title": "Just a moment...",
-    "ai_score": 0,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron"
-    ],
-    "signals": [],
-    "snippet": "",
-    "noise_count": 4,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Jaap",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.jaap.nl/huurhuizen/assendelft?prijsvan=0&prijstot=1600",
-    "status": "error",
-    "title": "",
-    "ai_score": 0,
-    "ai_label": "Algemene update",
-    "ai_reasons": [],
-    "signals": [],
-    "snippet": "",
-    "noise_count": 0,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Huislijn",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.huislijn.nl/huurwoning/assendelft",
-    "status": "403",
-    "title": "Just a moment...",
-    "ai_score": 0,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron"
-    ],
-    "signals": [],
-    "snippet": "",
-    "noise_count": 4,
-    "google_noise": false
-  },
-  {
-    "type": "nieuw gevolgd",
-    "bron": "Huurwoningen.nl",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.huurwoningen.nl/in/assendelft/",
-    "status": "403",
-    "title": "Just a moment...",
-    "ai_score": 0,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron"
-    ],
-    "signals": [],
-    "snippet": "",
-    "noise_count": 4,
+    "snippet": "Appartementen Heemskerk, Huur appartement in Heemskerk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
+    "noise_count": 6,
     "google_noise": false
   }
 ]
