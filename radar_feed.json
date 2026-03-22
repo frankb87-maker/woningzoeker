@@ -20,30 +20,6 @@
       "€1562"
     ],
     "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 6,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Kamernet",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.kamernet.nl/huren/appartement-uitgeest?maxRent=1600",
-    "status": "200",
-    "title": "",
-    "ai_score": 58,
-    "ai_label": "Mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "prijs gevonden",
-      "woning-taal"
-    ],
-    "signals": [
-      "€1450"
-    ],
-    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
     "noise_count": 7,
     "google_noise": false
   },
@@ -88,7 +64,7 @@
     ],
     "signals": [],
     "snippet": "Appartementen Heemskerk, Huur appartement in Heemskerk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 6,
+    "noise_count": 7,
     "google_noise": false
   }
 ]
