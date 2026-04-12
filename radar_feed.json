@@ -25,297 +25,42 @@
   },
   {
     "type": "pagina gewijzigd",
-    "bron": "Kamernet",
+    "bron": "ZVH",
     "plaats": "Beverwijk",
     "prioriteit": 2,
     "focus": "huurwoningen",
-    "url": "https://www.kamernet.nl/huren/appartement-beverwijk?maxRent=1600",
-    "status": "200",
+    "url": "https://www.zvh.nl/aanbod/",
+    "status": "500",
     "title": "",
-    "ai_score": 58,
-    "ai_label": "Mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "prijs gevonden",
-      "woning-taal"
-    ],
-    "signals": [
-      "€ 488",
-      "€1293"
-    ],
-    "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 6,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Kamernet",
-    "plaats": "Heemskerk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.kamernet.nl/huren/appartement-heemskerk?maxRent=1600",
-    "status": "200",
-    "title": "",
-    "ai_score": 58,
-    "ai_label": "Mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "prijs gevonden",
-      "woning-taal"
-    ],
-    "signals": [
-      "€ 488",
-      "€891"
-    ],
-    "snippet": "Appartementen Heemskerk, Huur appartement in Heemskerk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 6,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Kamernet",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.kamernet.nl/huren/appartement-uitgeest?maxRent=1600",
-    "status": "200",
-    "title": "",
-    "ai_score": 58,
-    "ai_label": "Mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "prijs gevonden",
-      "woning-taal"
-    ],
-    "signals": [
-      "€ 488",
-      "€1450"
-    ],
-    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
-    "noise_count": 7,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "WoningNet",
-    "plaats": "Beverwijk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.woningnet.nl/",
-    "status": "200",
-    "title": "Homepage - Woningnet",
-    "ai_score": 32,
+    "ai_score": 30,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
+      "directe bron"
     ],
     "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
+    "snippet": "",
+    "noise_count": 0,
     "google_noise": false
   },
   {
     "type": "pagina gewijzigd",
-    "bron": "WoningNet",
-    "plaats": "Heemskerk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.woningnet.nl/",
-    "status": "200",
-    "title": "Homepage - Woningnet",
-    "ai_score": 32,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "WoningNet",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.woningnet.nl/",
-    "status": "200",
-    "title": "Homepage - Woningnet",
-    "ai_score": 32,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "WoningNet",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.woningnet.nl/",
-    "status": "200",
-    "title": "Homepage - Woningnet",
-    "ai_score": 32,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "WoningNet",
+    "bron": "ZVH",
     "plaats": "Assendelft",
     "prioriteit": 2,
     "focus": "regio",
-    "url": "https://www.woningnet.nl/",
-    "status": "200",
-    "title": "Homepage - Woningnet",
-    "ai_score": 32,
+    "url": "https://www.zvh.nl/aanbod/",
+    "status": "500",
+    "title": "",
+    "ai_score": 30,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
+      "directe bron"
     ],
     "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Kennemer Wonen",
-    "plaats": "Beverwijk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.kennemerwonen.nl/aanbod/",
-    "status": "404",
-    "title": "Pagina niet gevonden - Kennemer Wonen",
-    "ai_score": 20,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "rzekering Mijn buurt Folders Ik zoek Projecten Woning huren Woning kopen Direct te huur Over Kennemer Wonen Onze dienstverlening Beleid en plannen Onze organisatie Privacyverklaring Publicaties Werken bij Kennemer Wonen Algemeen nummer Alge",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Kennemer Wonen",
-    "plaats": "Heemskerk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.kennemerwonen.nl/aanbod/",
-    "status": "404",
-    "title": "Pagina niet gevonden - Kennemer Wonen",
-    "ai_score": 20,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "rzekering Mijn buurt Folders Ik zoek Projecten Woning huren Woning kopen Direct te huur Over Kennemer Wonen Onze dienstverlening Beleid en plannen Onze organisatie Privacyverklaring Publicaties Werken bij Kennemer Wonen Algemeen nummer Alge",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Kennemer Wonen",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.kennemerwonen.nl/aanbod/",
-    "status": "404",
-    "title": "Pagina niet gevonden - Kennemer Wonen",
-    "ai_score": 20,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "rzekering Mijn buurt Folders Ik zoek Projecten Woning huren Woning kopen Direct te huur Over Kennemer Wonen Onze dienstverlening Beleid en plannen Onze organisatie Privacyverklaring Publicaties Werken bij Kennemer Wonen Algemeen nummer Alge",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Kennemer Wonen",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.kennemerwonen.nl/aanbod/",
-    "status": "404",
-    "title": "Pagina niet gevonden - Kennemer Wonen",
-    "ai_score": 20,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "rzekering Mijn buurt Folders Ik zoek Projecten Woning huren Woning kopen Direct te huur Over Kennemer Wonen Onze dienstverlening Beleid en plannen Onze organisatie Privacyverklaring Publicaties Werken bij Kennemer Wonen Algemeen nummer Alge",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Kennemer Wonen",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.kennemerwonen.nl/aanbod/",
-    "status": "404",
-    "title": "Pagina niet gevonden - Kennemer Wonen",
-    "ai_score": 20,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "rzekering Mijn buurt Folders Ik zoek Projecten Woning huren Woning kopen Direct te huur Over Kennemer Wonen Onze dienstverlening Beleid en plannen Onze organisatie Privacyverklaring Publicaties Werken bij Kennemer Wonen Algemeen nummer Alge",
-    "noise_count": 2,
+    "snippet": "",
+    "noise_count": 0,
     "google_noise": false
   }
 ]
