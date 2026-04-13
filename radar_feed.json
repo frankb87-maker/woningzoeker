@@ -17,10 +17,114 @@
       "woning-taal"
     ],
     "signals": [
+      "€ 611",
       "€ 850"
     ],
     "snippet": "Appartementen Assendelft, Huur appartement in Assendelft | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Z",
     "noise_count": 1,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Kamernet",
+    "plaats": "Beverwijk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.kamernet.nl/huren/appartement-beverwijk?maxRent=1600",
+    "status": "200",
+    "title": "",
+    "ai_score": 58,
+    "ai_label": "Mogelijk nieuw aanbod",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "prijs gevonden",
+      "woning-taal"
+    ],
+    "signals": [
+      "€ 611",
+      "€ 488",
+      "€1293"
+    ],
+    "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
+    "noise_count": 5,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Kamernet",
+    "plaats": "Heemskerk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.kamernet.nl/huren/appartement-heemskerk?maxRent=1600",
+    "status": "200",
+    "title": "",
+    "ai_score": 58,
+    "ai_label": "Mogelijk nieuw aanbod",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "prijs gevonden",
+      "woning-taal"
+    ],
+    "signals": [
+      "€ 611",
+      "€ 488",
+      "€891"
+    ],
+    "snippet": "Appartementen Heemskerk, Huur appartement in Heemskerk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
+    "noise_count": 5,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Kamernet",
+    "plaats": "Uitgeest",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.kamernet.nl/huren/appartement-uitgeest?maxRent=1600",
+    "status": "200",
+    "title": "",
+    "ai_score": 58,
+    "ai_label": "Mogelijk nieuw aanbod",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "prijs gevonden",
+      "woning-taal"
+    ],
+    "signals": [
+      "€ 611",
+      "€ 488",
+      "€1450"
+    ],
+    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
+    "noise_count": 6,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Kamernet",
+    "plaats": "Castricum",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.kamernet.nl/huren/appartement-castricum?maxRent=1600",
+    "status": "200",
+    "title": "",
+    "ai_score": 58,
+    "ai_label": "Mogelijk nieuw aanbod",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "prijs gevonden",
+      "woning-taal"
+    ],
+    "signals": [
+      "€ 611",
+      "€ 488"
+    ],
+    "snippet": "Appartementen Castricum, Huur appartement in Castricum | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
+    "noise_count": 7,
     "google_noise": false
   },
   {
@@ -30,17 +134,19 @@
     "prioriteit": 2,
     "focus": "huurwoningen",
     "url": "https://www.zvh.nl/aanbod/",
-    "status": "500",
+    "status": "404",
     "title": "",
-    "ai_score": 30,
+    "ai_score": 14,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
-      "directe bron"
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
     ],
     "signals": [],
-    "snippet": "",
-    "noise_count": 0,
+    "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
+    "noise_count": 2,
     "google_noise": false
   },
   {
@@ -50,17 +156,19 @@
     "prioriteit": 2,
     "focus": "regio",
     "url": "https://www.zvh.nl/aanbod/",
-    "status": "500",
+    "status": "404",
     "title": "",
-    "ai_score": 30,
+    "ai_score": 14,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
-      "directe bron"
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
     ],
     "signals": [],
-    "snippet": "",
-    "noise_count": 0,
+    "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
+    "noise_count": 2,
     "google_noise": false
   }
 ]
