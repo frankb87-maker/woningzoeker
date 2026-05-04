@@ -50,6 +50,30 @@
   {
     "type": "pagina gewijzigd",
     "bron": "Kamernet",
+    "plaats": "Uitgeest",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.kamernet.nl/huren/appartement-uitgeest?maxRent=1600",
+    "status": "200",
+    "title": "",
+    "ai_score": 58,
+    "ai_label": "Mogelijk nieuw aanbod",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "prijs gevonden",
+      "woning-taal"
+    ],
+    "signals": [
+      "€1450"
+    ],
+    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
+    "noise_count": 7,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Kamernet",
     "plaats": "Assendelft",
     "prioriteit": 2,
     "focus": "regio",
@@ -66,116 +90,6 @@
     ],
     "signals": [],
     "snippet": "Appartementen Assendelft, Huur appartement in Assendelft | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Z",
-    "noise_count": 1,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "WoningNet",
-    "plaats": "Beverwijk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.woningnet.nl/",
-    "status": "200",
-    "title": "Homepage - Woningnet",
-    "ai_score": 32,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "WoningNet",
-    "plaats": "Heemskerk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.woningnet.nl/",
-    "status": "200",
-    "title": "Homepage - Woningnet",
-    "ai_score": 32,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "WoningNet",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.woningnet.nl/",
-    "status": "200",
-    "title": "Homepage - Woningnet",
-    "ai_score": 32,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "WoningNet",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.woningnet.nl/",
-    "status": "200",
-    "title": "Homepage - Woningnet",
-    "ai_score": 32,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "WoningNet",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.woningnet.nl/",
-    "status": "200",
-    "title": "Homepage - Woningnet",
-    "ai_score": 32,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
     "noise_count": 1,
     "google_noise": false
   }
