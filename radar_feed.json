@@ -20,7 +20,7 @@
       "€1293"
     ],
     "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 6,
+    "noise_count": 7,
     "google_noise": false
   },
   {
@@ -44,7 +44,7 @@
       "€891"
     ],
     "snippet": "Appartementen Heemskerk, Huur appartement in Heemskerk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 6,
+    "noise_count": 7,
     "google_noise": false
   },
   {
@@ -95,6 +95,86 @@
   },
   {
     "type": "pagina gewijzigd",
+    "bron": "WoningNet",
+    "plaats": "Heemskerk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.woningnet.nl/",
+    "status": "202",
+    "title": "Homepage - Woningnet",
+    "ai_score": 30,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron"
+    ],
+    "signals": [],
+    "snippet": "",
+    "noise_count": 0,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "WoningNet",
+    "plaats": "Uitgeest",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.woningnet.nl/",
+    "status": "202",
+    "title": "Homepage - Woningnet",
+    "ai_score": 30,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron"
+    ],
+    "signals": [],
+    "snippet": "",
+    "noise_count": 0,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "WoningNet",
+    "plaats": "Castricum",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.woningnet.nl/",
+    "status": "202",
+    "title": "Homepage - Woningnet",
+    "ai_score": 30,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron"
+    ],
+    "signals": [],
+    "snippet": "",
+    "noise_count": 0,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "WoningNet",
+    "plaats": "Assendelft",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.woningnet.nl/",
+    "status": "202",
+    "title": "Homepage - Woningnet",
+    "ai_score": 30,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron"
+    ],
+    "signals": [],
+    "snippet": "",
+    "noise_count": 0,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
     "bron": "Kamernet",
     "plaats": "Castricum",
     "prioriteit": 2,
@@ -117,112 +197,19 @@
   },
   {
     "type": "pagina gewijzigd",
-    "bron": "Vesteda",
-    "plaats": "Beverwijk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=beverwijk&huurprijsmax=1600&kamers=2",
-    "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2026 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Vesteda",
-    "plaats": "Heemskerk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=heemskerk&huurprijsmax=1600&kamers=2",
-    "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2026 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Vesteda",
+    "bron": "Jaap",
     "plaats": "Uitgeest",
     "prioriteit": 2,
     "focus": "regio",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=uitgeest&huurprijsmax=1600&kamers=2",
-    "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
+    "url": "https://www.jaap.nl/huurhuizen/uitgeest?prijsvan=0&prijstot=1600",
+    "status": "error",
+    "title": "",
+    "ai_score": 0,
     "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
+    "ai_reasons": [],
     "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2026 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Vesteda",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=castricum&huurprijsmax=1600&kamers=2",
-    "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2026 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Vesteda",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=assendelft&huurprijsmax=1600&kamers=2",
-    "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2026 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
+    "snippet": "",
+    "noise_count": 0,
     "google_noise": false
   }
 ]
