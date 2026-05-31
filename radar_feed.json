@@ -71,6 +71,106 @@
   },
   {
     "type": "pagina gewijzigd",
+    "bron": "WoningNet",
+    "plaats": "Beverwijk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.woningnet.nl/",
+    "status": "202",
+    "title": "Homepage - Woningnet",
+    "ai_score": 30,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron"
+    ],
+    "signals": [],
+    "snippet": "",
+    "noise_count": 0,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "WoningNet",
+    "plaats": "Heemskerk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.woningnet.nl/",
+    "status": "202",
+    "title": "Homepage - Woningnet",
+    "ai_score": 30,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron"
+    ],
+    "signals": [],
+    "snippet": "",
+    "noise_count": 0,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "WoningNet",
+    "plaats": "Uitgeest",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.woningnet.nl/",
+    "status": "202",
+    "title": "Homepage - Woningnet",
+    "ai_score": 30,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron"
+    ],
+    "signals": [],
+    "snippet": "",
+    "noise_count": 0,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "WoningNet",
+    "plaats": "Castricum",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.woningnet.nl/",
+    "status": "202",
+    "title": "Homepage - Woningnet",
+    "ai_score": 30,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron"
+    ],
+    "signals": [],
+    "snippet": "",
+    "noise_count": 0,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "WoningNet",
+    "plaats": "Assendelft",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.woningnet.nl/",
+    "status": "202",
+    "title": "Homepage - Woningnet",
+    "ai_score": 30,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron"
+    ],
+    "signals": [],
+    "snippet": "",
+    "noise_count": 0,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
     "bron": "Kamernet",
     "plaats": "Castricum",
     "prioriteit": 2,
