@@ -152,19 +152,17 @@
     "prioriteit": 2,
     "focus": "huurwoningen",
     "url": "https://www.woningnet.nl/",
-    "status": "200",
+    "status": "202",
     "title": "Homepage - Woningnet",
-    "ai_score": 32,
+    "ai_score": 30,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
+      "directe bron"
     ],
     "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
+    "snippet": "",
+    "noise_count": 0,
     "google_noise": false
   },
   {
@@ -174,19 +172,17 @@
     "prioriteit": 2,
     "focus": "regio",
     "url": "https://www.woningnet.nl/",
-    "status": "200",
+    "status": "202",
     "title": "Homepage - Woningnet",
-    "ai_score": 32,
+    "ai_score": 30,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
+      "directe bron"
     ],
     "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
+    "snippet": "",
+    "noise_count": 0,
     "google_noise": false
   },
   {
@@ -196,19 +192,17 @@
     "prioriteit": 2,
     "focus": "regio",
     "url": "https://www.woningnet.nl/",
-    "status": "200",
+    "status": "202",
     "title": "Homepage - Woningnet",
-    "ai_score": 32,
+    "ai_score": 30,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
+      "directe bron"
     ],
     "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
+    "snippet": "",
+    "noise_count": 0,
     "google_noise": false
   },
   {
@@ -218,19 +212,17 @@
     "prioriteit": 2,
     "focus": "regio",
     "url": "https://www.woningnet.nl/",
-    "status": "200",
+    "status": "202",
     "title": "Homepage - Woningnet",
-    "ai_score": 32,
+    "ai_score": 30,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
+      "directe bron"
     ],
     "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
-    "noise_count": 1,
+    "snippet": "",
+    "noise_count": 0,
     "google_noise": false
   }
 ]
