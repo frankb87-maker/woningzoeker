@@ -20,7 +20,7 @@
       "€1025"
     ],
     "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 5,
+    "noise_count": 6,
     "google_noise": false
   },
   {
@@ -44,7 +44,7 @@
       "€ 759"
     ],
     "snippet": "Appartementen Heemskerk, Huur appartement in Heemskerk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 4,
+    "noise_count": 5,
     "google_noise": false
   },
   {
@@ -76,17 +76,19 @@
     "prioriteit": 2,
     "focus": "huurwoningen",
     "url": "https://www.woningnet.nl/",
-    "status": "202",
+    "status": "200",
     "title": "Homepage - Woningnet",
-    "ai_score": 30,
+    "ai_score": 32,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
-      "directe bron"
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
     ],
     "signals": [],
-    "snippet": "",
-    "noise_count": 0,
+    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "noise_count": 1,
     "google_noise": false
   },
   {
@@ -96,17 +98,19 @@
     "prioriteit": 2,
     "focus": "huurwoningen",
     "url": "https://www.woningnet.nl/",
-    "status": "202",
+    "status": "200",
     "title": "Homepage - Woningnet",
-    "ai_score": 30,
+    "ai_score": 32,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
-      "directe bron"
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
     ],
     "signals": [],
-    "snippet": "",
-    "noise_count": 0,
+    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "noise_count": 1,
     "google_noise": false
   },
   {
@@ -116,17 +120,19 @@
     "prioriteit": 2,
     "focus": "regio",
     "url": "https://www.woningnet.nl/",
-    "status": "202",
+    "status": "200",
     "title": "Homepage - Woningnet",
-    "ai_score": 30,
+    "ai_score": 32,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
-      "directe bron"
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
     ],
     "signals": [],
-    "snippet": "",
-    "noise_count": 0,
+    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "noise_count": 1,
     "google_noise": false
   },
   {
@@ -136,17 +142,19 @@
     "prioriteit": 2,
     "focus": "regio",
     "url": "https://www.woningnet.nl/",
-    "status": "202",
+    "status": "200",
     "title": "Homepage - Woningnet",
-    "ai_score": 30,
+    "ai_score": 32,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
-      "directe bron"
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
     ],
     "signals": [],
-    "snippet": "",
-    "noise_count": 0,
+    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "noise_count": 1,
     "google_noise": false
   },
   {
@@ -156,29 +164,9 @@
     "prioriteit": 2,
     "focus": "regio",
     "url": "https://www.woningnet.nl/",
-    "status": "202",
+    "status": "200",
     "title": "Homepage - Woningnet",
-    "ai_score": 30,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron"
-    ],
-    "signals": [],
-    "snippet": "",
-    "noise_count": 0,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Vesteda",
-    "plaats": "Beverwijk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=beverwijk&huurprijsmax=1600&kamers=2",
-    "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
+    "ai_score": 32,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
@@ -187,96 +175,8 @@
       "listing-snippet"
     ],
     "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2026 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Vesteda",
-    "plaats": "Heemskerk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=heemskerk&huurprijsmax=1600&kamers=2",
-    "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2026 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Vesteda",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=uitgeest&huurprijsmax=1600&kamers=2",
-    "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2026 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Vesteda",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=castricum&huurprijsmax=1600&kamers=2",
-    "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2026 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Vesteda",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=assendelft&huurprijsmax=1600&kamers=2",
-    "status": "200",
-    "title": "Woning zoeken | Vesteda",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "Tijdelijke kamerverhuur Middenhuur Bestaande huurders Voorrang verlaten sociale huurwoning Consument Service en contact Huurverhoging 2026 Energie besparen Storingen-reparaties Onderhoud Mijn huur Belangen-klachten Veelgestelde vragen wonin",
-    "noise_count": 5,
+    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "noise_count": 1,
     "google_noise": false
   }
 ]
