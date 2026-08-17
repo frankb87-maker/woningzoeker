@@ -1,7 +1,7 @@
 {
   "Funda|Beverwijk|https://www.funda.nl/zoeken/huur?selected_area=%5B%22beverwijk%22%5D&price=%22-1600%22&rooms=%222-%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:15",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -24,7 +24,7 @@
   },
   "Pararius|Beverwijk|https://www.pararius.nl/huurwoningen/beverwijk/0-1600/2-slaapkamers": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:15",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -47,7 +47,7 @@
   },
   "Jaap|Beverwijk|https://www.jaap.nl/huurhuizen/beverwijk?prijsvan=0&prijstot=1600": {
     "digest": "43bd2445e16707cb10e51fab675bd9029ef8f337e9ed7a5c91d564477c185f8c",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:15",
     "status": "error",
     "title": "",
     "bron": "Jaap",
@@ -67,7 +67,7 @@
   },
   "Huislijn|Beverwijk|https://www.huislijn.nl/huurwoning/beverwijk": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:15",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Huislijn",
@@ -90,7 +90,7 @@
   },
   "Huurwoningen.nl|Beverwijk|https://www.huurwoningen.nl/in/beverwijk/": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:15",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Huurwoningen.nl",
@@ -112,8 +112,8 @@
     }
   },
   "Kamernet|Beverwijk|https://www.kamernet.nl/huren/appartement-beverwijk?maxRent=1600": {
-    "digest": "a202ce3d3d7ec338cf169133235b86a066bb5c53fda7fc4ccd8b6166e423d9f1",
-    "checked_at": "2026-08-16 06:59",
+    "digest": "648977cb644a24b5763f3a65b05bf74d2f9e9d0e7311f7aed53504b5d9967389",
+    "checked_at": "2026-08-17 07:15",
     "status": "200",
     "title": "",
     "bron": "Kamernet",
@@ -133,14 +133,14 @@
       "signals": [
         "€1025"
       ],
-      "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
+      "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
       "noise_count": 6,
       "google_noise": false
     }
   },
   "Vesteda|Beverwijk|https://www.vesteda.com/nl/woningaanbod/zoeken/?location=beverwijk&huurprijsmax=1600&kamers=2": {
     "digest": "aabf1921655484ddfece8409de066437d3c62c787682fb3a152ac026eb30ac6e",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:15",
     "status": "200",
     "title": "Woning zoeken | Vesteda",
     "bron": "Vesteda",
@@ -165,7 +165,7 @@
   },
   "Woonopmaat|Beverwijk|https://www.woonopmaat.nl/woningaanbod/": {
     "digest": "4369891462074f0545b3b8c52d4844e0680b5f26ea460cae979c4b8bda76880f",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:15",
     "status": "error",
     "title": "",
     "bron": "Woonopmaat",
@@ -185,7 +185,7 @@
   },
   "Kennemer Wonen|Beverwijk|https://www.kennemerwonen.nl/aanbod/": {
     "digest": "a9b2b29e2a5fd5e509451da022d2dd71ad54f98582d996bc60e5fdd5a5008ef1",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:15",
     "status": "404",
     "title": "Pagina niet gevonden - Kennemer Wonen",
     "bron": "Kennemer Wonen",
@@ -210,7 +210,7 @@
   },
   "Pre Wonen|Beverwijk|https://www.prewonen.nl/woningaanbod/": {
     "digest": "5d76ac6abc591e70c7152178d0c5b5dd859a733e0086f72edd41eb9545cec1e8",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:15",
     "status": "404",
     "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
     "bron": "Pre Wonen",
@@ -234,13 +234,38 @@
     }
   },
   "WoningNet|Beverwijk|https://www.woningnet.nl/": {
-    "digest": "d6110196f0550aaca769f9de46d083ea3f9d4da6cc5e664321b161b336dab14a",
-    "checked_at": "2026-08-16 06:59",
-    "status": "error",
-    "title": "",
+    "digest": "be694000057f914a5de5ffd987b21fb37018ca61d237ed10b3ebcf35662e1ce5",
+    "checked_at": "2026-08-17 07:15",
+    "status": "200",
+    "title": "Homepage - WoningNet",
     "bron": "WoningNet",
     "plaats": "Beverwijk",
     "url": "https://www.woningnet.nl/",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "ai": {
+      "score": 32,
+      "label": "Algemene update",
+      "reasons": [
+        "prioriteit 2",
+        "directe bron",
+        "woning-taal",
+        "listing-snippet"
+      ],
+      "signals": [],
+      "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+      "noise_count": 1,
+      "google_noise": false
+    }
+  },
+  "ZVH|Beverwijk|https://www.zvh.nl/aanbod/": {
+    "digest": "0e8f08e0b2f167550f66e45432339c1c521350374e627949ceb3b46298382532",
+    "checked_at": "2026-08-17 07:16",
+    "status": "error",
+    "title": "",
+    "bron": "ZVH",
+    "plaats": "Beverwijk",
+    "url": "https://www.zvh.nl/aanbod/",
     "prioriteit": 2,
     "focus": "huurwoningen",
     "ai": {
@@ -253,34 +278,9 @@
       "google_noise": false
     }
   },
-  "ZVH|Beverwijk|https://www.zvh.nl/aanbod/": {
-    "digest": "1601651306b2f7cd5e217d6aa5c4c9219b2fb84ba8068de2820b8846ab524e17",
-    "checked_at": "2026-08-16 06:59",
-    "status": "404",
-    "title": "",
-    "bron": "ZVH",
-    "plaats": "Beverwijk",
-    "url": "https://www.zvh.nl/aanbod/",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "ai": {
-      "score": 14,
-      "label": "Algemene update",
-      "reasons": [
-        "prioriteit 2",
-        "directe bron",
-        "woning-taal",
-        "listing-snippet"
-      ],
-      "signals": [],
-      "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
-      "noise_count": 2,
-      "google_noise": false
-    }
-  },
   "Funda|Heemskerk|https://www.funda.nl/zoeken/huur?selected_area=%5B%22heemskerk%22%5D&price=%22-1600%22&rooms=%222-%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -303,7 +303,7 @@
   },
   "Pararius|Heemskerk|https://www.pararius.nl/huurwoningen/heemskerk/0-1600/2-slaapkamers": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -326,7 +326,7 @@
   },
   "Jaap|Heemskerk|https://www.jaap.nl/huurhuizen/heemskerk?prijsvan=0&prijstot=1600": {
     "digest": "26a0c4ab41ab137010d594927ee384f8f35f96ae4ac70464b7601f589b9b3835",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "error",
     "title": "",
     "bron": "Jaap",
@@ -346,7 +346,7 @@
   },
   "Huislijn|Heemskerk|https://www.huislijn.nl/huurwoning/heemskerk": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Huislijn",
@@ -369,7 +369,7 @@
   },
   "Huurwoningen.nl|Heemskerk|https://www.huurwoningen.nl/in/heemskerk/": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Huurwoningen.nl",
@@ -391,8 +391,8 @@
     }
   },
   "Kamernet|Heemskerk|https://www.kamernet.nl/huren/appartement-heemskerk?maxRent=1600": {
-    "digest": "d8d0402904a3350e7896f5ee4542e10d7d63385bc1df2e0fefa3e00133bd13ab",
-    "checked_at": "2026-08-16 06:59",
+    "digest": "9f20b0b49ce81480c5acc6747ee8f6a84f86e490305d90ff2147a275f11dbb34",
+    "checked_at": "2026-08-17 07:16",
     "status": "200",
     "title": "",
     "bron": "Kamernet",
@@ -410,14 +410,14 @@
         "plaats gevonden"
       ],
       "signals": [],
-      "snippet": "Appartementen Heemskerk, Huur appartement in Heemskerk | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
+      "snippet": "Appartementen Heemskerk, Huur appartement in Heemskerk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
       "noise_count": 6,
       "google_noise": false
     }
   },
   "Vesteda|Heemskerk|https://www.vesteda.com/nl/woningaanbod/zoeken/?location=heemskerk&huurprijsmax=1600&kamers=2": {
     "digest": "aabf1921655484ddfece8409de066437d3c62c787682fb3a152ac026eb30ac6e",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "200",
     "title": "Woning zoeken | Vesteda",
     "bron": "Vesteda",
@@ -442,7 +442,7 @@
   },
   "Woonopmaat|Heemskerk|https://www.woonopmaat.nl/woningaanbod/": {
     "digest": "4369891462074f0545b3b8c52d4844e0680b5f26ea460cae979c4b8bda76880f",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "error",
     "title": "",
     "bron": "Woonopmaat",
@@ -462,7 +462,7 @@
   },
   "Kennemer Wonen|Heemskerk|https://www.kennemerwonen.nl/aanbod/": {
     "digest": "a9b2b29e2a5fd5e509451da022d2dd71ad54f98582d996bc60e5fdd5a5008ef1",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "404",
     "title": "Pagina niet gevonden - Kennemer Wonen",
     "bron": "Kennemer Wonen",
@@ -487,7 +487,7 @@
   },
   "Pre Wonen|Heemskerk|https://www.prewonen.nl/woningaanbod/": {
     "digest": "5d76ac6abc591e70c7152178d0c5b5dd859a733e0086f72edd41eb9545cec1e8",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "404",
     "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
     "bron": "Pre Wonen",
@@ -511,28 +511,33 @@
     }
   },
   "WoningNet|Heemskerk|https://www.woningnet.nl/": {
-    "digest": "33d1d00631459123929a22b758a67b377d432afd9f0fff492ef0fd1a4ebe6f78",
-    "checked_at": "2026-08-16 06:59",
-    "status": "error",
-    "title": "",
+    "digest": "be694000057f914a5de5ffd987b21fb37018ca61d237ed10b3ebcf35662e1ce5",
+    "checked_at": "2026-08-17 07:16",
+    "status": "200",
+    "title": "Homepage - WoningNet",
     "bron": "WoningNet",
     "plaats": "Heemskerk",
     "url": "https://www.woningnet.nl/",
     "prioriteit": 2,
     "focus": "huurwoningen",
     "ai": {
-      "score": 0,
+      "score": 32,
       "label": "Algemene update",
-      "reasons": [],
+      "reasons": [
+        "prioriteit 2",
+        "directe bron",
+        "woning-taal",
+        "listing-snippet"
+      ],
       "signals": [],
-      "snippet": "",
-      "noise_count": 0,
+      "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+      "noise_count": 1,
       "google_noise": false
     }
   },
   "ZVH|Heemskerk|https://www.zvh.nl/aanbod/": {
     "digest": "1601651306b2f7cd5e217d6aa5c4c9219b2fb84ba8068de2820b8846ab524e17",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "404",
     "title": "",
     "bron": "ZVH",
@@ -557,7 +562,7 @@
   },
   "Funda|Uitgeest|https://www.funda.nl/zoeken/huur?selected_area=%5B%22uitgeest%22%5D&price=%22-1600%22&rooms=%222-%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -580,7 +585,7 @@
   },
   "Pararius|Uitgeest|https://www.pararius.nl/huurwoningen/uitgeest/0-1600/2-slaapkamers": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -603,7 +608,7 @@
   },
   "Jaap|Uitgeest|https://www.jaap.nl/huurhuizen/uitgeest?prijsvan=0&prijstot=1600": {
     "digest": "dd7a48dd7d70686d38ef5a0f01764535c933ee856777e11cddd79884d9118b37",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "error",
     "title": "",
     "bron": "Jaap",
@@ -623,7 +628,7 @@
   },
   "Huislijn|Uitgeest|https://www.huislijn.nl/huurwoning/uitgeest": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Huislijn",
@@ -646,7 +651,7 @@
   },
   "Huurwoningen.nl|Uitgeest|https://www.huurwoningen.nl/in/uitgeest/": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Huurwoningen.nl",
@@ -669,7 +674,7 @@
   },
   "Kamernet|Uitgeest|https://www.kamernet.nl/huren/appartement-uitgeest?maxRent=1600": {
     "digest": "440da0ab609c6a1d7a391297f8d7dcd630824eec2b247bdb61b45e4a26be811f",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "200",
     "title": "",
     "bron": "Kamernet",
@@ -696,7 +701,7 @@
   },
   "Vesteda|Uitgeest|https://www.vesteda.com/nl/woningaanbod/zoeken/?location=uitgeest&huurprijsmax=1600&kamers=2": {
     "digest": "aabf1921655484ddfece8409de066437d3c62c787682fb3a152ac026eb30ac6e",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "200",
     "title": "Woning zoeken | Vesteda",
     "bron": "Vesteda",
@@ -721,7 +726,7 @@
   },
   "Woonopmaat|Uitgeest|https://www.woonopmaat.nl/woningaanbod/": {
     "digest": "4369891462074f0545b3b8c52d4844e0680b5f26ea460cae979c4b8bda76880f",
-    "checked_at": "2026-08-16 06:59",
+    "checked_at": "2026-08-17 07:16",
     "status": "error",
     "title": "",
     "bron": "Woonopmaat",
@@ -741,7 +746,7 @@
   },
   "Kennemer Wonen|Uitgeest|https://www.kennemerwonen.nl/aanbod/": {
     "digest": "a9b2b29e2a5fd5e509451da022d2dd71ad54f98582d996bc60e5fdd5a5008ef1",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "404",
     "title": "Pagina niet gevonden - Kennemer Wonen",
     "bron": "Kennemer Wonen",
@@ -766,7 +771,7 @@
   },
   "Pre Wonen|Uitgeest|https://www.prewonen.nl/woningaanbod/": {
     "digest": "5d76ac6abc591e70c7152178d0c5b5dd859a733e0086f72edd41eb9545cec1e8",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "404",
     "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
     "bron": "Pre Wonen",
@@ -790,28 +795,33 @@
     }
   },
   "WoningNet|Uitgeest|https://www.woningnet.nl/": {
-    "digest": "20137e8c305120856d1502f16b13d3d03d34a99c7099add639571f9a7fb4ffa3",
-    "checked_at": "2026-08-16 07:00",
-    "status": "error",
-    "title": "",
+    "digest": "be694000057f914a5de5ffd987b21fb37018ca61d237ed10b3ebcf35662e1ce5",
+    "checked_at": "2026-08-17 07:16",
+    "status": "200",
+    "title": "Homepage - WoningNet",
     "bron": "WoningNet",
     "plaats": "Uitgeest",
     "url": "https://www.woningnet.nl/",
     "prioriteit": 2,
     "focus": "regio",
     "ai": {
-      "score": 0,
+      "score": 32,
       "label": "Algemene update",
-      "reasons": [],
+      "reasons": [
+        "prioriteit 2",
+        "directe bron",
+        "woning-taal",
+        "listing-snippet"
+      ],
       "signals": [],
-      "snippet": "",
-      "noise_count": 0,
+      "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+      "noise_count": 1,
       "google_noise": false
     }
   },
   "ZVH|Uitgeest|https://www.zvh.nl/aanbod/": {
     "digest": "1601651306b2f7cd5e217d6aa5c4c9219b2fb84ba8068de2820b8846ab524e17",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "404",
     "title": "",
     "bron": "ZVH",
@@ -836,7 +846,7 @@
   },
   "Funda|Castricum|https://www.funda.nl/zoeken/huur?selected_area=%5B%22castricum%22%5D&price=%22-1600%22&rooms=%222-%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -859,7 +869,7 @@
   },
   "Pararius|Castricum|https://www.pararius.nl/huurwoningen/castricum/0-1600/2-slaapkamers": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -882,7 +892,7 @@
   },
   "Jaap|Castricum|https://www.jaap.nl/huurhuizen/castricum?prijsvan=0&prijstot=1600": {
     "digest": "9d862fe504dbe51a4c2fe65270f324056b7429d69f664d4a92a2f558f38507b0",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "error",
     "title": "",
     "bron": "Jaap",
@@ -902,7 +912,7 @@
   },
   "Huislijn|Castricum|https://www.huislijn.nl/huurwoning/castricum": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Huislijn",
@@ -925,7 +935,7 @@
   },
   "Huurwoningen.nl|Castricum|https://www.huurwoningen.nl/in/castricum/": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Huurwoningen.nl",
@@ -947,8 +957,8 @@
     }
   },
   "Kamernet|Castricum|https://www.kamernet.nl/huren/appartement-castricum?maxRent=1600": {
-    "digest": "c454857394dc203daab25ae7d9aaf55467706ace5eb55092e6268550a728fdef",
-    "checked_at": "2026-08-16 07:00",
+    "digest": "8a6589ba6c0294e4938a15f26e6de96929ddd5b3c467c074e4e1386fcfdb57a9",
+    "checked_at": "2026-08-17 07:16",
     "status": "200",
     "title": "",
     "bron": "Kamernet",
@@ -975,7 +985,7 @@
   },
   "Vesteda|Castricum|https://www.vesteda.com/nl/woningaanbod/zoeken/?location=castricum&huurprijsmax=1600&kamers=2": {
     "digest": "aabf1921655484ddfece8409de066437d3c62c787682fb3a152ac026eb30ac6e",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "200",
     "title": "Woning zoeken | Vesteda",
     "bron": "Vesteda",
@@ -1000,7 +1010,7 @@
   },
   "Woonopmaat|Castricum|https://www.woonopmaat.nl/woningaanbod/": {
     "digest": "4369891462074f0545b3b8c52d4844e0680b5f26ea460cae979c4b8bda76880f",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "error",
     "title": "",
     "bron": "Woonopmaat",
@@ -1020,7 +1030,7 @@
   },
   "Kennemer Wonen|Castricum|https://www.kennemerwonen.nl/aanbod/": {
     "digest": "a9b2b29e2a5fd5e509451da022d2dd71ad54f98582d996bc60e5fdd5a5008ef1",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "404",
     "title": "Pagina niet gevonden - Kennemer Wonen",
     "bron": "Kennemer Wonen",
@@ -1045,7 +1055,7 @@
   },
   "Pre Wonen|Castricum|https://www.prewonen.nl/woningaanbod/": {
     "digest": "5d76ac6abc591e70c7152178d0c5b5dd859a733e0086f72edd41eb9545cec1e8",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "404",
     "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
     "bron": "Pre Wonen",
@@ -1069,28 +1079,33 @@
     }
   },
   "WoningNet|Castricum|https://www.woningnet.nl/": {
-    "digest": "c8ecdf7bb3a98906fc214437241f91d9b285d780edd508f91c19902129aa925b",
-    "checked_at": "2026-08-16 07:00",
-    "status": "error",
-    "title": "",
+    "digest": "be694000057f914a5de5ffd987b21fb37018ca61d237ed10b3ebcf35662e1ce5",
+    "checked_at": "2026-08-17 07:16",
+    "status": "200",
+    "title": "Homepage - WoningNet",
     "bron": "WoningNet",
     "plaats": "Castricum",
     "url": "https://www.woningnet.nl/",
     "prioriteit": 2,
     "focus": "regio",
     "ai": {
-      "score": 0,
+      "score": 32,
       "label": "Algemene update",
-      "reasons": [],
+      "reasons": [
+        "prioriteit 2",
+        "directe bron",
+        "woning-taal",
+        "listing-snippet"
+      ],
       "signals": [],
-      "snippet": "",
-      "noise_count": 0,
+      "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+      "noise_count": 1,
       "google_noise": false
     }
   },
   "ZVH|Castricum|https://www.zvh.nl/aanbod/": {
     "digest": "1601651306b2f7cd5e217d6aa5c4c9219b2fb84ba8068de2820b8846ab524e17",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "404",
     "title": "",
     "bron": "ZVH",
@@ -1115,7 +1130,7 @@
   },
   "Funda|Assendelft|https://www.funda.nl/zoeken/huur?selected_area=%5B%22assendelft%22%5D&price=%22-1600%22&rooms=%222-%22": {
     "digest": "0f874a3e171b2e7f35f8717a9a4c91324b594fe1bbf6c45135111cc16f236d52",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "200",
     "title": "Je bent bijna op de pagina die je zoekt [funda]",
     "bron": "Funda",
@@ -1138,7 +1153,7 @@
   },
   "Pararius|Assendelft|https://www.pararius.nl/huurwoningen/assendelft/0-1600/2-slaapkamers": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Pararius",
@@ -1161,7 +1176,7 @@
   },
   "Jaap|Assendelft|https://www.jaap.nl/huurhuizen/assendelft?prijsvan=0&prijstot=1600": {
     "digest": "8e4502d44a97fbbbf39299386e8d4e3ab1302521921ea6021b635653d96f06ea",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "error",
     "title": "",
     "bron": "Jaap",
@@ -1181,7 +1196,7 @@
   },
   "Huislijn|Assendelft|https://www.huislijn.nl/huurwoning/assendelft": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Huislijn",
@@ -1204,7 +1219,7 @@
   },
   "Huurwoningen.nl|Assendelft|https://www.huurwoningen.nl/in/assendelft/": {
     "digest": "01b805fc388d107807daa0e975d06b03fdac48460290a2fc34b5505d5b17ca09",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "403",
     "title": "Just a moment...",
     "bron": "Huurwoningen.nl",
@@ -1226,8 +1241,8 @@
     }
   },
   "Kamernet|Assendelft|https://www.kamernet.nl/huren/appartement-assendelft?maxRent=1600": {
-    "digest": "913cfa949810e4ac743f2d0d3cd6f3131b4bd61ed43857427fac594867e0abc8",
-    "checked_at": "2026-08-16 07:00",
+    "digest": "6eb77e283260dd7aae57d4a75f8fb09c4f15e6132eee4ebd5313f4d571b6e4b1",
+    "checked_at": "2026-08-17 07:16",
     "status": "200",
     "title": "",
     "bron": "Kamernet",
@@ -1252,7 +1267,7 @@
   },
   "Vesteda|Assendelft|https://www.vesteda.com/nl/woningaanbod/zoeken/?location=assendelft&huurprijsmax=1600&kamers=2": {
     "digest": "aabf1921655484ddfece8409de066437d3c62c787682fb3a152ac026eb30ac6e",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "200",
     "title": "Woning zoeken | Vesteda",
     "bron": "Vesteda",
@@ -1277,7 +1292,7 @@
   },
   "Woonopmaat|Assendelft|https://www.woonopmaat.nl/woningaanbod/": {
     "digest": "4369891462074f0545b3b8c52d4844e0680b5f26ea460cae979c4b8bda76880f",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "error",
     "title": "",
     "bron": "Woonopmaat",
@@ -1297,7 +1312,7 @@
   },
   "Kennemer Wonen|Assendelft|https://www.kennemerwonen.nl/aanbod/": {
     "digest": "a9b2b29e2a5fd5e509451da022d2dd71ad54f98582d996bc60e5fdd5a5008ef1",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "404",
     "title": "Pagina niet gevonden - Kennemer Wonen",
     "bron": "Kennemer Wonen",
@@ -1322,7 +1337,7 @@
   },
   "Pre Wonen|Assendelft|https://www.prewonen.nl/woningaanbod/": {
     "digest": "5d76ac6abc591e70c7152178d0c5b5dd859a733e0086f72edd41eb9545cec1e8",
-    "checked_at": "2026-08-16 07:00",
+    "checked_at": "2026-08-17 07:16",
     "status": "404",
     "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
     "bron": "Pre Wonen",
@@ -1346,28 +1361,33 @@
     }
   },
   "WoningNet|Assendelft|https://www.woningnet.nl/": {
-    "digest": "41aac8e8512f507b58cf9fad44c30d084caae07b56a4138de31014487838c91b",
-    "checked_at": "2026-08-16 07:01",
-    "status": "error",
-    "title": "",
+    "digest": "be694000057f914a5de5ffd987b21fb37018ca61d237ed10b3ebcf35662e1ce5",
+    "checked_at": "2026-08-17 07:16",
+    "status": "200",
+    "title": "Homepage - WoningNet",
     "bron": "WoningNet",
     "plaats": "Assendelft",
     "url": "https://www.woningnet.nl/",
     "prioriteit": 2,
     "focus": "regio",
     "ai": {
-      "score": 0,
+      "score": 32,
       "label": "Algemene update",
-      "reasons": [],
+      "reasons": [
+        "prioriteit 2",
+        "directe bron",
+        "woning-taal",
+        "listing-snippet"
+      ],
       "signals": [],
-      "snippet": "",
-      "noise_count": 0,
+      "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+      "noise_count": 1,
       "google_noise": false
     }
   },
   "ZVH|Assendelft|https://www.zvh.nl/aanbod/": {
     "digest": "1601651306b2f7cd5e217d6aa5c4c9219b2fb84ba8068de2820b8846ab524e17",
-    "checked_at": "2026-08-16 07:01",
+    "checked_at": "2026-08-17 07:16",
     "status": "404",
     "title": "",
     "bron": "ZVH",
