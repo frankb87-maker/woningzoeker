@@ -44,8 +44,8 @@
       "€ 669",
       "€1025"
     ],
-    "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 6,
+    "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
+    "noise_count": 5,
     "google_noise": false
   },
   {
@@ -69,7 +69,7 @@
       "€ 669"
     ],
     "snippet": "Appartementen Heemskerk, Huur appartement in Heemskerk | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 6,
+    "noise_count": 5,
     "google_noise": false
   },
   {
@@ -93,7 +93,7 @@
       "€ 669",
       "€1675"
     ],
-    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
+    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
     "noise_count": 6,
     "google_noise": false
   },
@@ -118,7 +118,7 @@
       "€ 669",
       "€2172"
     ],
-    "snippet": "Appartementen Castricum, Huur appartement in Castricum | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
+    "snippet": "Appartementen Castricum, Huur appartement in Castricum | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
     "noise_count": 6,
     "google_noise": false
   },
@@ -129,18 +129,13 @@
     "prioriteit": 2,
     "focus": "huurwoningen",
     "url": "https://www.woningnet.nl/",
-    "status": "200",
+    "status": "error",
     "title": "Homepage - WoningNet",
-    "ai_score": 50,
-    "ai_label": "Mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
+    "ai_score": 0,
+    "ai_label": "Algemene update",
+    "ai_reasons": [],
     "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "snippet": "",
     "noise_count": 0,
     "google_noise": false
   },
@@ -151,18 +146,13 @@
     "prioriteit": 2,
     "focus": "huurwoningen",
     "url": "https://www.woningnet.nl/",
-    "status": "200",
+    "status": "error",
     "title": "Homepage - WoningNet",
-    "ai_score": 50,
-    "ai_label": "Mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
+    "ai_score": 0,
+    "ai_label": "Algemene update",
+    "ai_reasons": [],
     "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "snippet": "",
     "noise_count": 0,
     "google_noise": false
   },
@@ -173,18 +163,13 @@
     "prioriteit": 2,
     "focus": "regio",
     "url": "https://www.woningnet.nl/",
-    "status": "200",
+    "status": "error",
     "title": "Homepage - WoningNet",
-    "ai_score": 50,
-    "ai_label": "Mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
+    "ai_score": 0,
+    "ai_label": "Algemene update",
+    "ai_reasons": [],
     "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "snippet": "",
     "noise_count": 0,
     "google_noise": false
   },
@@ -195,18 +180,13 @@
     "prioriteit": 2,
     "focus": "regio",
     "url": "https://www.woningnet.nl/",
-    "status": "200",
+    "status": "error",
     "title": "Homepage - WoningNet",
-    "ai_score": 50,
-    "ai_label": "Mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
+    "ai_score": 0,
+    "ai_label": "Algemene update",
+    "ai_reasons": [],
     "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "snippet": "",
     "noise_count": 0,
     "google_noise": false
   },
@@ -217,18 +197,13 @@
     "prioriteit": 2,
     "focus": "regio",
     "url": "https://www.woningnet.nl/",
-    "status": "200",
+    "status": "error",
     "title": "Homepage - WoningNet",
-    "ai_score": 50,
-    "ai_label": "Mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
+    "ai_score": 0,
+    "ai_label": "Algemene update",
+    "ai_reasons": [],
     "signals": [],
-    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "snippet": "",
     "noise_count": 0,
     "google_noise": false
   }
