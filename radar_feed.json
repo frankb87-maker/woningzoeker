@@ -19,7 +19,7 @@
     "signals": [
       "€ 669"
     ],
-    "snippet": "Appartementen Assendelft, Huur appartement in Assendelft | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Z",
+    "snippet": "Appartementen Assendelft, Huur appartement in Assendelft | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Z",
     "noise_count": 1,
     "google_noise": false
   },
@@ -45,7 +45,7 @@
       "€1025"
     ],
     "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 5,
+    "noise_count": 6,
     "google_noise": false
   },
   {
@@ -99,41 +99,19 @@
   },
   {
     "type": "pagina gewijzigd",
-    "bron": "Kamernet",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.kamernet.nl/huren/appartement-castricum?maxRent=1600",
-    "status": "200",
-    "title": "",
-    "ai_score": 58,
-    "ai_label": "Mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "prijs gevonden",
-      "woning-taal"
-    ],
-    "signals": [
-      "€ 669",
-      "€2172"
-    ],
-    "snippet": "Appartementen Castricum, Huur appartement in Castricum | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 6,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
     "bron": "WoningNet",
     "plaats": "Beverwijk",
     "prioriteit": 2,
     "focus": "huurwoningen",
     "url": "https://www.woningnet.nl/",
-    "status": "error",
-    "title": "Homepage - WoningNet",
-    "ai_score": 0,
+    "status": "202",
+    "title": "",
+    "ai_score": 30,
     "ai_label": "Algemene update",
-    "ai_reasons": [],
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron"
+    ],
     "signals": [],
     "snippet": "",
     "noise_count": 0,
@@ -146,11 +124,14 @@
     "prioriteit": 2,
     "focus": "huurwoningen",
     "url": "https://www.woningnet.nl/",
-    "status": "error",
-    "title": "Homepage - WoningNet",
-    "ai_score": 0,
+    "status": "202",
+    "title": "",
+    "ai_score": 30,
     "ai_label": "Algemene update",
-    "ai_reasons": [],
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron"
+    ],
     "signals": [],
     "snippet": "",
     "noise_count": 0,
@@ -163,11 +144,14 @@
     "prioriteit": 2,
     "focus": "regio",
     "url": "https://www.woningnet.nl/",
-    "status": "error",
-    "title": "Homepage - WoningNet",
-    "ai_score": 0,
+    "status": "202",
+    "title": "",
+    "ai_score": 30,
     "ai_label": "Algemene update",
-    "ai_reasons": [],
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron"
+    ],
     "signals": [],
     "snippet": "",
     "noise_count": 0,
@@ -180,11 +164,14 @@
     "prioriteit": 2,
     "focus": "regio",
     "url": "https://www.woningnet.nl/",
-    "status": "error",
-    "title": "Homepage - WoningNet",
-    "ai_score": 0,
+    "status": "202",
+    "title": "",
+    "ai_score": 30,
     "ai_label": "Algemene update",
-    "ai_reasons": [],
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron"
+    ],
     "signals": [],
     "snippet": "",
     "noise_count": 0,
@@ -197,11 +184,14 @@
     "prioriteit": 2,
     "focus": "regio",
     "url": "https://www.woningnet.nl/",
-    "status": "error",
-    "title": "Homepage - WoningNet",
-    "ai_score": 0,
+    "status": "202",
+    "title": "",
+    "ai_score": 30,
     "ai_label": "Algemene update",
-    "ai_reasons": [],
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron"
+    ],
     "signals": [],
     "snippet": "",
     "noise_count": 0,
