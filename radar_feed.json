@@ -69,7 +69,7 @@
       "€ 669",
       "€1675"
     ],
-    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
+    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
     "noise_count": 6,
     "google_noise": false
   },
@@ -118,116 +118,6 @@
     "signals": [],
     "snippet": "Appartementen Assendelft, Huur appartement in Assendelft | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Z",
     "noise_count": 1,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
-    "plaats": "Beverwijk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
-    "ai_score": 20,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "plaats gevonden"
-    ],
-    "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
-    "plaats": "Heemskerk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
-    "ai_score": 20,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "plaats gevonden"
-    ],
-    "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
     "google_noise": false
   }
 ]
