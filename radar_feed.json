@@ -43,7 +43,7 @@
     "signals": [
       "€1675"
     ],
-    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
+    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
     "noise_count": 6,
     "google_noise": false
   },
@@ -69,6 +69,28 @@
     ],
     "snippet": "Appartementen Castricum, Huur appartement in Castricum | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
     "noise_count": 6,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "WoningNet",
+    "plaats": "Beverwijk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.woningnet.nl/",
+    "status": "200",
+    "title": "Homepage - WoningNet",
+    "ai_score": 50,
+    "ai_label": "Mogelijk nieuw aanbod",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "noise_count": 0,
     "google_noise": false
   },
   {
@@ -113,226 +135,6 @@
     "signals": [],
     "snippet": "Appartementen Heemskerk, Huur appartement in Heemskerk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
     "noise_count": 5,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
-    "plaats": "Beverwijk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
-    "ai_score": 20,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "plaats gevonden"
-    ],
-    "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
-    "plaats": "Heemskerk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
-    "ai_score": 20,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "plaats gevonden"
-    ],
-    "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "ZVH",
-    "plaats": "Beverwijk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.zvh.nl/aanbod/",
-    "status": "404",
-    "title": "",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "ZVH",
-    "plaats": "Heemskerk",
-    "prioriteit": 2,
-    "focus": "huurwoningen",
-    "url": "https://www.zvh.nl/aanbod/",
-    "status": "404",
-    "title": "",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "ZVH",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.zvh.nl/aanbod/",
-    "status": "404",
-    "title": "",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "ZVH",
-    "plaats": "Castricum",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.zvh.nl/aanbod/",
-    "status": "404",
-    "title": "",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "ZVH",
-    "plaats": "Assendelft",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.zvh.nl/aanbod/",
-    "status": "404",
-    "title": "",
-    "ai_score": 14,
-    "ai_label": "Algemene update",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "woning-taal",
-      "listing-snippet"
-    ],
-    "signals": [],
-    "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
-    "noise_count": 2,
     "google_noise": false
   }
 ]
