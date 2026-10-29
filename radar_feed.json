@@ -20,7 +20,7 @@
       "€1650"
     ],
     "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 2,
+    "noise_count": 5,
     "google_noise": false
   },
   {
@@ -43,32 +43,8 @@
     "signals": [
       "€669"
     ],
-    "snippet": "Appartementen Heemskerk, Huur appartement in Heemskerk | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 2,
-    "google_noise": false
-  },
-  {
-    "type": "pagina gewijzigd",
-    "bron": "Kamernet",
-    "plaats": "Uitgeest",
-    "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.kamernet.nl/huren/appartement-uitgeest?maxRent=1600",
-    "status": "200",
-    "title": "",
-    "ai_score": 58,
-    "ai_label": "Mogelijk nieuw aanbod",
-    "ai_reasons": [
-      "prioriteit 2",
-      "directe bron",
-      "prijs gevonden",
-      "woning-taal"
-    ],
-    "signals": [
-      "€1450"
-    ],
-    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
-    "noise_count": 6,
+    "snippet": "Appartementen Heemskerk, Huur appartement in Heemskerk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
+    "noise_count": 5,
     "google_noise": false
   },
   {
@@ -95,57 +71,57 @@
   },
   {
     "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
+    "bron": "Vesteda",
     "plaats": "Beverwijk",
     "prioriteit": 2,
     "focus": "huurwoningen",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
-    "ai_score": 20,
+    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=beverwijk&huurprijsmax=1600&kamers=2",
+    "status": "200",
+    "title": "Woning zoeken | Vesteda",
+    "ai_score": 14,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
       "directe bron",
       "woning-taal",
-      "plaats gevonden"
+      "listing-snippet"
     ],
     "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
+    "snippet": "ct Over ons Consument Aanbod bekijken Parkeren Middenhuur woningen Vrije sector huurwoningen Consument Huren in 5 stappen Inschrijven en bezichtigen Voorwaarden en toewijzing Inkomens-voorwaarden Consument Huren op maat Woningdelen 50&#x2B;",
+    "noise_count": 5,
     "google_noise": false
   },
   {
     "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
+    "bron": "Vesteda",
     "plaats": "Heemskerk",
     "prioriteit": 2,
     "focus": "huurwoningen",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
-    "ai_score": 20,
+    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=heemskerk&huurprijsmax=1600&kamers=2",
+    "status": "200",
+    "title": "Woning zoeken | Vesteda",
+    "ai_score": 14,
     "ai_label": "Algemene update",
     "ai_reasons": [
       "prioriteit 2",
       "directe bron",
       "woning-taal",
-      "plaats gevonden"
+      "listing-snippet"
     ],
     "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
+    "snippet": "ct Over ons Consument Aanbod bekijken Parkeren Middenhuur woningen Vrije sector huurwoningen Consument Huren in 5 stappen Inschrijven en bezichtigen Voorwaarden en toewijzing Inkomens-voorwaarden Consument Huren op maat Woningdelen 50&#x2B;",
+    "noise_count": 5,
     "google_noise": false
   },
   {
     "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
+    "bron": "Vesteda",
     "plaats": "Uitgeest",
     "prioriteit": 2,
     "focus": "regio",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
+    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=uitgeest&huurprijsmax=1600&kamers=2",
+    "status": "200",
+    "title": "Woning zoeken | Vesteda",
     "ai_score": 14,
     "ai_label": "Algemene update",
     "ai_reasons": [
@@ -155,19 +131,19 @@
       "listing-snippet"
     ],
     "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
+    "snippet": "ct Over ons Consument Aanbod bekijken Parkeren Middenhuur woningen Vrije sector huurwoningen Consument Huren in 5 stappen Inschrijven en bezichtigen Voorwaarden en toewijzing Inkomens-voorwaarden Consument Huren op maat Woningdelen 50&#x2B;",
+    "noise_count": 5,
     "google_noise": false
   },
   {
     "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
+    "bron": "Vesteda",
     "plaats": "Castricum",
     "prioriteit": 2,
     "focus": "regio",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
+    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=castricum&huurprijsmax=1600&kamers=2",
+    "status": "200",
+    "title": "Woning zoeken | Vesteda",
     "ai_score": 14,
     "ai_label": "Algemene update",
     "ai_reasons": [
@@ -177,19 +153,19 @@
       "listing-snippet"
     ],
     "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
+    "snippet": "ct Over ons Consument Aanbod bekijken Parkeren Middenhuur woningen Vrije sector huurwoningen Consument Huren in 5 stappen Inschrijven en bezichtigen Voorwaarden en toewijzing Inkomens-voorwaarden Consument Huren op maat Woningdelen 50&#x2B;",
+    "noise_count": 5,
     "google_noise": false
   },
   {
     "type": "pagina gewijzigd",
-    "bron": "Pre Wonen",
+    "bron": "Vesteda",
     "plaats": "Assendelft",
     "prioriteit": 2,
     "focus": "regio",
-    "url": "https://www.prewonen.nl/woningaanbod/",
-    "status": "404",
-    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
+    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=assendelft&huurprijsmax=1600&kamers=2",
+    "status": "200",
+    "title": "Woning zoeken | Vesteda",
     "ai_score": 14,
     "ai_label": "Algemene update",
     "ai_reasons": [
@@ -199,8 +175,8 @@
       "listing-snippet"
     ],
     "signals": [],
-    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
-    "noise_count": 2,
+    "snippet": "ct Over ons Consument Aanbod bekijken Parkeren Middenhuur woningen Vrije sector huurwoningen Consument Huren in 5 stappen Inschrijven en bezichtigen Voorwaarden en toewijzing Inkomens-voorwaarden Consument Huren op maat Woningdelen 50&#x2B;",
+    "noise_count": 5,
     "google_noise": false
   }
 ]
