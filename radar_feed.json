@@ -17,10 +17,9 @@
       "woning-taal"
     ],
     "signals": [
-      "€ 900",
-      "€ 997"
+      "€ 900"
     ],
-    "snippet": "Appartementen Assendelft, Huur appartement in Assendelft | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Z",
+    "snippet": "Appartementen Assendelft, Huur appartement in Assendelft | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Z",
     "noise_count": 1,
     "google_noise": false
   },
@@ -45,7 +44,7 @@
       "€1650"
     ],
     "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 4,
+    "noise_count": 2,
     "google_noise": false
   },
   {
@@ -69,7 +68,7 @@
       "€669"
     ],
     "snippet": "Appartementen Heemskerk, Huur appartement in Heemskerk | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 4,
+    "noise_count": 2,
     "google_noise": false
   },
   {
@@ -92,8 +91,8 @@
     "signals": [
       "€1450"
     ],
-    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
-    "noise_count": 6,
+    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
+    "noise_count": 5,
     "google_noise": false
   },
   {
@@ -118,6 +117,116 @@
     ],
     "snippet": "Appartementen Castricum, Huur appartement in Castricum | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
     "noise_count": 6,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "ZVH",
+    "plaats": "Beverwijk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.zvh.nl/aanbod/",
+    "status": "404",
+    "title": "",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
+    "noise_count": 2,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "ZVH",
+    "plaats": "Heemskerk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.zvh.nl/aanbod/",
+    "status": "404",
+    "title": "",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
+    "noise_count": 2,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "ZVH",
+    "plaats": "Uitgeest",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.zvh.nl/aanbod/",
+    "status": "404",
+    "title": "",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
+    "noise_count": 2,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "ZVH",
+    "plaats": "Castricum",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.zvh.nl/aanbod/",
+    "status": "404",
+    "title": "",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
+    "noise_count": 2,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "ZVH",
+    "plaats": "Assendelft",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.zvh.nl/aanbod/",
+    "status": "404",
+    "title": "",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "paratie en onderhoud Huur en betalen Huis en contract Buurt en omgeving Ik zoek Huurwoning Koopwoning Over ZVH Actueel Organisatie Contact Werken bij ZVH Privacy Disclaimer Cookies LinkedIn © ZVH",
+    "noise_count": 2,
     "google_noise": false
   }
 ]
