@@ -19,7 +19,7 @@
     "signals": [
       "€1650"
     ],
-    "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
+    "snippet": "Appartementen Beverwijk, Huur appartement in Beverwijk | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
     "noise_count": 2,
     "google_noise": false
   },
@@ -67,8 +67,8 @@
     "signals": [
       "€1450"
     ],
-    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
-    "noise_count": 5,
+    "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
+    "noise_count": 2,
     "google_noise": false
   },
   {
@@ -115,6 +115,116 @@
     "signals": [],
     "snippet": "Appartementen Assendelft, Huur appartement in Assendelft | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Z",
     "noise_count": 1,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Vesteda",
+    "plaats": "Beverwijk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=beverwijk&huurprijsmax=1600&kamers=2",
+    "status": "200",
+    "title": "Huurwoning zoeken in heel Nederland | Vesteda | Vesteda",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "Huurwoning zoeken in heel Nederland | Vesteda | Vesteda Ga naar het hoofdmenu Ga naar de inhoud Favorieten Opgeslagen producten Mijn bewaarde favorieten Sluit modal U heeft nog geen woningen",
+    "noise_count": 5,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Vesteda",
+    "plaats": "Heemskerk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=heemskerk&huurprijsmax=1600&kamers=2",
+    "status": "200",
+    "title": "Huurwoning zoeken in heel Nederland | Vesteda | Vesteda",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "Huurwoning zoeken in heel Nederland | Vesteda | Vesteda Ga naar het hoofdmenu Ga naar de inhoud Favorieten Opgeslagen producten Mijn bewaarde favorieten Sluit modal U heeft nog geen woningen",
+    "noise_count": 5,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Vesteda",
+    "plaats": "Uitgeest",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=uitgeest&huurprijsmax=1600&kamers=2",
+    "status": "200",
+    "title": "Huurwoning zoeken in heel Nederland | Vesteda | Vesteda",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "Huurwoning zoeken in heel Nederland | Vesteda | Vesteda Ga naar het hoofdmenu Ga naar de inhoud Favorieten Opgeslagen producten Mijn bewaarde favorieten Sluit modal U heeft nog geen woningen",
+    "noise_count": 5,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Vesteda",
+    "plaats": "Castricum",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=castricum&huurprijsmax=1600&kamers=2",
+    "status": "200",
+    "title": "Huurwoning zoeken in heel Nederland | Vesteda | Vesteda",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "Huurwoning zoeken in heel Nederland | Vesteda | Vesteda Ga naar het hoofdmenu Ga naar de inhoud Favorieten Opgeslagen producten Mijn bewaarde favorieten Sluit modal U heeft nog geen woningen",
+    "noise_count": 5,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Vesteda",
+    "plaats": "Assendelft",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.vesteda.com/nl/woningaanbod/zoeken/?location=assendelft&huurprijsmax=1600&kamers=2",
+    "status": "200",
+    "title": "Huurwoning zoeken in heel Nederland | Vesteda | Vesteda",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "Huurwoning zoeken in heel Nederland | Vesteda | Vesteda Ga naar het hoofdmenu Ga naar de inhoud Favorieten Opgeslagen producten Mijn bewaarde favorieten Sluit modal U heeft nog geen woningen",
+    "noise_count": 5,
     "google_noise": false
   },
   {
