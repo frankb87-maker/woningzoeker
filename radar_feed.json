@@ -68,31 +68,117 @@
       "€1450"
     ],
     "snippet": "Appartementen Uitgeest, Huur appartement in Uitgeest | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zoe",
-    "noise_count": 2,
+    "noise_count": 5,
     "google_noise": false
   },
   {
     "type": "pagina gewijzigd",
-    "bron": "Kamernet",
-    "plaats": "Castricum",
+    "bron": "WoningNet",
+    "plaats": "Beverwijk",
     "prioriteit": 2,
-    "focus": "regio",
-    "url": "https://www.kamernet.nl/huren/appartement-castricum?maxRent=1600",
+    "focus": "huurwoningen",
+    "url": "https://www.woningnet.nl/",
     "status": "200",
-    "title": "",
-    "ai_score": 58,
+    "title": "Homepage - WoningNet",
+    "ai_score": 50,
     "ai_label": "Mogelijk nieuw aanbod",
     "ai_reasons": [
       "prioriteit 2",
       "directe bron",
-      "prijs gevonden",
-      "woning-taal"
+      "woning-taal",
+      "listing-snippet"
     ],
-    "signals": [
-      "€2395"
+    "signals": [],
+    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "noise_count": 0,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "WoningNet",
+    "plaats": "Heemskerk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.woningnet.nl/",
+    "status": "200",
+    "title": "Homepage - WoningNet",
+    "ai_score": 50,
+    "ai_label": "Mogelijk nieuw aanbod",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
     ],
-    "snippet": "Appartementen Castricum, Huur appartement in Castricum | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Zo",
-    "noise_count": 5,
+    "signals": [],
+    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "noise_count": 0,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "WoningNet",
+    "plaats": "Uitgeest",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.woningnet.nl/",
+    "status": "200",
+    "title": "Homepage - WoningNet",
+    "ai_score": 50,
+    "ai_label": "Mogelijk nieuw aanbod",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "noise_count": 0,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "WoningNet",
+    "plaats": "Castricum",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.woningnet.nl/",
+    "status": "200",
+    "title": "Homepage - WoningNet",
+    "ai_score": 50,
+    "ai_label": "Mogelijk nieuw aanbod",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "noise_count": 0,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "WoningNet",
+    "plaats": "Assendelft",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.woningnet.nl/",
+    "status": "200",
+    "title": "Homepage - WoningNet",
+    "ai_score": 50,
+    "ai_label": "Mogelijk nieuw aanbod",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "n Ik zoek een woning Met DĀK op zoek naar je nieuwe (t)huis. Zoek en reageer op huurwoningen in al onze regio's. Altijd op de hoogte van het nieuwste woningaanbod. Ga naar DĀK Ik wil een aanvraag indienen Voor het aanvragen van urgenties, v",
+    "noise_count": 0,
     "google_noise": false
   },
   {
@@ -113,8 +199,96 @@
       "plaats gevonden"
     ],
     "signals": [],
-    "snippet": "Appartementen Assendelft, Huur appartement in Assendelft | Kamernet Woningaanbod Account maken Inloggen Gratis woning verhuren Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Z",
+    "snippet": "Appartementen Assendelft, Huur appartement in Assendelft | Kamernet Woningaanbod Gratis woning verhuren Inloggen Account maken Plaats of postcode Plaats of postcode +10 km ​ Appartement max Huurprijs (€) min Grootte (m²) Z",
     "noise_count": 1,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Woonopmaat",
+    "plaats": "Beverwijk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.woonopmaat.nl/woningaanbod/",
+    "status": "200",
+    "title": "Huurwoning | Woonopmaat",
+    "ai_score": 20,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "plaats gevonden"
+    ],
+    "signals": [],
+    "snippet": "Huurwoning | Woonopmaat Menu Sluiten Mijn Woonopmaat Ik zoek Ik zoek Huurwoning Overstap naar Woonservice Wonen in een woongroep Ouder worden en prettig wonen Garage Ik huur Ik huur Huurdersinformatie Extra informatie voor huurders Salderen",
+    "noise_count": 4,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Pre Wonen",
+    "plaats": "Beverwijk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.prewonen.nl/woningaanbod/",
+    "status": "404",
+    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
+    "ai_score": 20,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "plaats gevonden"
+    ],
+    "signals": [],
+    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
+    "noise_count": 2,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Woonopmaat",
+    "plaats": "Heemskerk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.woonopmaat.nl/woningaanbod/",
+    "status": "200",
+    "title": "Huurwoning | Woonopmaat",
+    "ai_score": 20,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "plaats gevonden"
+    ],
+    "signals": [],
+    "snippet": "Huurwoning | Woonopmaat Menu Sluiten Mijn Woonopmaat Ik zoek Ik zoek Huurwoning Overstap naar Woonservice Wonen in een woongroep Ouder worden en prettig wonen Garage Ik huur Ik huur Huurdersinformatie Extra informatie voor huurders Salderen",
+    "noise_count": 4,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Pre Wonen",
+    "plaats": "Heemskerk",
+    "prioriteit": 2,
+    "focus": "huurwoningen",
+    "url": "https://www.prewonen.nl/woningaanbod/",
+    "status": "404",
+    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
+    "ai_score": 20,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "plaats gevonden"
+    ],
+    "signals": [],
+    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
+    "noise_count": 2,
     "google_noise": false
   },
   {
@@ -185,6 +359,50 @@
   },
   {
     "type": "pagina gewijzigd",
+    "bron": "Woonopmaat",
+    "plaats": "Uitgeest",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.woonopmaat.nl/woningaanbod/",
+    "status": "200",
+    "title": "Huurwoning | Woonopmaat",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "Huurwoning | Woonopmaat Menu Sluiten Mijn Woonopmaat Ik zoek Ik zoek Huurwoning Overstap naar Woonservice Wonen in een woongroep Ouder worden en prettig wonen Garage Ik huur Ik huur Huurdersinformatie Extra informatie voor huurders Salderen",
+    "noise_count": 4,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Pre Wonen",
+    "plaats": "Uitgeest",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.prewonen.nl/woningaanbod/",
+    "status": "404",
+    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
+    "noise_count": 2,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
     "bron": "Vesteda",
     "plaats": "Castricum",
     "prioriteit": 2,
@@ -207,6 +425,50 @@
   },
   {
     "type": "pagina gewijzigd",
+    "bron": "Woonopmaat",
+    "plaats": "Castricum",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.woonopmaat.nl/woningaanbod/",
+    "status": "200",
+    "title": "Huurwoning | Woonopmaat",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "Huurwoning | Woonopmaat Menu Sluiten Mijn Woonopmaat Ik zoek Ik zoek Huurwoning Overstap naar Woonservice Wonen in een woongroep Ouder worden en prettig wonen Garage Ik huur Ik huur Huurdersinformatie Extra informatie voor huurders Salderen",
+    "noise_count": 4,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Pre Wonen",
+    "plaats": "Castricum",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.prewonen.nl/woningaanbod/",
+    "status": "404",
+    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
+    "noise_count": 2,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
     "bron": "Vesteda",
     "plaats": "Assendelft",
     "prioriteit": 2,
@@ -225,6 +487,50 @@
     "signals": [],
     "snippet": "Huurwoning zoeken in heel Nederland | Vesteda | Vesteda Ga naar het hoofdmenu Ga naar de inhoud Favorieten Opgeslagen producten Mijn bewaarde favorieten Sluit modal U heeft nog geen woningen",
     "noise_count": 5,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Woonopmaat",
+    "plaats": "Assendelft",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.woonopmaat.nl/woningaanbod/",
+    "status": "200",
+    "title": "Huurwoning | Woonopmaat",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "Huurwoning | Woonopmaat Menu Sluiten Mijn Woonopmaat Ik zoek Ik zoek Huurwoning Overstap naar Woonservice Wonen in een woongroep Ouder worden en prettig wonen Garage Ik huur Ik huur Huurdersinformatie Extra informatie voor huurders Salderen",
+    "noise_count": 4,
+    "google_noise": false
+  },
+  {
+    "type": "pagina gewijzigd",
+    "bron": "Pre Wonen",
+    "plaats": "Assendelft",
+    "prioriteit": 2,
+    "focus": "regio",
+    "url": "https://www.prewonen.nl/woningaanbod/",
+    "status": "404",
+    "title": "Oeps, deze pagina bestaat niet (meer)... - Pré Wonen",
+    "ai_score": 14,
+    "ai_label": "Algemene update",
+    "ai_reasons": [
+      "prioriteit 2",
+      "directe bron",
+      "woning-taal",
+      "listing-snippet"
+    ],
+    "signals": [],
+    "snippet": "anbod! Ons aanbod is te vinden op www.mijnwoonservice.mijndak.nl &nbsp; Sociale huurwoning Inschrijven sociale huurwoning Voorrang en urgentie Seniorenwoning Inschrijven seniorenwoning Verhuisregeling Ouder worden &amp; prettig wonen Verhui",
+    "noise_count": 2,
     "google_noise": false
   },
   {
